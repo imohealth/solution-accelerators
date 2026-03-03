@@ -15,16 +15,10 @@ The priority rules below are used by the notebook logic in the dynamic rules-bas
 
 | If entity is found in... | Look for context in this order |
 |---|---|
-| `assessment` | `assessment` → `assessment and plan` → `hpi` → `problem list` → `history` → `physical exam` |
 | `assessment and plan` | `assessment` → `assessment and plan` → `hpi` → `problem list` → `history` → `physical exam` |
 | `problem list` | `problem list` → `assessment` → `assessment and plan` → `hpi` → `reason for visit` |
 | `hpi` | `hpi` → `assessment` → `assessment and plan` → `problem list` → `physical exam` → `review of systems` → `medical decision making` |
-| `history of present illness` | `hpi` → `assessment` → `assessment and plan` → `problem list` → `physical exam` → `review of systems` → `medical decision making` |
-| `history of present illness (hpi)` | `hpi` → `assessment` → `assessment and plan` → `problem list` → `physical exam` → `review of systems` → `medical decision making` |
 | `physical exam` | `physical exam` → `problem list` → `hpi` |
-| `physical examinations` | `physical exam` → `problem list` → `hpi` |
-| `history` | `history` → `problem list` |
-| `reason` | `reason for visit` → `assessment` → `assessment and plan` → `hpi` |
 | `reason for visit` | `reason for visit` → `assessment` → `assessment and plan` → `hpi` |
 | `review of systems` | `review of systems` → `hpi` → `assessment` → `assessment and plan` |
 | `chief complaint` | `chief complaint` → `hpi` → `assessment` → `assessment and plan` |
