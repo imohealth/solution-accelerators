@@ -22,6 +22,6 @@ Jugular venous distension,1409,25,PHYSICAL EXAM
 S3 gallop,1461,9,PHYSICAL EXAM
 Bilateral crackles in lower lung fields,1472,39,PHYSICAL EXAM
 Bilateral 2+ pitting edema to knees,1548,35,PHYSICAL EXAM
-- Hypertension,1600,14,PROBLEM LIST
-Heart Failure,1617,13,PROBLEM LIST
-Shortness of breath,1650,19,REASON FOR VISIT
+- Hypertension,1600,14,REASON FOR VISIT
+Heart Failure,1617,13,REASON FOR VISIT
+Shortness of breath,1650,19,Unknown
