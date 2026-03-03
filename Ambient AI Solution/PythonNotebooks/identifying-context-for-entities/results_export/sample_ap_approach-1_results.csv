@@ -1,0 +1,493 @@
+Input Term,Context,Matches
+hypertension,"ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,"ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 1.00
+
+3. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+hypertension,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 0.98
+
+3. Heart failure
+   ICD-10: I50.9
+   Score: 0.98"
+Hypertension,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 0.98
+
+3. Heart failure
+   ICD-10: I50.9
+   Score: 0.98"
+Systolic Heart Failure,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 0.98
+
+3. Systolic heart failure
+   ICD-10: I50.20
+   Score: 0.98"
+systolic heart failure,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 0.98
+
+3. Systolic heart failure
+   ICD-10: I50.20
+   Score: 0.98"
+decompensation,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Clinical decompensation
+   ICD-10: R68.89
+   Score: 1.00
+
+3. Decompensated heart failure
+   ICD-10: I50.9
+   Score: 0.97"
+Bilateral lower extremity edema,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Edema of both lower extremities
+   ICD-10: R60.0
+   Score: 1.00
+
+2. Edema of lower extremity
+   ICD-10: R60.0
+   Score: 0.98"
+crackles,"ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running s","1. Respiratory crackles
+   ICD-10: R09.89
+   Score: 1.00"
+history of hypertension,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. History of hypertension
+   ICD-10: Z86.79
+   Score: 1.00
+
+2. Hypertension
+   ICD-10: I10
+   Score: 0.98"
+systolic heart failure,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Systolic heart failure
+   ICD-10: I50.20
+   Score: 1.00
+
+2. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 0.98
+
+3. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 0.98"
+shortness of breath,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Shortness of breath
+   ICD-10: R06.02
+   Score: 1.00
+
+2. Dyspnea on exertion
+   ICD-10: R06.09
+   Score: 1.00
+
+3. Dyspnea
+   ICD-10: R06.00
+   Score: 0.98"
+leg swelling,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Edema of lower extremity
+   ICD-10: R60.0
+   Score: 1.00
+
+2. Swelling of lower extremity
+   ICD-10: M79.89
+   Score: 0.98"
+dyspnea on exertion,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Dyspnea on exertion
+   ICD-10: R06.09
+   Score: 1.00"
+orthopnea,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Orthopnea
+   ICD-10: R06.01
+   Score: 1.00"
+requiring 3 pillows to sleep,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","No match found
+(Semantic search for 'requiring 3 pillows to sleep' matched to 'Difficulty sleeping' with a score of 0.80; No identifiable problem domain clinical concept in input term - returning no results.; After excluding irrelevant results, no matches remain)"
+bilateral lower extremity swelling,"HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chroni","1. Swelling of both lower extremities
+   ICD-10: M79.89
+   Score: 1.00
+
+2. Edema of both lower extremities
+   ICD-10: R60.0
+   Score: 1.00
+
+3. Edema of lower extremity
+   ICD-10: R60.0
+   Score: 1.00"
+Jugular venous distension,"PHYSICAL EXAM:
+Blood pressure 145/88, heart rate 98, respiratory rate 22, oxygen saturation 91 percent on room air. Jugular venous distension noted. Cardiac exam shows S3 gallop. Bilateral crackles in lower lung fields. Abdomen soft, liver edge palpable. Bilateral 2+ pitting edema to knees.
+
+PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.","1. Jugular venous distension
+   ICD-10: R09.89
+   Score: 1.00"
+S3 gallop,"PHYSICAL EXAM:
+Blood pressure 145/88, heart rate 98, respiratory rate 22, oxygen saturation 91 percent on room air. Jugular venous distension noted. Cardiac exam shows S3 gallop. Bilateral crackles in lower lung fields. Abdomen soft, liver edge palpable. Bilateral 2+ pitting edema to knees.
+
+PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.","1. Third heart sound
+   ICD-10: R01.2
+   Score: 1.00"
+Bilateral crackles in lower lung fields,"PHYSICAL EXAM:
+Blood pressure 145/88, heart rate 98, respiratory rate 22, oxygen saturation 91 percent on room air. Jugular venous distension noted. Cardiac exam shows S3 gallop. Bilateral crackles in lower lung fields. Abdomen soft, liver edge palpable. Bilateral 2+ pitting edema to knees.
+
+PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.","1. Respiratory crackles
+   ICD-10: R09.89
+   Score: 1.00
+
+2. Respiratory crackles of both lungs
+   ICD-10: R09.89
+   Score: 0.94
+
+3. Respiratory crackles at both lung bases
+   ICD-10: R09.89
+   Score: 0.87"
+Bilateral 2+ pitting edema to knees,"PHYSICAL EXAM:
+Blood pressure 145/88, heart rate 98, respiratory rate 22, oxygen saturation 91 percent on room air. Jugular venous distension noted. Cardiac exam shows S3 gallop. Bilateral crackles in lower lung fields. Abdomen soft, liver edge palpable. Bilateral 2+ pitting edema to knees.
+
+PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.","1. Edema of both lower extremities
+   ICD-10: R60.0
+   Score: 1.00"
+- Hypertension,"PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the pa","1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+Heart Failure,"PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the pa","1. Acute on chronic systolic heart failure
+   ICD-10: I50.23
+   Score: 1.00
+
+2. Chronic systolic heart failure
+   ICD-10: I50.22
+   Score: 1.00
+
+3. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+Shortness of breath,"REASON FOR VISIT:
+Shortness of breath and swelling
+
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over ","1. Shortness of breath
+   ICD-10: R06.02
+   Score: 1.00
+
+2. Dyspnea
+   ICD-10: R06.00
+   Score: 0.98
+
+3. Breathlessness
+   ICD-10: R06.81
+   Score: 0.98"

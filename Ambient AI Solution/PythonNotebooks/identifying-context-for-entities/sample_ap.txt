@@ -1,0 +1,23 @@
+ASSESSMENT:
+58-year-old male with hypertension and heart failure.
+
+ASSESSMENT AND PLAN:
+58-year-old male with hypertension and heart failure.
+1. Hypertension: I10
+Content and Plan: Blood pressure elevated at 145/88 today. Continue current antihypertensive regimen. Monitor blood pressure closely given heart failure exacerbation. Target blood pressure less than 130/80.
+
+2. Acute on Chronic Systolic Heart Failure: I50.23
+Content and Plan: Patient with known chronic systolic heart failure now presenting with acute decompensation. Bilateral lower extremity edema and crackles on lung exam. Weight increased 8 pounds over past week. Increase furosemide to 40 mg twice daily. Strict fluid restriction to 1.5 liters daily. Daily weights. Follow up in 3 days.
+
+HISTORY OF PRESENT ILLNESS:
+Patient is a 58-year-old male with history of hypertension and chronic systolic heart failure presenting with worsening shortness of breath and leg swelling over the past week. His blood pressure has been running slightly elevated at home. He reports increased dyspnea on exertion and orthopnea, now requiring 3 pillows to sleep at night. He notes bilateral lower extremity swelling that is worse than his baseline. Weight has increased from 190 to 198 pounds over the past week despite no change in diet.
+
+PHYSICAL EXAM:
+Blood pressure 145/88, heart rate 98, respiratory rate 22, oxygen saturation 91 percent on room air. Jugular venous distension noted. Cardiac exam shows S3 gallop. Bilateral crackles in lower lung fields. Abdomen soft, liver edge palpable. Bilateral 2+ pitting edema to knees.
+
+PROBLEM LIST:
+- Hypertension
+- Heart Failure
+
+REASON FOR VISIT:
+Shortness of breath and swelling

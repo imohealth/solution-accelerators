@@ -1,0 +1,27 @@
+entity,offset,length,section
+hypertension,34,12,ASSESSMENT
+heart failure,51,13,ASSESSMENT
+hypertension,110,12,ASSESSMENT AND PLAN
+heart failure,127,13,ASSESSMENT AND PLAN
+Hypertension,145,12,ASSESSMENT AND PLAN
+heart failure,302,13,ASSESSMENT AND PLAN
+Systolic Heart Failure,391,22,ASSESSMENT AND PLAN
+systolic heart failure,467,22,ASSESSMENT AND PLAN
+decompensation,516,14,ASSESSMENT AND PLAN
+Bilateral lower extremity edema,532,31,ASSESSMENT AND PLAN
+crackles,568,8,ASSESSMENT AND PLAN
+history of hypertension,821,23,HISTORY OF PRESENT ILLNESS
+systolic heart failure,857,22,HISTORY OF PRESENT ILLNESS
+shortness of breath,906,19,HISTORY OF PRESENT ILLNESS
+leg swelling,930,12,HISTORY OF PRESENT ILLNESS
+dyspnea on exertion,1047,19,HISTORY OF PRESENT ILLNESS
+orthopnea,1071,9,HISTORY OF PRESENT ILLNESS
+requiring 3 pillows to sleep,1086,28,HISTORY OF PRESENT ILLNESS
+bilateral lower extremity swelling,1134,34,HISTORY OF PRESENT ILLNESS
+Jugular venous distension,1409,25,PHYSICAL EXAM
+S3 gallop,1461,9,PHYSICAL EXAM
+Bilateral crackles in lower lung fields,1472,39,PHYSICAL EXAM
+Bilateral 2+ pitting edema to knees,1548,35,PHYSICAL EXAM
+- Hypertension,1600,14,PROBLEM LIST
+Heart Failure,1617,13,PROBLEM LIST
+Shortness of breath,1650,19,REASON FOR VISIT
