@@ -54,7 +54,7 @@ The notebook expects the following files in the current directory:
 
 ### 1. Clinical Note Text File
 - **Format**: Plain text file containing clinical documentation
-- **Examples**: `sample_hpi.txt`, `sample_ap.txt`, etc.
+- **Examples**: `sample.txt` etc.
 - **Location**: Same directory as notebook 
 
 ### 2. Entities CSV File
@@ -65,13 +65,13 @@ The notebook expects the following files in the current directory:
   - `length` - Entity length in characters
   - `Semantic Tag` - Entity type (e.g., Problem) [optional]
   - `Complete Entity` - Full entity phrase [optional]
-- **Examples**: `sample_hpi_entities.csv`, `sample_ap_entities.csv`
+- **Examples**: `sample_entities.csv`
 - **Location**: Same directory as notebook
 
 
 ### 3. Gold Standard JSON (Optional)
 - **Format**: JSON file with expected ICD-10 codes for accuracy calculation
-- **Example**: `expected_codes.json`
+- **Example**: `sample_gold.json`
 - **Purpose**: Enables accuracy metrics and performance comparison across approaches
 
 ---
@@ -186,12 +186,11 @@ In the initial cells, update the note ID and note type variables:
 ```python
 # Specify your note ID and type
 note_id = "sample"           # Your clinical note ID
-note_type = "ap"         # Note type: "hpi" or "ap"
 ```
 
 The notebook will automatically construct file paths:
-- Clinical note: `{note_id}_{note_type}.txt`
-- Entities CSV: `{note_id}_{note_type}_entities.csv`
+- Clinical note: `{note_id}.txt`
+- Entities CSV: `{note_id}_entities.csv`
 
 ### Step 3: Execute the Workflow
 
