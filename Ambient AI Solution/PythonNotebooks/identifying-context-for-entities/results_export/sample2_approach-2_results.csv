@@ -1,0 +1,681 @@
+Input Term,Context,Matches
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+asthma,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+anemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+HbA1c elevated,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Hyperglycemia
+   ICD-10: R73.9
+   Score: 1.00
+
+2. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 0.99"
+HbA1c elevated,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 1.00"
+HbA1c elevated,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 0.99"
+HbA1c elevated,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 0.99"
+HbA1c elevated,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 0.99"
+asthma,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+Anemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Iron deficiency,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00
+
+2. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 0.98"
+Iron deficiency,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00"
+Iron deficiency,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00
+
+2. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 0.98"
+Iron deficiency,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00
+
+2. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 0.98"
+Iron deficiency,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00
+
+2. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 0.98"
+history of Type 2 diabetes,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 1.00
+
+2. Type 2 diabetes mellitus
+   ICD-10: E11.9
+   Score: 0.98
+
+3. Non-insulin dependent type 2 diabetes mellitus
+   ICD-10: E11.9
+   Score: 0.92"
+history of Type 2 diabetes,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 1.00
+
+2. Type 2 diabetes mellitus
+   ICD-10: E11.9
+   Score: 0.98
+
+3. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 0.98"
+history of Type 2 diabetes,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus
+   ICD-10: E11.9
+   Score: 0.98
+
+3. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 0.94"
+history of Type 2 diabetes,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 1.00"
+history of Type 2 diabetes,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 1.00
+
+2. Type 2 diabetes mellitus
+   ICD-10: E11.9
+   Score: 0.98"
+"asthma,","HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+"asthma,","ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+"asthma,","ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+"asthma,","PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+"asthma,","PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+anemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+asthma,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+fatigued,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+fatigued,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+fatigued,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+fatigued,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+fatigued,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+anemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+anemia,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+conjunctival pallor,"PHYSICAL EXAM:
+Blood pressure 132/78, heart rate 76, respiratory rate 16, oxygen saturation 98 percent on room air. General appearance alert and oriented. Lungs clear to auscultation bilaterally. Heart regular rate and rhythm. Abdomen soft, non-tender. Extremities show conjunctival pallor. No edema.","1. Pale conjunctiva
+   ICD-10: H11.89
+   Score: 1.00"
+conjunctival pallor,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Pale conjunctiva
+   ICD-10: H11.89
+   Score: 1.00"
+conjunctival pallor,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Pale conjunctiva
+   ICD-10: H11.89
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00
+
+2. Type 2 diabetes mellitus with hyperglycemia, without long-term current use of insulin
+   ICD-10: E11.65
+   Score: 0.97"
+Type 2 diabetes mellitus with hyperglycemia,"REASON FOR VISIT:
+Routine follow-up of chronic conditions","1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+asthma,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Mild persistent asthma
+   ICD-10: J45.30
+   Score: 1.00
+
+2. Asthma
+   ICD-10: J45.909
+   Score: 0.98"
+asthma,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+asthma,"REASON FOR VISIT:
+Routine follow-up of chronic conditions","1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+Anemia,"PROBLEM LIST:
+- Type 2 diabetes mellitus with hyperglycemia
+- Mild persistent asthma
+- Anemia","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"ASSESSMENT:
+62-year-old female with Type 2 diabetes mellitus with hyperglycemia, mild persistent asthma, and anemia.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"ASSESSMENT AND PLAN:
+62-year-old female with chronic conditions presenting for routine follow-up.
+1. Type 2 diabetes mellitus with hyperglycemia:
+Content and Plan: HbA1c elevated at 8.2 percent. Increase metformin to 1000 mg twice daily. Add glipizide 5 mg daily. Reinforce dietary counseling. Recheck HbA1c in 3 months.
+
+2. Mild persistent asthma:
+Content and Plan: Well controlled on current inhaler regimen. Continue fluticasone-salmeterol 250/50 one puff twice daily. Albuterol as needed for rescue. Annual spirometry scheduled.
+
+3. Anemia:
+Content and Plan: Iron deficiency etiology confirmed with ferritin at 8 ng/mL and low serum iron. Continue ferrous sulfate 325 mg twice daily. Recheck CBC and iron studies in 6 weeks. Referred to gastroenterology to evaluate for occult blood loss.","1. Iron deficiency anemia
+   ICD-10: D50.9
+   Score: 1.00
+
+2. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"HISTORY OF PRESENT ILLNESS:
+Patient is a 62-year-old female with history of Type 2 diabetes, asthma, and anemia presenting for routine follow-up of chronic conditions. She reports her blood sugars have been running higher than usual over the past month with fasting levels around 160-180. Her asthma has been stable with no recent exacerbations. She continues to feel fatigued which she attributes to her anemia. She has been compliant with iron supplementation.","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Anemia,"REASON FOR VISIT:
+Routine follow-up of chronic conditions","1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"

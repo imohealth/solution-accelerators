@@ -1,0 +1,79 @@
+Input Term,Context,Matches
+hypertension,None,"1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,None,"1. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+hypertension,None,"1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,None,"1. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+Hypertension,None,"1. Hypertension
+   ICD-10: I10
+   Score: 1.00"
+heart failure,None,"1. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+Systolic Heart Failure,None,"1. Systolic heart failure
+   ICD-10: I50.20
+   Score: 1.00"
+systolic heart failure,None,"1. Systolic heart failure
+   ICD-10: I50.20
+   Score: 1.00"
+decompensation,None,"1. Clinical decompensation
+   ICD-10: R68.89
+   Score: 1.00"
+Bilateral lower extremity edema,None,"1. Edema of both lower extremities
+   ICD-10: R60.0
+   Score: 1.00"
+crackles,None,"1. Respiratory crackles
+   ICD-10: R09.89
+   Score: 1.00"
+history of hypertension,None,"1. History of hypertension
+   ICD-10: Z86.79
+   Score: 1.00"
+systolic heart failure,None,"1. Systolic heart failure
+   ICD-10: I50.20
+   Score: 1.00"
+shortness of breath,None,"1. Shortness of breath
+   ICD-10: R06.02
+   Score: 1.00"
+leg swelling,None,"1. Swelling of lower extremity
+   ICD-10: M79.89
+   Score: 1.00"
+dyspnea on exertion,None,"1. Dyspnea on exertion
+   ICD-10: R06.09
+   Score: 1.00"
+orthopnea,None,"1. Orthopnea
+   ICD-10: R06.01
+   Score: 1.00"
+requiring 3 pillows to sleep,None,"1. Cervical smear finding requires repeat smear in 3 months
+   ICD-10: R87.619
+   Score: 0.24"
+bilateral lower extremity swelling,None,"1. Swelling of both lower extremities
+   ICD-10: M79.89
+   Score: 0.99"
+Jugular venous distension,None,"1. Jugular venous distension
+   ICD-10: R09.89
+   Score: 1.00"
+S3 gallop,None,"1. Third heart sound
+   ICD-10: R01.2
+   Score: 1.00"
+Bilateral crackles in lower lung fields,None,"1. Respiratory crackles
+   ICD-10: R09.89
+   Score: 0.62"
+Bilateral 2+ pitting edema to knees,None,"1. 2+ pitting edema
+   ICD-10: R60.9
+   Score: 0.77"
+- Hypertension,None,"1. Hypertension
+   ICD-10: I10
+   Score: 0.99"
+Heart Failure,None,"1. Heart failure
+   ICD-10: I50.9
+   Score: 1.00"
+Shortness of breath,None,"1. Shortness of breath
+   ICD-10: R06.02
+   Score: 1.00"
