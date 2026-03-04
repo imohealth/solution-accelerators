@@ -1,0 +1,55 @@
+Input Term,Context,Matches
+Type 2 diabetes mellitus with hyperglycemia,None,"1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+asthma,None,"1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+anemia,None,"1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,None,"1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+HbA1c elevated,None,"1. Elevated hemoglobin A1c
+   ICD-10: R73.09
+   Score: 0.99"
+asthma,None,"1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+Anemia,None,"1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+Iron deficiency,None,"1. Iron deficiency
+   ICD-10: E61.1
+   Score: 1.00"
+history of Type 2 diabetes,None,"1. History of type 2 diabetes mellitus
+   ICD-10: Z86.39
+   Score: 0.96"
+"asthma,",None,"1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+anemia,None,"1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+asthma,None,"1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+fatigued,None,"1. Fatigue
+   ICD-10: R53.83
+   Score: 1.00"
+anemia,None,"1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
+conjunctival pallor,None,"1. Pale conjunctiva
+   ICD-10: H11.89
+   Score: 1.00"
+Type 2 diabetes mellitus with hyperglycemia,None,"1. Type 2 diabetes mellitus with hyperglycemia
+   ICD-10: E11.65
+   Score: 1.00"
+asthma,None,"1. Asthma
+   ICD-10: J45.909
+   Score: 1.00"
+Anemia,None,"1. Anemia
+   ICD-10: D64.9
+   Score: 1.00"
