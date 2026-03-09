@@ -361,6 +361,13 @@ You can customize these section lists in the notebook to match your clinical doc
 
 ---
 
+## Documentation
+
+- **[Data Preparation Guide](DATA_PREP_FOR_WORKSHOP.md)** - Instructions for preparing clinical notes, entities, and gold standard files for the workshop
+- **[Section Priorities Guide](SECTION_PRIORITIES_GUIDE.md)** - Detailed explanation of section prioritization rules and how context sections are selected
+
+---
+
 ## Additional Notes
 
 ### Privacy & Compliance
