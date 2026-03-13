@@ -22,7 +22,7 @@ imo_diagnostic_workflow_client_id = ""	# Update with your IMO API client ID
 imo_diagnostic_workflow_client_secret = "	"# Update with your IMO API client secret
 
 # API Endpoints
-imo_auth_url = "https://auth.imohealth.com/oauth/token"
+imo_auth_url = "https://api.imohealth.com/oauth/token"
 imo_entity_extraction_url = "https://api.imohealth.com/entityextraction/pipelines/imo-clinical-comprehensive?version=3.0"
 imo_precision_normalize_enrichment_url = "https://api.imohealth.com/precision/normalize/enrichment"
 imo_precision_normalize_url = "https://api.imohealth.com/precision/normalize"
