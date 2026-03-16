@@ -1,6 +1,6 @@
 {
     "auth0": {
-        "domain": "auth.imohealth.com",
+        "domain": "api.imohealth.com",
         "client_id": "",
         "client_secret": "",
         "audience": "https://api.imohealth.com"
