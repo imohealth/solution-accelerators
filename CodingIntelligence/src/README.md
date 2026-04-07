@@ -1,4 +1,4 @@
-# Coding Intelligence with Alerts
+# Coding Intelligence Solution Accelerator
 
 The IMO Coding Intelligence Solution Accelerator demonstrates how to use IMO Health's **Coding Intelligence API** to validate ICD-10-CM diagnosis codes for billing appropriateness. The app accepts CSV files with medical codes or manually inputted code lists, and flags coding issues using three rule sets from the IMO API.
 
