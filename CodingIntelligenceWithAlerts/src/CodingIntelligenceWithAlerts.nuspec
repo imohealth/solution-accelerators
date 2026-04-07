@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>CodingIntelligenceWithAlerts</id>
+    <version>1.1.1.1</version>
+    <authors>IMO</authors>
+    <owners>Intelligent Medical Objects, Inc.</owners>
+    <projectUrl>https://dev.azure.com/imo-collection01/SolutionAccelerators/_git/CodingIntelligenceWithAlerts</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Your Hovercraft has been filled with eels, please change this description</description>
+    <copyright>Copyright (c) 2026 - 2026</copyright>
+  </metadata>
+  <files>
+    <file src="$SRCDIR$\readme.md" target="" />
+    <file src="$SRCDIR$\terraform\**\*" target="terraform" exclude="**\.terraform\**" />
+  </files>
+</package>
