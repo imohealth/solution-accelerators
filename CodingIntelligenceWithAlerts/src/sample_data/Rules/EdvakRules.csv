@@ -1,0 +1,1318 @@
+Value Set Name,External ID,Value Set ID,Code system,Code,Description,Output Reason,Single Soft,Single Hard,Hard,Soft,Only if these Codes are not present,Reason,NDC Required
+HCPCS Codes Requiring NDCs,vcg-44601551848,19588,HCPCS,J2919,"Injection, methylprednisolone sodium succinate, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3030,"Injection, sumatriptan succinate, 6 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J2993,"Injection, reteplase, 18.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2800,"Injection, methocarbamol, up to 10 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2791,"Injection, rho(d) immune globulin (human), (rhophylac), intramuscular or intravenous, 100 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J2680,"Injection, fluphenazine decanoate, up to 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2601,"Injection, vasopressin (baxter), 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,J2765,"Injection, metoclopramide hcl, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2710,"Injection, neostigmine methylsulfate, up to 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2724,"Injection, protein c concentrate, intravenous, human, 10 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J2793,"Injection, rilonacept, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2540,"Injection, penicillin g potassium, up to 600,000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J2598,"Injection, vasopressin, 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,S0142,"Colistimethate sodium, inhalation solution administered through dme, concentrated form, per mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0148,"Injection, pegylated interferon alfa-2b, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,S0187,"Tamoxifen citrate, oral, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0182,"Procarbazine hydrochloride, oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0104,"Zidovudine, oral, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0012,"Butorphanol tartrate, nasal spray, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q3027,"Injection, interferon beta-1a, 1 mcg for intramuscular use",Included rule,,,,,,,Yes
+,,,HCPCS,Q0155,"Dronabinol (syndros), 0.1 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0249,"Injection, tocilizumab, for hospitalized adults and pediatric patients (2 years of age and older) with covid-19 who are receiving systemic corticosteroids and require supplemental oxygen, non-invasive or invasive mechanical ventilation, or extracorporeal membrane oxygenation (ecmo) only, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1457,"Injection, gallium nitrate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3365,"Injection, iv, urokinase, 250,000 i.u. vial",Included rule,,,,,,,Yes
+,,,HCPCS,J3400,"Injection, triflupromazine hcl, up to 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9585,"Injection, gadobutrol, 0.1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J1554,"Injection, immune globulin (asceniv), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9281,"Mitomycin pyelocalyceal instillation, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7200,"Injection, factor ix, (antihemophilic factor, recombinant), rixubis, per iu",Included rule,,,,,,,Yes
+,,,HCPCS,J3247,"Injection, secukinumab, intravenous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9220,"Injection, indigotindisulfonate sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3145,"Injection, testosterone undecanoate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9046,"Cocaine hydrochloride nasal solution (goprelto), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9173,"Injection, durvalumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9482,"Injection, sotalol hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9022,"Injection, atezolizumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9299,"Injection, nivolumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2426,"Injection, paliperidone palmitate extended release (invega sustenna), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2312,"Injection, naloxone hydrochloride, not otherwise specified, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2405,"Injection, ondansetron hydrochloride, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2355,"Injection, oprelvekin, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2003,"Injection, lidocaine hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1960,"Injection, levorphanol tartrate, up to 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1990,"Injection, chlordiazepoxide hcl, up to 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1943,"Injection, aripiprazole lauroxil, (aristada initio), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1931,"Injection, laronidase, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1954,"Injection, leuprolide acetate for depot suspension (lutrate depot), 7.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1952,"Leuprolide injectable, camcevi, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2246,"Injection, micafungin in sodium (baxter), not therapeutically equivalent to j2248, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2291,"Injection, nafcillin sodium (baxter), 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2300,"Injection, nalbuphine hydrochloride, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2278,"Injection, ziconotide, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7518,"Mycophenolic acid, oral, 180 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7316,"Injection, ocriplasmin, 0.125 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7212,"Factor viia (antihemophilic factor, recombinant)-jncw (sevenfact), 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7214,"Injection, factor viii/von willebrand factor complex, recombinant (altuviiio), per factor viii i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7308,"Aminolevulinic acid hcl for topical administration, 20%, single unit dosage form (354 mg)",Included rule,,,,,,,Yes
+,,,HCPCS,J7320,"Hyaluronan or derivitive, genvisc 850, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7508,"Tacrolimus, extended release, (astagraf xl), oral, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5107,"Injection, bevacizumab-awwb, biosimilar, (mvasi), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5103,"Injection, infliximab-dyyb, biosimilar, (inflectra), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1411,"Injection, etranacogene dezaparvovec-drlb, per therapeutic dose",Included rule,,,,,,,Yes
+,,,HCPCS,J0132,"Injection, acetylcysteine, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0168,"Injection, epinephrine (international medication systems), not therapeutically equivalent to j0165, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0175,"Injection, donanemab-azbt, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0179,"Injection, brolucizumab-dbll, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1786,"Injection, imiglucerase, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1749,"Injection, iloprost, 0.1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1826,"Injection, interferon beta-1a, 30 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1815,"Injection, insulin, per 5 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1836,"Injection, metronidazole, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1747,"Injection, spesolimab-sbzo, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1652,"Injection, fondaparinux sodium, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1644,"Injection, heparin sodium, per 1000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1740,"Injection, ibandronate sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1559,"Injection, immune globulin (hizentra), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1558,"Injection, immune globulin (xembify), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1598,"Injection, glycopyrrolate (fresenius kabi), not therapeutically equivalent to j1596, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1572,"Injection, immune globulin, (flebogamma/flebogamma dif), intravenous, non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3350,"Injection, urea, up to 40 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J3290,"Injection, tranexamic acid, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3402,"Injection, remestemcel-l-rknd, per therapeutic dose",Included rule,,,,,,,Yes
+,,,HCPCS,J3240,"Injection, thyrotropin alpha, 0.9 mg, provided in 1.1 mg vial",Included rule,,,,,,,Yes
+,,,HCPCS,J3472,"Injection, hyaluronidase, ovine, preservative free, per 1000 usp units",Included rule,,,,,,,Yes
+,,,HCPCS,J9305,"Injection, pemetrexed, not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9306,"Injection, pertuzumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0589,"Injection, daxibotulinumtoxina-lanm, 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,J0594,"injection, busulfan, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0592,"Injection, buprenorphine hydrochloride, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0360,"Injection, hydralazine hcl, up to 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0400,"Injection, aripiprazole, intramuscular, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0462,"Injection, atropine sulfate, not therapeutically equivalent to j0461, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0500,"Injection, dicyclomine hcl, up to 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0485,"Injection, belatacept, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0295,"Injection, ampicillin sodium/sulbactam sodium, per 1.5 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J0218,"Injection, olipudase alfa-rpcp, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0222,"Injection, patisiran, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0207,"Injection, amifostine, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9177,"Injection, enfortumab vedotin-ejfv, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,G9518,Documentation of active injection drug use,Included rule,,,,,,,Yes
+,,,HCPCS,J3110,"Injection, teriparatide, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2997,"Injection, alteplase recombinant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2799,"Injection, risperidone (uzedy), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2770,"Injection, quinupristin/dalfopristin, 500 mg (150/350)",Included rule,,,,,,,Yes
+,,,HCPCS,J2779,"Injection, ranibizumab, via intravitreal implant (susvimo), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2501,"Injection, paricalcitol, 1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2704,"Injection, propofol, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0160,"Dextroamphetamine sulfate, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0088,"Imatinib, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0081,"Injection, piperacillin sodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0078,"Injection, fosphenytoin sodium, 750 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4213,"Ascent, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4171,"Interfyl, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q0138,"Injection, ferumoxytol, for treatment of iron deficiency anemia, 1 mg (non-esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,Q0515,"Injection, sermorelin acetate, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,Q0224,"Injection, pemivibart, for the pre-exposure prophylaxis only, for certain adults and adolescents (12 years of age and older weighing at least 40 kg) with no known sars-cov-2 exposure, and who either have moderate-to-severe immune compromise due to a medical condition or receipt of immunosuppressive medications or treatments, and are unlikely to mount an adequate immune response to covid-19 vaccination, 4500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q0166,"Granisetron hydrochloride, 1 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 24 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0164,"Prochlorperazine maleate, 5 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0180,"Dolasetron mesylate, 100 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 24 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,J3304,"Injection, triamcinolone acetonide, preservative-free, extended-release, microsphere formulation, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9342,"Injection, thiotepa, not otherwise specified, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2940,"Injection, somatrem, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0080,"Injection, pentamidine isethionate, 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0715,"Injection, ceftizoxime sodium, per 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9088,"Instillation, bupivacaine and meloxicam, 1 mg/0.03 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9175,"Injection, treosulfan, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A2023,"Innovamatrix pd, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A2014,"Omeza collagen matrix or omeza complete matrix, per 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A2004,"Xcellistem, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A4737,"Injectable anesthetic, for dialysis, per 10 ml",Included rule,,,,,,,Yes
+,,,HCPCS,C9067,"Gallium ga-68, dotatoc, diagnostic, 0.01 mci",Included rule,,,,,,,Yes
+,,,HCPCS,J0223,"Injection, givosiran, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0695,"Injection, ceftolozane 50 mg and tazobactam 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7313,"Injection, fluocinolone acetonide, intravitreal implant (iluvien), 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7171,"Injection, adamts13, recombinant-krhn, 10 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J3316,"Injection, triptorelin, extended-release, 3.75 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9057,"Injection, copanlisib, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1301,"Injection, edaravone, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7342,"Instillation, ciprofloxacin otic suspension, 6 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0517,"Injection, benralizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9462,"Injection, delafloxacin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1833,"Injection, isavuconazonium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2351,"Injection, ocrelizumab, 1 mg and hyaluronidase-ocsq",Included rule,,,,,,,Yes
+,,,HCPCS,J2280,"Injection, moxifloxacin, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2170,"Injection, mecasermin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1951,"Injection, leuprolide acetate for depot suspension (fensolvi), 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2247,"Injection, micafungin sodium (par pharm) not thereapeutically equivalent to j2248, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1442,"Injection, filgrastim (g-csf), excludes biosimilars, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J1447,"Injection, tbo-filgrastim, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J1449,"Injection, eflapegrastim-xnst, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1160,"Injection, digoxin, up to 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1325,"Injection, epoprostenol, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9376,"Injection, pozelimab-bbfg, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9353,"Injection, margetuximab-cmkb, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9356,"Injection, trastuzumab, 10 mg and hyaluronidase-oysk",Included rule,,,,,,,Yes
+,,,HCPCS,J9028,"Injection, nogapendekin alfa inbakicept-pmln, for intravesical use, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J8597,"Antiemetic drug, oral, not otherwise specified",Included rule,,,,,,,Yes
+,,,HCPCS,J9033,"Injection, bendamustine hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9011,"Injection, datopotamab deruxtecan-dlnk, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8612,"Methotrexate (xatmep), oral, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7641,"Flunisolide, inhalation solution, compounded product, administered through dme, unit dose, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7645,"Ipratropium bromide, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7609,"Albuterol, inhalation solution, compounded product, administered through dme, unit dose, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0740,"Injection, cidofovir, 375 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0725,"Injection, chorionic gonadotropin, per 1,000 usp units",Included rule,,,,,,,Yes
+,,,HCPCS,J0738,"Injection, lenacapavir, 1 mg, fda approved prescription, only for use as hiv pre-exposure prophylaxis (not for use as treatment for hiv)",Included rule,,,,,,,Yes
+,,,HCPCS,J0717,"Injection, certolizumab pegol, 1 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J0759,"Injection, clevidipine butyrate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0750,"Emtricitabine 200mg and tenofovir disoproxil fumarate 300mg, oral, fda approved prescription, only for use as hiv pre-exposure prophylaxis (not for use as treatment of hiv)",Included rule,,,,,,,Yes
+,,,HCPCS,J0743,"Injection, cilastatin sodium; imipenem, per 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0775,"Injection, collagenase, clostridium histolyticum, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0850,"Injection, cytomegalovirus immune globulin intravenous (human), per vial",Included rule,,,,,,,Yes
+,,,HCPCS,J0802,"Injection, corticotropin (ani), up to 40 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0840,"Injection, crotalidae polyvalent immune fab (ovine), up to 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J0890,"Injection, peginesatide, 0.1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0650,"Injection, levothyroxine sodium, not otherwise specified, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J0640,"Injection, leucovorin calcium, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0605,"Sucroferric oxyhydroxide, oral, 5 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0607,"Lanthanum carbonate, oral, 5 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0670,"Injection, mepivacaine hydrochloride, per 10 ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9968,"Injection, non-radioactive, non-contrast, visualization adjunct (e.g., methylene blue, isosulfan blue), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9964,"High osmolar contrast material, 400 or greater mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9966,"Low osmolar contrast material, 200-299 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q5141,"Injection, adalimumab-aaty, biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5142,"Injection, adalimumab-ryvk biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5152,"Injection, eculizumab-aeeb (bkemv), biosimilar, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9051,"Injection, bortezomib (maia), not therapeutically equivalent to j9041, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9263,"Injection, oxaliplatin, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9262,"Injection, omacetaxine mepesuccinate, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9223,"Injection, lurbinectedin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9215,"Injection, interferon, alfa-n3, (human leukocyte derived), 250,000 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J9227,"Injection, isatuximab-irfc, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9206,"Injection, irinotecan, 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9201,"Injection, gemcitabine hydrochloride, not otherwise specified, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9155,"Injection, degarelix, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9118,"Injection, calaspargase pegol-mknl, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J9178,"Injection, epirubicin hcl, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9060,"Injection, cisplatin, powder or solution, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9100,"Injection, cytarabine, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9075,"Injection, cyclophosphamide, not otherwise specified, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7513,"Daclizumab, parenteral, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7310,"Ganciclovir, 4.5 mg, long-acting implant",Included rule,,,,,,,Yes
+,,,HCPCS,Q5109,"Injection, infliximab-qbtx, biosimilar, (ixifi), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1444,"Injection, ferric pyrophosphate citrate powder, 0.1 mg of iron",Included rule,,,,,,,Yes
+,,,HCPCS,J1710,"Injection, hydrocortisone sodium phosphate, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1620,"Injection, gonadorelin hydrochloride, per 100 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1590,"Injection, gatifloxacin, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7527,"Everolimus, oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7297,"Levonorgestrel-releasing intrauterine contraceptive system (liletta), 52 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7213,"Injection, coagulation factor ix (recombinant), ixinity, 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7301,"Levonorgestrel-releasing intrauterine contraceptive system (skyla), 13.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7179,"Injection, von willebrand factor (recombinant), (vonvendi), 1 i.u. vwf:rco",Included rule,,,,,,,Yes
+,,,HCPCS,J7191,"Factor viii (antihemophilic factor (porcine)), per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,Q5121,"Injection, infliximab-axxq, biosimilar, (avsola), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5118,"Injection, bevacizumab-bvzr, biosimilar, (zirabev), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5108,"Injection, pegfilgrastim-jmdb (fulphila), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1453,"Injection, fosaprepitant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1429,"Injection, golodirsen, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1438,"Injection, etanercept, 25 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J1260,"Injection, dolasetron mesylate, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1230,"Injection, methadone hcl, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1320,"Injection, amitriptyline hcl, up to 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1304,"Injection, tofersen, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0899,"Injection, argatroban (auromedics), not therapeutically equivalent to j0884, 1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0895,"Injection, deferoxamine mesylate, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0898,"Injection, argatroban (auromedics), not therapeutically equivalent to j0883, 1 mg (for non-esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,J0130,"Injection abciximab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0136,"Injection, acetaminophen (b braun), not therapeutically equivalent to j0131, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1814,"Insulin (lyumjev), per 5 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1806,"Injection, esmolol hydrochloride (wg critical care), not therapeutically equivalent to j1805, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1748,"Injection, infliximab-dyyb (zymfentra), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1744,"Injection, icatibant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1611,"Injection, glucagon hydrochloride (fresenius kabi), not therapeutically equivalent to j1610, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1602,"Injection, golimumab, 1 mg, for intravenous use",Included rule,,,,,,,Yes
+,,,HCPCS,J1566,"Injection, immune globulin, intravenous, lyophilized (e.g., powder), not otherwise specified, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1610,"Injection, glucagon hydrochloride, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1574,"Injection, ganciclovir sodium (exela), not therapeutically equivalent to j1570, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3360,"Injection, diazepam, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3374,"Injection, vancomycin hydrochloride (mylan) not therapeutically equivalent to j3373, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3391,"Injection, atidarsagene autotemcel, per treatment",Included rule,,,,,,,Yes
+,,,HCPCS,J3300,"Injection, triamcinolone acetonide, preservative free, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3263,"Injection, toripalimab-tpzi, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3230,"Injection, chlorpromazine hcl, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3570,"Laetrile, amygdalin, vitamin b17",Included rule,,,,,,,Yes
+,,,HCPCS,J7131,"Hypertonic saline solution, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J7175,"Injection, factor x, (human), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7040,"Infusion, normal saline solution, sterile (500 ml = 1 unit)",Included rule,,,,,,,Yes
+,,,HCPCS,J3415,"Injection, pyridoxine hcl, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3485,"Injection, zidovudine, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3480,"Injection, potassium chloride, per 2 meq",Included rule,,,,,,,Yes
+,,,HCPCS,J9329,"Injection, tislelizumab-jsgr, 1mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9304,"Injection, pemetrexed (pemfexy), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9331,"Injection, sirolimus protein-bound particles, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9302,"Injection, ofatumumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9275,"Injection, cosibelimab-ipdl, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0598,"Injection, c-1 esterase inhibitor (human), cinryze, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0583,"Injection, bivalirudin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0577,"Injection, buprenorphine extended-release (brixadi), less than or equal to 7 days of therapy",Included rule,,,,,,,Yes
+,,,HCPCS,J0588,"Injection, incobotulinumtoxin a, 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,J0461,"Injection, atropine sulfate, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0491,"Injection, anifrolumab-fnia, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0558,"Injection, penicillin g benzathine and penicillin g procaine, 100,000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0402,"Injection, aripiprazole (abilify asimtufii), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0282,"Injection, amiodarone hydrochloride, 30 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0348,"Injection, anidulafungin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0248,"Injection, remdesivir, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0209,"Injection, sodium thiosulfate (hope), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0184,"Injection, amisulpride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9393,"Injection, fulvestrant (teva), not therapeutically equivalent to j9395, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9357,"Injection, valrubicin, intravesical, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8498,"Antiemetic drug, rectal/suppository, not otherwise specified",Included rule,,,,,,,Yes
+,,,HCPCS,J9027,"Injection, clofarabine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8565,"Gefitinib, oral, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8522,"Capecitabine, oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7676,"Pentamidine isethionate, inhalation solution, compounded product, administered through dme, unit dose form, per 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7682,"Tobramycin, inhalation solution, fda-approved final product, non-compounded, unit dose form, administered through dme, per 300 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7680,"Terbutaline sulfate, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7677,"Revefenacin inhalation solution, fda-approved final product, non-compounded, administered through dme, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7640,"Formoterol, inhalation solution, compounded product, administered through dme, unit dose form, 12 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J7627,"Budesonide, inhalation solution, compounded product, administered through dme, unit dose form, up to 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7607,"Levalbuterol, inhalation solution, compounded product, administered through dme, concentrated form, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0737,"Injection, clindamycin phosphate (baxter), not therapeutically equivalent to j0736, 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0872,"Injection, daptomycin (xellia), unrefrigerated, not therapeutically equivalent to j0878 or j0873, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0885,"Injection, epoetin alfa, (for non-esrd use), 1000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0630,"Injection, calcitonin salmon, up to 400 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0651,"Injection, levothyroxine sodium (fresenius kabi), not therapeutically equivalent to j0650, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J0692,"Injection, cefepime hydrochloride, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5126,"Injection, bevacizumab-maly, biosimilar, (alymsys), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9992,"Injection, buprenorphine extended-release (sublocade), greater than 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5145,"Injection, adalimumab-afzb (abrilada), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9991,"Injection, buprenorphine extended-release (sublocade), less than or equal to 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2274,"Injection, morphine sulfate, preservative-free for epidural or intrathecal use, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8670,"Rolapitant, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9960,"High osmolar contrast material, 200-249 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J9047,"Injection, carfilzomib, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9267,"Injection, paclitaxel, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9266,"Injection, pegaspargase, per single dose vial",Included rule,,,,,,,Yes
+,,,HCPCS,J9213,"Injection, interferon, alfa-2a, recombinant, 3 million units",Included rule,,,,,,,Yes
+,,,HCPCS,J9172,"Injection, docetaxel (docivyx), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9071,"Injection, cyclophosphamide (auromedics), 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2820,"Injection, sargramostim (gm-csf), 50 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2850,"Injection, secretin, synthetic, human, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J3060,"Injection, taliglucerase alfa, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J2690,"Injection, procainamide hcl, up to 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J2650,"Injection, prednisolone acetate, up to 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2794,"Injection, risperidone (risperdal consta), 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2561,"Injection, phenobarbital sodium (sezaby), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2543,"Injection, piperacillin sodium/tazobactam sodium, 1 gram/0.125 grams (1.125 grams)",Included rule,,,,,,,Yes
+,,,HCPCS,J2590,"Injection, oxytocin, up to 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J2440,"Injection, papaverine hcl, up to 60 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2506,"Injection, pegfilgrastim, excludes biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0122,"Injection, menotropins, 75 iu",Included rule,,,,,,,Yes
+,,,HCPCS,S0140,"Saquinavir, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0109,"Methadone, oral, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0014,"Tacrine hydrochloride, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0040,"Injection, ticarcillin disodium and clavulanate potassium, 3.1 grams",Included rule,,,,,,,Yes
+,,,HCPCS,Q4189,"Artacent ac, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4112,"Cymetra, injectable, 1 cc",Included rule,,,,,,,Yes
+,,,HCPCS,Q2009,"Injection, fosphenytoin, 50 mg phenytoin equivalent",Included rule,,,,,,,Yes
+,,,HCPCS,Q3028,"Injection, interferon beta-1a, 1 mcg for subcutaneous use",Included rule,,,,,,,Yes
+,,,HCPCS,Q0175,"Perphenazine, 4 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,J7296,"Levonorgestrel-releasing intrauterine contraceptive system, (kyleena), 19.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3358,"Ustekinumab, for intravenous injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2513,"Injection, pentastarch, 10% solution, 100 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2504,"Injection, pegademase bovine, 25 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J0889,"Daprodustat, oral, 1 mg, (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J9212,"Injection, interferon alfacon-1, recombinant, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,A2033,"Myriad morcells, 4 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,A2028,"Micromatrix flex, per mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9575,"Injection, gadoterate meglumine, 0.1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,A9577,"Injection, gadobenate dimeglumine (multihance), per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J1303,"Injection, ravulizumab-cwvz, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9317,"Injection, sacituzumab govitecan-hziy, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0691,"Injection, lefamulin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0791,"Injection, crizanlizumab-tmca, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0883,"Injection, argatroban, 1 mg (for non-esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,J3090,"Injection, tedizolid phosphate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2547,"Injection, peramivir, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2781,"Injection, pegcetacoplan, intravitreal, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9254,"Injection, lacosamide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9269,"Injection, tagraxofusp-erzs, 10 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J9229,"Injection, inotuzumab ozogamicin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9313,"Injection, moxetumomab pasudotox-tdfk, 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9176,"Injection, elotuzumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9205,"Injection, irinotecan liposome, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7203,"Injection factor ix, (antihemophilic factor, recombinant), glycopegylated, (rebinyn), 1 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J7318,"Hyaluronan or derivative, durolane, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9950,"Injection, sulfur hexafluoride lipid microspheres, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2427,"Injection, paliperidone palmitate extended release (invega hafyera, or invega trinza), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2402,"Injection, chloroprocaine hydrochloride (clorotekal), per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2430,"Injection, pamidronate disodium, per 30 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2325,"Injection, nesiritide, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2358,"Injection, olanzapine, long-acting, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2020,"Injection, linezolid, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2002,"Injection, lidocaine hcl in 5% dextrose, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2253,"Injection, midazolam (seizalam), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2180,"Injection, meperidine and promethazine hcl, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2305,"Injection, nitroglycerin, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2265,"Injection, minocycline hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7315,"Mitomycin, ophthalmic, 0.2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7501,"Azathioprine, parenteral, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7356,"Injection, foscarbidopa 0.25 mg/foslevodopa 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7331,"Hyaluronan or derivative, synojoynt, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7345,"Aminolevulinic acid hcl for topical administration, 10% gel, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7503,"Tacrolimus, extended release, (envarsus xr), oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7186,"Injection, antihemophilic factor viii/von willebrand factor complex (human), per factor viii i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7204,"Injection, factor viii, antihemophilic factor (recombinant), (esperoct), glycopegylated-exei, per iu",Included rule,,,,,,,Yes
+,,,HCPCS,J7197,"Antithrombin iii (human), per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7195,"Injection, factor ix (antihemophilic factor, recombinant) per iu, not otherwise specified",Included rule,,,,,,,Yes
+,,,HCPCS,J7657,"Isoproterenol hcl, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7668,"Metaproterenol sulfate, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7667,"Metaproterenol sulfate, inhalation solution, compounded product, concentrated form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7643,"Glycopyrrolate, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7650,"Isoetharine hcl, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7648,"Isoetharine hcl, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7622,"Beclomethasone, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7612,"Levalbuterol, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7629,"Bitolterol mesylate, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7633,"Budesonide, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, per 0.25 milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7624,"Betamethasone, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J0703,"Injection, cefepime hydrochloride (b braun), not therapeutically equivalent to maxipime, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0770,"Injection, colistimethate sodium, up to 150 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0879,"Injection, difelikefalin, 0.1 microgram, (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0841,"Injection, crotalidae immune f(ab')2 (equine), 120 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0881,"Injection, darbepoetin alfa, 1 microgram (non-esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,J0652,"Injection, levothyroxine sodium (hikma), not therapeutically equivalent to j0650, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J0637,"Injection, caspofungin acetate, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0618,"Injection, calcium chloride, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0666,"Injection, bupivacaine liposome, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9038,"Injection, axatilimab-csfr, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9048,"Injection, bortezomib (fresenius kabi), not therapeutically equivalent to j9041, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9045,"Injection, carboplatin, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9042,"Injection, brentuximab vedotin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9255,"Injection, methotrexate (accord), not therapeutically equivalent to j9260, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9216,"Injection, interferon, gamma 1-b, 3 million units",Included rule,,,,,,,Yes
+,,,HCPCS,J9218,"Leuprolide acetate, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9190,"Injection, fluorouracil, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9207,"Injection, ixabepilone, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9063,"Injection, mirvetuximab soravtansine-gynx, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9055,"Injection, cetuximab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3101,"Injection, tenecteplase, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3095,"Injection, telavancin, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3010,"Injection, fentanyl citrate, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2783,"Injection, rasburicase, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2675,"Injection, progesterone, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2730,"Injection, pralidoxime chloride, up to 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J2469,"Injection, palonosetron hcl, 25 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2597,"Injection, desmopressin acetate, per 1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2550,"Injection, promethazine hcl, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2460,"Injection, oxytetracycline hcl, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2508,"Injection, pegunigalsidase alfa-iwxj, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0132,"Injection, ganirelix acetate, 250 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,S0137,"Didanosine (ddi), 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0172,"Chlorambucil, oral, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0179,"Megestrol acetate, oral, 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0177,"Levamisole hydrochloride, oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0021,"Injection, cefoperazone sodium, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J1452,"Injection, fomivirsen sodium, intraocular, 1.65 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0172,"Injection, aducanumab-avwa, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8562,"Fludarabine phosphate, oral, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9019,"Injection, asparaginase (erwinaze), 1,000 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J9020,"Injection, asparaginase, not otherwise specified, 10,000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J9272,"Injection, dostarlimab-gxly, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7209,"Injection, factor viii, (antihemophilic factor, recombinant), (nuwiq), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7210,"Injection, factor viii, (antihemophilic factor, recombinant), (afstyla), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J0875,"Injection, dalbavancin, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7172,"Injection, marstacimab-hncq, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0567,"Injection, cerliponase alfa, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3031,"Injection, fremanezumab-vfrm, 1 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self-administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J2182,"Injection, mepolizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9488,"Injection, conivaptan hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2062,"Loxapine for inhalation, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2406,"Injection, oritavancin (kimyrsa), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2353,"Injection, octreotide, depot form for intramuscular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2151,"Injection, mannitol, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1932,"Injection, lanreotide, (cipla), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1955,"Injection, levocarnitine, per 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J2252,"Injection, midazolam in 0.8% sodium chloride, intravenous, not therapeutically equivalent to j2250, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2248,"Injection, micafungin sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2210,"Injection, methylergonovine maleate, up to 0.2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2212,"Injection, methylnaltrexone, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2277,"Injection, motixafortide, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1414,"Injection, fidanacogene elaparvovec-dzkt, per therapeutic dose",Included rule,,,,,,,Yes
+,,,HCPCS,J1413,"Injection, delandistrogene moxeparvovec-rokl, per therapeutic dose",Included rule,,,,,,,Yes
+,,,HCPCS,J1450,"Injection fluconazole, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1171,"Injection, hydromorphone, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1000,"Injection, depo-estradiol cypionate, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0911,"Instillation, taurolidine 1.35 mg and heparin sodium 100 units (central venous catheter lock for adult patients receiving chronic hemodialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J1010,"Injection, methylprednisolone acetate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1240,"Injection, dimenhydrinate, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1202,"Miglustat, oral, 65 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1290,"Injection, ecallantide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0893,"Injection, decitabine (sun pharma), not therapeutically equivalent to j0894, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0137,"Injection, acetaminophen (hikma), not therapeutically equivalent to j0131, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1812,"Insulin (fiasp), per 5 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1756,"Injection, iron sucrose, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1830,"Injection, interferon beta-1b, 0.25 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J1720,"Injection, hydrocortisone sodium succinate, up to 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1626,"Injection, granisetron hydrochloride, 100 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1561,"Injection, immune globulin, (gamunex-c/gammaked), non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1459,"Injection, immune globulin (privigen), intravenous, non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9280,"Injection, mitomycin, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9320,"Injection, streptozocin, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J9324,"Injection, pemetrexed (pemrydi rtu), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9274,"Injection, tebentafusp-tebn, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J9286,"Injection, glofitamab-gxbm, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9361,"Injection, efbemalenograstim alfa-vuxw, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9395,"Injection, fulvestrant, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9600,"Injection, porfimer sodium, 75 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9359,"Injection, loncastuximab tesirine-lpyl, 0.075 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9015,"Injection, aldesleukin, per single use vial",Included rule,,,,,,,Yes
+,,,HCPCS,J8541,"Dexamethasone (hemady), oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8501,"Aprepitant, oral, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7634,"Budesonide, inhalation solution, compounded product, administered through dme, concentrated form, per 0.25 milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7636,"Atropine, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J0713,"Injection, ceftazidime, per 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0701,"Injection, cefepime hydrochloride (baxter), not therapeutically equivalent to maxipime, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0720,"Injection, chloramphenicol sodium succinate, up to 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J0744,"Injection, ciprofloxacin for intravenous infusion, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0745,"Injection, codeine phosphate, per 30 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0892,"Injection, argatroban (accord), not therapeutically equivalent to j0884, 1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0877,"Injection, daptomycin (hospira), not therapeutically equivalent to j0878, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0615,"Calcium acetate, oral, 23 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0641,"Injection, levoleucovorin, not otherwise specified, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0609,"Ferric citrate, oral, 3 mg ferric iron, (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0688,"Injection, cefazolin sodium (hikma), not therapeutically equivalent to j0690, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5133,"Injection, tocilizumab-bavi (tofidence), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5124,"Injection, ranibizumab-nuna, biosimilar, (byooviz), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9998,"Injection, ustekinumab-aekn (selarsdi), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1726,"Injection, hydroxyprogesterone caproate, (makena), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5149,"Injection, aflibercept-abzv (enzeevu), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5143,"Injection, adalimumab-adbm, biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5153,"Injection, aflibercept-yszy (opuviz), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9130,"Dacarbazine, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9209,"Injection, mesna, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9211,"Injection, idarubicin hydrochloride, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9181,"Injection, etoposide, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9204,"Injection, mogamulizumab-kpkc, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9150,"Injection, daunorubicin, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9120,"Injection, dactinomycin, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3105,"Injection, terbutaline sulfate, up to 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2998,"Injection, plasminogen, human-tvmh, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3000,"Injection, streptomycin, up to 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J2950,"Injection, promazine hcl, up to 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2785,"Injection, regadenoson, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4174,"Palingen or promatrx, 0.36 mg per 0.25 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J1562,"Injection, immune globulin (vivaglobin), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3364,"Injection, urokinase, 5000 iu vial",Included rule,,,,,,,Yes
+,,,HCPCS,J9270,"Injection, plicamycin, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0710,"Injection, cephapirin sodium, up to 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J0795,"Injection, corticorelin ovine triflutate, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J1439,"Injection, ferric carboxymaltose, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1430,"Injection, ethanolamine oleate, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1451,"Injection, fomepizole, 15 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1250,"Injection, dobutamine hydrochloride, per 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1203,"Injection, cipaglucosidase alfa-atga, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1324,"Injection, enfuvirtide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1364,"Injection, erythromycin lactobionate, per 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1302,"Injection, sutimlimab-jome, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1100,"Injection, dexamethasone sodium phosphate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0897,"Injection, denosumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0129,"Injection, abatacept, 10 mg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J0122,"Injection, eravacycline, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0164,"Injection, epinephrine in sodium chloride (baxter), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0174,"Lecanemab-irmb, for intravenous injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1807,"Injection, ethacrynate sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1811,"Insulin (fiasp) for administration through dme (i.e., insulin pump) per 50 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1835,"Injection, itraconazole, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1743,"Injection, idursulfase, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1612,"Injection, glucagon (gvoke), 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1645,"Injection, dalteparin sodium, per 2500 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J1568,"Injection, immune globulin, (octagam), intravenous, non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1555,"Injection, immune globulin (cuvitru), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1571,"Injection, hepatitis b immune globulin (hepagam b), intramuscular, 0.5 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J3357,"Ustekinumab, for subcutaneous injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3285,"Injection, treprostinil, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3299,"Injection, triamcinolone acetonide (xipere), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3399,"Injection, onasemnogene abeparvovec-xioi, per treatment, up to 5x10^15 vector genomes",Included rule,,,,,,,Yes
+,,,HCPCS,J3301,"Injection, triamcinolone acetonide, not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3265,"Injection, torsemide, 10 mg/ml",Included rule,,,,,,,Yes
+,,,HCPCS,J3303,"Injection, triamcinolone hexacetonide, per 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3535,Drug administered through a metered dose inhaler,Included rule,,,,,,,Yes
+,,,HCPCS,J7050,"Infusion, normal saline solution, 250 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J3420,"Injection, vitamin b-12 cyanocobalamin, up to 1000 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J9321,"Injection, epcoritamab-bysp, 0.16 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9303,"Injection, panitumumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9318,"Injection, romidepsin, non-lyophilized, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9309,"Injection, polatuzumab vedotin-piiq, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0490,"Injection, belimumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0515,"Injection, benztropine mesylate, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0211,"Injection, sodium nitrite 3 mg and sodium thiosulfate 125 mg (nithiodote)",Included rule,,,,,,,Yes
+,,,HCPCS,J9347,"Injection, tremelimumab-actl, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9345,"Injection, retifanlimab-dlwr, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9354,"Injection, ado-trastuzumab emtansine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9355,"Injection, trastuzumab, excludes biosimilar, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9034,"Injection, bendamustine hcl (bendeka), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9030,"Bcg live intravesical instillation, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8600,"Melphalan; oral, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8560,"Etoposide; oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7699,"Noc drugs, inhalation solution administered through dme",Included rule,,,,,,,Yes
+,,,HCPCS,J7659,"Isoproterenol hcl, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7638,"Dexamethasone, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7615,"Levalbuterol, inhalation solution, compounded product, administered through dme, unit dose, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7608,"Acetylcysteine, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per gram",Included rule,,,,,,,Yes
+,,,HCPCS,J7611,"Albuterol, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0735,"Injection, clonidine hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0752,"Oral, lenacapavir, 300 mg, fda approved prescription, only for use as hiv pre-exposure prophylaxis (not for use as treatment for hiv)",Included rule,,,,,,,Yes
+,,,HCPCS,J0870,"Injection, imetelstat, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0834,"Injection, cosyntropin, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0799,"Fda approved prescription drug, only for use as hiv pre-exposure prophylaxis (not for use as treatment of hiv), not otherwise classified",Included rule,,,,,,,Yes
+,,,HCPCS,J0884,"Injection, argatroban, 1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0612,"Injection, calcium gluconate, not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0606,"Injection, etelcalcetide, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0608,"Lanthanum carbonate, oral, powder, 5 mg, not therapeutically equivalent to j0607 (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0668,"Instillation, bupivacaine and meloxicam, 1 mg/0.03 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0675,"Injection, carboprost tromethamine, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5127,"Injection, pegfilgrastim-fpgk (stimufend), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5136,"Injection, denosumab-bbdz (jubbonti/wyost), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5129,"Injection, bevacizumab-adcd (vegzelma), biosimilar, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9999,"Injection, ustekinumab-aauz (otulfi), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9963,"High osmolar contrast material, 350-399 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9965,"Low osmolar contrast material, 100-199 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9951,"Low osmolar contrast material, 400 or greater mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J0888,"Injection, epoetin beta, 1 microgram, (for non esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,J9052,"Injection, carmustine (accord), not therapeutically equivalent to j9050, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9035,"Injection, bevacizumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9040,"Injection, bleomycin sulfate, 15 units",Included rule,,,,,,,Yes
+,,,HCPCS,J9050,"Injection, carmustine, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9245,"Injection, melphalan hydrochloride, not otherwise specified, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9246,"Injection, melphalan (evomela), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9261,"Injection, nelarabine, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9264,"Injection, paclitaxel protein-bound particles, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9230,"Injection, mechlorethamine hydrochloride, (nitrogen mustard), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9225,"Histrelin implant (vantas), 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9161,"Injection, denileukin diftitox-cxdl, 1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J9203,"Injection, gemtuzumab ozogamicin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9174,"Injection, docetaxel (beizray), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9064,"Injection, cabazitaxel (sandoz), not therapeutically equivalent to j9043, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9072,"Injection, cyclophosphamide (frindovyx), 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9065,"Injection, cladribine, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1267,"Injection, doripenem, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0288,"Injection, amphotericin b cholesteryl sulfate complex, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0395,"Injection, arbutamine hcl, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0380,"Injection, metaraminol bitartrate, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0205,"Injection, alglucerase, per 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0190,"Injection, biperiden lactate, per 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1930,"Injection, lanreotide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2410,"Injection, oxymorphone hcl, up to 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2371,"Injection, phenylephrine hydrochloride, 20 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J2373,"Injection, phenylephrine hydrochloride (immphentiv), 20 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J2356,"Injection, tezepelumab-ekko, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7604,"Acetylcysteine, inhalation solution, compounded product, administered through dme, unit dose form, per gram",Included rule,,,,,,,Yes
+,,,HCPCS,J7311,"Injection, fluocinolone acetonide, intravitreal implant (retisert), 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7325,"Hyaluronan or derivative, synvisc or synvisc-one, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7295,"Ethinyl estradiol and etonogestrel 0.015mg, 0.12mg per 24 hours; monthly vaginal ring, each",Included rule,,,,,,,Yes
+,,,HCPCS,J7355,"Injection, travoprost, intracameral implant, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7353,"Anacaulase-bcdb, 8.8% gel, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J7511,"Lymphocyte immune globulin, antithymocyte globulin, rabbit, parenteral, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7514,"Mycophenolate mofetil (myhibbin), oral suspension, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7183,"Injection, von willebrand factor complex (human), wilate, 1 i.u. vwf:rco",Included rule,,,,,,,Yes
+,,,HCPCS,Q5119,"Injection, rituximab-pvvr, biosimilar, (ruxience), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5110,"Injection, filgrastim-aafi, biosimilar, (nivestym), 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,Q5104,"Injection, infliximab-abda, biosimilar, (renflexis), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5100,"Injection, ustekinumab-kfce (yesintek), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1437,"Injection, ferric derisomaltose, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1435,"Injection, estrone, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1120,"Injection, acetazolamide sodium, up to 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1130,"Injection, diclofenac sodium, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1163,"Injection, diltiazem hydrochloride, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0945,"Injection, brompheniramine maleate, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1071,"Injection, testosterone cypionate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1050,"Injection, medroxyprogesterone acetate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1265,"Injection, dopamine hcl, 40 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1190,"Injection, dexrazoxane hydrochloride, per 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1205,"Injection, chlorothiazide sodium, per 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1327,"Injection, eptifibatide, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1307,"Injection, crovalimab-akkz, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0131,"Injection, acetaminophen, not otherwise specified,10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0166,"Injection, epinephrine (bpi), not therapeutically equivalent to j0165, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0138,"Injection, acetaminophen 10 mg and ibuprofen 3 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1813,"Insulin (lyumjev) for administration through dme (i.e., insulin pump) per 50 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1805,"Injection, esmolol hydrochloride, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1800,"Injection, propranolol hcl, up to 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1823,"Injection, inebilizumab-cdon, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1920,"Injection, labetalol hydrochloride, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1630,"Injection, haloperidol, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1670,"Injection, tetanus immune globulin, human, up to 250 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1642,"Injection, heparin sodium, (heparin lock flush), per 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1808,"Injection, folic acid, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1570,"Injection, ganciclovir sodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1455,"Injection, foscarnet sodium, per 1000 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1575,"Injection, immune globulin/hyaluronidase, (hyqvia), 100 mg immuneglobulin",Included rule,,,,,,,Yes
+,,,HCPCS,J3401,"Beremagene geperpavec-svdt for topical administration, containing nominal 5 x 10^9 pfu/ml vector genomes, per 0.1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J3410,"Injection, hydroxyzine hcl, up to 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3403,"Revakinagene taroretcel-lwey, per implant",Included rule,,,,,,,Yes
+,,,HCPCS,J3396,"Injection, verteporfin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3260,"Injection, tobramycin sulfate, up to 80 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7030,"Infusion, normal saline solution , 1000 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J3520,"Edetate disodium, per 150 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7110,"Infusion, dextran 75, 500 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J7042,5% dextrose/normal saline (500 ml = 1 unit),Included rule,,,,,,,Yes
+,,,HCPCS,J3471,"Injection, hyaluronidase, ovine, preservative free, per 1 usp unit (up to 999 usp units)",Included rule,,,,,,,Yes
+,,,HCPCS,J3489,"Injection, zoledronic acid, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9323,"Injection, pemetrexed ditromethamine, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9298,"Injection, nivolumab and relatlimab-rmbw, 3 mg/1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9307,"Injection, pralatrexate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9268,"Injection, pentostatin, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9289,"Injection, nivolumab, 2 mg and hyaluronidase-nvhy",Included rule,,,,,,,Yes
+,,,HCPCS,Q4114,"Integra flowable wound matrix, injectable, 1 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J0470,"Injection, dimercaprol, per 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0457,"Injection, aztreonam, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0281,"Injection, aminocaproic acid, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J0349,"Injection, rezafungin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0219,"Injection, avalglucosidase alfa-ngpt, 4 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0221,"Injection, alglucosidase alfa, (lumizyme), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0257,"Injection, alpha 1 proteinase inhibitor (human), (glassia), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0275,"Alprostadil urethral suppository (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J0224,"Injection, lumasiran, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0206,"Injection, allopurinol sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9390,"Injection, vinorelbine tartrate, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9351,"Injection, topotecan, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8611,"Methotrexate (jylamvo), oral, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9021,"Injection, asparaginase, recombinant, (rylaze), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9024,"Injection, atezolizumab, 5 mg and hyaluronidase-tqjs",Included rule,,,,,,,Yes
+,,,HCPCS,J8499,"Prescription drug, oral, non chemotherapeutic, nos",Included rule,,,,,,,Yes
+,,,HCPCS,J7685,"Tobramycin, inhalation solution, compounded product, administered through dme, unit dose form, per 300 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7799,"Noc drugs, other than inhalation drugs, administered through dme",Included rule,,,,,,,Yes
+,,,HCPCS,J8999,"Prescription drug, oral, chemotherapeutic, nos",Included rule,,,,,,,Yes
+,,,HCPCS,J8510,"Busulfan; oral, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7614,"Levalbuterol, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7670,"Metaproterenol sulfate, inhalation solution, compounded product, administered through dme, unit dose form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J0697,"Injection, sterile cefuroxime sodium, per 750 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0689,"Injection, cefazolin sodium (baxter), not therapeutically equivalent to j0690, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5140,"Injection, adalimumab-fkjp, biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5125,"Injection, filgrastim-ayow, biosimilar, (releuko), 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,Q9996,"Injection, ustekinumab-ttwe (pyzchiva), subcutaneous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9962,"High osmolar contrast material, 300-349 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9958,"High osmolar contrast material, up to 149 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9956,"Injection, octafluoropropane microspheres, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q5150,"Injection, aflibercept-mrbb (ahzantive), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1945,"Injection, lepirudin, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2777,"Injection, faricimab-svoa, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2790,"Injection, rho d immune globulin, human, full dose, 300 micrograms (1500 i.u.)",Included rule,,,,,,,Yes
+,,,HCPCS,J2725,"Injection, protirelin, per 250 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J2471,"Injection, pantoprazole (hikma), not therapeutically equivalent to j2470, 40 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0128,"Injection, follitropin beta, 75 iu",Included rule,,,,,,,Yes
+,,,HCPCS,S0139,"Minoxidil, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0108,"Mercaptopurine, oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0174,"Dolasetron mesylate, oral 50 mg (for circumstances falling under the medicare statute, use q0180)",Included rule,,,,,,,Yes
+,,,HCPCS,S0178,"Lomustine, oral, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q2049,"Injection, doxorubicin hydrochloride, liposomal, imported lipodox, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9341,"Injection, thiotepa (tepylute), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0013,"Esketamine, nasal spray, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0350,"Injection, anistreplase, per 30 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0365,"Injection, aprotonin, 10,000 kiu",Included rule,,,,,,,Yes
+,,,HCPCS,J0215,"Injection, alefacept, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0200,"Injection, alatrofloxacin mesylate, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9089,"Bupivacaine, collagen-matrix implant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9603,"Injection, pafolacianine, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9573,"Injection, gadopiclenol, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J3241,"Injection, teprotumumab-trbw, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1427,"Injection, viltolarsen, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0121,"Injection, omadacycline, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7402,"Mometasone furoate sinus implant, (sinuva), 10 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J7202,"Injection, factor ix, albumin fusion protein, (recombinant), idelvion, 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7207,"Injection, factor viii, (antihemophilic factor, recombinant), pegylated, 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7181,"Injection, factor xiii a-subunit, (recombinant), per iu",Included rule,,,,,,,Yes
+,,,HCPCS,J9276,"Injection, zanidatamab-hrii, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9589,"Instillation, hexaminolevulinate hydrochloride, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1096,"Dexamethasone, lacrimal ophthalmic insert, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7169,"Injection, coagulation factor xa (recombinant), inactivated-zhzo (andexxa), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1322,"Injection, elosulfase alfa, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9308,"Injection, ramucirumab, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1095,"Injection, dexamethasone 9 percent, intraocular, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7322,"Hyaluronan or derivative, hymovis or hymovis one, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9352,"Injection, trabectedin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9145,"Injection, daratumumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9023,"Injection, avelumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1627,"Injection, granisetron, extended-release, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9285,"Injection, olaratumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2403,"Chloroprocaine hcl ophthalmic, 3% gel, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2425,"Injection, palifermin, 50 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J2360,"Injection, orphenadrine citrate, up to 60 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2428,"Injection, paliperidone palmitate extended release (erzofri), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2313,"Injection, naloxone hydrochloride (zimhi), 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2320,"Injection, nandrolone decanoate, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2010,"Injection, lincomycin hcl, up to 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1939,"Injection, bumetanide, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1950,"Injection, leuprolide acetate (for depot suspension), per 3.75 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2249,"Injection, remimazolam, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2186,"Injection, meropenem and vaborbactam, 10mg/10mg (20mg)",Included rule,,,,,,,Yes
+,,,HCPCS,J2183,"Injection, meropenem (wg critical care), not therapeutically equivalent to j2185, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7525,"Tacrolimus, parenteral, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7312,"Injection, dexamethasone, intravitreal implant, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7323,"Hyaluronan or derivative, euflexxa, for intra-articular injection, per dose",Included rule,,,,,,,Yes
+,,,HCPCS,J7294,"Segesterone acetate and ethinyl estradiol 0.15mg, 0.013mg per 24 hours; yearly vaginal system, each",Included rule,,,,,,,Yes
+,,,HCPCS,J7300,Intrauterine copper contraceptive (paragard),Included rule,,,,,,,Yes
+,,,HCPCS,J7314,"Injection, fluocinolone acetonide, intravitreal implant (yutiq), 0.01 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7510,"Prednisolone oral, per 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7516,"Injection, cyclosporine, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7504,"Lymphocyte immune globulin, antithymocyte globulin, equine, parenteral, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7193,"Factor ix (antihemophilic factor, purified, non-recombinant) per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,Q5115,"Injection, rituximab-abbs, biosimilar, (truxima), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5117,"Injection, trastuzumab-anns, biosimilar, (kanjinti), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0896,"Injection, luspatercept-aamt, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0177,"Injection, aflibercept hd, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0178,"Injection, aflibercept, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1750,"Injection, iron dextran, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1790,"Injection, droperidol, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1640,"Injection, hemin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1675,"Injection, histrelin acetate, 10 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J1809,"Injection, fosdenopterin, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1460,"Injection, gamma globulin, intramuscular, 1 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J1456,"Injection, fosaprepitant (teva), not therapeutically equivalent to j1453, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1552,"Injection, immune globulin (alyglo), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1596,"Injection, glycopyrrolate, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3302,"Injection, triamcinolone diacetate, per 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3375,"Injection, vancomycin hydrochloride (xellia), not therapeutically equivalent to j3373, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3393,"Injection, betibeglogene autotemcel, per treatment",Included rule,,,,,,,Yes
+,,,HCPCS,J3397,"Injection, vestronidase alfa-vjbk, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3262,"Injection, tocilizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7100,"Infusion, dextran 40, 500 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J7165,"Injection, prothrombin complex concentrate, human-lans, per i.u. of factor ix activity",Included rule,,,,,,,Yes
+,,,HCPCS,J7121,"5% dextrose in lactated ringers infusion, up to 1000 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J3424,"Injection, hydroxocobalamin, intravenous, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3475,"Injection, magnesium sulfate, per 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9330,"Injection, temsirolimus, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9316,"Injection, pertuzumab, trastuzumab, and hyaluronidase-zzxf, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9273,"Injection, tisotumab vedotin-tftv, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9294,"Injection, pemetrexed (hospira), not therapeutically equivalent to j9305, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9292,"Injection, pemetrexed dipotassium, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0582,"Injection, bivalirudin (endo), not therapeutically equivalent to j0583, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0586,"Injection, abobotulinumtoxina, 5 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0476,"Injection, baclofen, 50 mcg for intrathecal trial",Included rule,,,,,,,Yes
+,,,HCPCS,J0525,"Injection, cefotetan disodium, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0283,"Injection, amiodarone hydrochloride (nexterone), 30 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0300,"Injection, amobarbital, up to 125 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0220,"Injection, alglucosidase alfa, 10 mg, not otherwise specified",Included rule,,,,,,,Yes
+,,,HCPCS,J0270,"Injection, alprostadil, 1.25 mcg (code may be used for medicare when drug administered under the direct supervision of a physician, not for use when drug is self administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J0225,"Injection, vutrisiran, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2782,"Injection, avacincaptad pegol, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2810,"Injection, theophylline, per 40 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2804,"Injection, rifampin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3055,"Injection, talquetamab-tgvs, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2865,"Injection, sulfamethoxazole 5 mg and trimethoprim 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2700,"Injection, oxacillin sodium, up to 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2670,"Injection, tolazoline hcl, up to 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2787,"Riboflavin 5'-phosphate, ophthalmic solution, up to 3 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2562,"Injection, plerixafor, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2510,"Injection, penicillin g procaine, aqueous, up to 600,000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J2560,"Injection, phenobarbital sodium, up to 120 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2468,"Injection, palonosetron hydrochloride (posfrea), 25 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J2507,"Injection, pegloticase, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0156,"Exemestane, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0175,"Flutamide, oral, 125 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0138,"Finasteride, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0190,"Mifepristone, oral, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0093,"Injection, morphine sulfate, 500 mg (loading dose for infusion pump)",Included rule,,,,,,,Yes
+,,,HCPCS,Q4168,"Amnioband, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4113,"Graftjacket xpress, injectable, 1 cc",Included rule,,,,,,,Yes
+,,,HCPCS,Q4081,"Injection, epoetin alfa, 100 units (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,Q2026,"Injection, radiesse, 0.1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q0177,"Hydroxyzine pamoate, 25 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,J2910,"Injection, aurothioglucose, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q2017,"Injection, teniposide, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q0174,"Thiethylperazine maleate, 10 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,J1330,"Injection, ergonovine maleate, up to 0.2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1443,"Injection, ferric pyrophosphate citrate solution (triferic), 0.1 mg of iron",Included rule,,,,,,,Yes
+,,,HCPCS,J9151,"Injection, daunorubicin citrate, liposomal formulation, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9165,"Injection, diethylstilbestrol diphosphate, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9098,"Injection, cytarabine liposome, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A2030,"Miro3d fibers, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,A2026,"Restrata minimatrix, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A4802,"Protamine sulfate, for hemodialysis, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0599,"Injection, c-1 esterase inhibitor (human), (haegarda), 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J9153,"Injection, liposomal, 1 mg daunorubicin and 2.27 mg cytarabine",Included rule,,,,,,,Yes
+,,,HCPCS,J3398,"Injection, voretigene neparvovec-rzyl, 1 billion vector genomes",Included rule,,,,,,,Yes
+,,,HCPCS,J1628,"Injection, guselkumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1380,"Injection, estradiol valerate, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1434,"Injection, fosaprepitant (focinvez), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1436,"Injection, etidronate disodium, per 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1448,"Injection, trilaciclib, 1mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1245,"Injection, dipyridamole, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1110,"Injection, dihydroergotamine mesylate, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1097,"Phenylephrine 10.16 mg/ml and ketorolac 2.88 mg/ml ophthalmic irrigation solution, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J1200,"Injection, diphenhydramine hcl, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1180,"Injection, dyphylline, up to 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1308,"Injection, famotidine, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1105,"Dexmedetomidine, oral, 1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J0894,"Injection, decitabine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9381,"Injection, teplizumab-mzwv, 5 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J9382,"Injection, zenocutuzumab-zbco, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9370,"Vincristine sulfate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9348,"Injection, naxitamab-gqgk, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9358,"Injection, fam-trastuzumab deruxtecan-nxki, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9360,"Injection, vinblastine sulfate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9029,"Intravesical instillation, nadofaragene firadenovec-vncg, per therapeutic dose",Included rule,,,,,,,Yes
+,,,HCPCS,J9017,"Injection, arsenic trioxide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9025,"Injection, azacitidine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7684,"Triamcinolone, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7999,"Compounded drug, not otherwise classified",Included rule,,,,,,,Yes
+,,,HCPCS,J8700,"Temozolomide, oral, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8515,"Cabergoline, oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7642,"Glycopyrrolate, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7674,"Methacholine chloride administered as inhalation solution through a nebulizer, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7669,"Metaproterenol sulfate, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7665,"Mannitol, administered through an inhaler, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7637,"Dexamethasone, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7649,"Isoetharine hcl, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7647,"Isoetharine hcl, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7610,"Albuterol, inhalation solution, compounded product, administered through dme, concentrated form, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7613,"Albuterol, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7631,"Cromolyn sodium, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7632,"Cromolyn sodium, inhalation solution, compounded product, administered through dme, unit dose form, per 10 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J7626,"Budesonide, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, up to 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0702,"Injection, betamethasone acetate 3 mg and betamethasone sodium phosphate 3 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0712,"Injection, ceftaroline fosamil, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0751,"Emtricitabine 200mg and tenofovir alafenamide 25mg, oral, fda approved prescription, only for use as hiv pre-exposure prophylaxis (not for use as treatment of hiv)",Included rule,,,,,,,Yes
+,,,HCPCS,J0874,"Injection, daptomycin (baxter), not therapeutically equivalent to j0878, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0801,"Injection, corticotropin (acthar gel), up to 40 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0690,"Injection, cefazolin sodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0613,"Injection, calcium gluconate (wg critical care), not therapeutically equivalent to j0612, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0694,"Injection, cefoxitin sodium, 1 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J0699,"Injection, cefiderocol, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0681,"Injection, ceftobiprole medocaril sodium, 3 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5137,"Injection, ustekinumab-auub (wezlana), biosimilar, subcutaneous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5135,"Injection, tocilizumab-aazg (tyenne), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9967,"Low osmolar contrast material, 300-399 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9955,"Injection, perflexane lipid microspheres, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q5147,"Injection, aflibercept-ayyh (pavblu), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5144,"Injection, adalimumab-aacf (idacio), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9046,"Injection, bortezomib (dr. reddy's), not therapeutically equivalent to j9041, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9043,"Injection, cabazitaxel, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9202,"Goserelin acetate implant, per 3.6 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9217,"Leuprolide acetate (for depot suspension), 7.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9226,"Histrelin implant (supprelin la), 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9228,"Injection, ipilimumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9196,"Injection, gemcitabine hydrochloride (accord), not therapeutically equivalent to j9201, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9056,"Injection, bendamustine hydrochloride (vivimusta), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9073,"Injection, cyclophosphamide (dr. reddy's), 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7606,"Formoterol fumarate, inhalation solution, fda approved final product, non-compounded, administered through dme, unit dose form, 20 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J7605,"Arformoterol, inhalation solution, fda approved final product, non-compounded, administered through dme, unit dose form, 15 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J7327,"Hyaluronan or derivative, monovisc, for intra-articular injection, per dose",Included rule,,,,,,,Yes
+,,,HCPCS,J7321,"Hyaluronan or derivative, hyalgan, supartz or visco-3, for intra-articular injection, per dose",Included rule,,,,,,,Yes
+,,,HCPCS,J7340,"Carbidopa 5 mg/levodopa 20 mg enteral suspension, 100 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J7507,"Tacrolimus, immediate release, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7211,"Injection, factor viii, (antihemophilic factor, recombinant), (kovaltry), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7198,"Anti-inhibitor, per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7182,"Injection, factor viii, (antihemophilic factor, recombinant), (novoeight), per iu",Included rule,,,,,,,Yes
+,,,HCPCS,J7208,"Injection, factor viii, (antihemophilic factor, recombinant), pegylated-aucl, (jivi), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7188,"Injection, factor viii (antihemophilic factor, recombinant), (obizur), per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,Q5122,"Injection, pegfilgrastim-apgf (nyvepria), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5099,"Injection, ustekinumab-stba (steqeyma), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5111,"Injection, pegfilgrastim-cbqv (udenyca), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5113,"Injection, trastuzumab-pkrb, biosimilar, (herzuma), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0597,"Injection, c-1 esterase inhibitor (human), berinert, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0591,"Injection, deoxycholic acid, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3111,"Injection, romosozumab-aqqg, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2801,"Injection, risperidone (rykindo), 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2679,"Injection, fluphenazine hcl, 1.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2760,"Injection, phentolamine mesylate, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2545,"Pentamidine isethionate, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2470,"Injection, pantoprazole sodium, 40 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2472,"Injection, pantoprazole sodium in sodium chloride (baxter), 40 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0126,"Injection, follitropin alfa, 75 iu",Included rule,,,,,,,Yes
+,,,HCPCS,S0176,"Hydroxyurea, oral, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0170,"Anastrozole, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0091,"Granisetron hydrochloride, 1 mg (for circumstances falling under the medicare statute, use q0166)",Included rule,,,,,,,Yes
+,,,HCPCS,S0090,"Sildenafil citrate, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0106,"Bupropion hcl sustained release tablet, 150 mg, per bottle of 60 tablets",Included rule,,,,,,,Yes
+,,,HCPCS,Q2050,"Injection, doxorubicin hydrochloride, liposomal, not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q0139,"Injection, ferumoxytol, for treatment of iron deficiency anemia, 1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,Q2028,"Injection, sculptra, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q0163,"Diphenhydramine hydrochloride, 50 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at time of chemotherapy treatment not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0167,"Dronabinol, 2.5 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0173,"Trimethobenzamide hydrochloride, 250 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,J7205,"Injection, factor viii fc fusion protein (recombinant), per iu",Included rule,,,,,,,Yes
+,,,HCPCS,J2995,"Injection, streptokinase, per 250,000 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J3305,"Injection, trimetrexate glucuronate, per 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3310,"Injection, perphenazine, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9248,"Injection, clevidipine butyrate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9174,"Injection, datopotamab deruxtecan-dlnk, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1632,"Injection, brexanolone, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9061,"Injection, amivantamab-vmjw, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9144,"Injection, daratumumab, 10 mg and hyaluronidase-fihj",Included rule,,,,,,,Yes
+,,,HCPCS,J1738,"Injection, meloxicam, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9144,"Injection, bupivacaine (posimir), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9399,Unclassified drugs or biologicals,Included rule,,,,,,,Yes
+,,,HCPCS,Q5148,"Injection, filgrastim-txid (nypozi), biosimilar, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,C9047,"Injection, caplacizumab-yhdp, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9210,"Injection, emapalumab-lzsg, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9271,"Injection, pembrolizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1454,"Injection, fosnetupitant 235 mg and palonosetron 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9325,"Injection, talimogene laherparepvec, per 1 million plaque forming units",Included rule,,,,,,,Yes
+,,,HCPCS,J2786,"Injection, reslizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1428,"Injection, eteplirsen, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9311,"Injection, rituximab 10 mg and hyaluronidase",Included rule,,,,,,,Yes
+,,,HCPCS,J0185,"Injection, aprepitant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9460,"Injection, cangrelor, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2860,"Injection, siltuximab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2372,"Injection, phenylephrine hydrochloride (biorphen), 20 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J2401,"Injection, chloroprocaine hydrochloride, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2315,"Injection, naltrexone, depot form, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2359,"Injection, olanzapine, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2250,"Injection, midazolam hydrochloride, per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2060,"Injection, lorazepam, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2004,"Injection, lidocaine hcl with epinephrine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2021,"Injection, linezolid (hospira), not therapeutically equivalent to j2020, 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1953,"Injection, levetiracetam, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2251,"Injection, midazolam in 0.9% sodium chloride, intravenous, not therapeutically equivalent to j2250, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2270,"Injection, morphine sulfate, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7521,"Tacrolimus, granules, oral suspension, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7519,"Injection, mycophenolate mofetil, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7599,"Immunosuppressive drug, not otherwise classified",Included rule,,,,,,,Yes
+,,,HCPCS,J7326,"Hyaluronan or derivative, gel-one, for intra-articular injection, per dose",Included rule,,,,,,,Yes
+,,,HCPCS,J7328,"Hyaluronan or derivative, gelsyn-3, for intra-articular injection, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7307,"Etonogestrel (contraceptive) implant system, including implant and supplies",Included rule,,,,,,,Yes
+,,,HCPCS,J7336,"Capsaicin 8% patch, per square centimeter",Included rule,,,,,,,Yes
+,,,HCPCS,J7517,"Mycophenolate mofetil, oral, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7515,"Cyclosporine, oral, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7190,"Factor viii (antihemophilic factor, human) per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7178,"Injection, human fibrinogen concentrate, not otherwise specified, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7180,"Injection, factor xiii (antihemophilic factor, human), 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7189,"Factor viia (antihemophilic factor, recombinant), (novoseven rt), 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7192,"Factor viii (antihemophilic factor, recombinant) per i.u., not otherwise specified",Included rule,,,,,,,Yes
+,,,HCPCS,Q5106,"Injection, epoetin alfa-epbx, biosimilar, (retacrit) (for non-esrd use), 1000 units",Included rule,,,,,,,Yes
+,,,HCPCS,Q5116,"Injection, trastuzumab-qyyp, biosimilar, (trazimera), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5112,"Injection, trastuzumab-dttb, biosimilar, (ontruzant), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5101,"Injection, filgrastim-sndz, biosimilar, (zarxio), 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J1557,"Injection, immune globulin, (gammaplex), intravenous, non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1600,"Injection, gold sodium thiomalate, up to 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1576,"Injection, immune globulin (panzyga), intravenous, non-lyophilized (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3373,"Injection, vancomycin hydrochloride, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3394,"Injection, lovotibeglogene autotemcel, per treatment",Included rule,,,,,,,Yes
+,,,HCPCS,J3245,"Injection, tildrakizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3243,"Injection, tigecycline, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3591,Unclassified drug or biological used for esrd on dialysis,Included rule,,,,,,,Yes
+,,,HCPCS,J7120,"Ringers lactate infusion, up to 1000 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J7173,"Injection, concizumab-mtci, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7060,5% dextrose/water (500 ml = 1 unit),Included rule,,,,,,,Yes
+,,,HCPCS,J3425,"Injection, hydroxocobalamin, intramuscular, 10 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J3473,"Injection, hyaluronidase, recombinant, 1 usp unit",Included rule,,,,,,,Yes
+,,,HCPCS,J9314,"Injection, pemetrexed (teva), not therapeutically equivalent to j9305, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9297,"Injection, pemetrexed (sandoz), not therapeutically equivalent to j9305, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4145,"Epifix, injectable, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0603,"Sevelamer hydrochloride (renagel or therapeutically equivalent), oral, 20 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0602,"Sevelamer carbonate (renvela or therapeutically equivalent), oral, powder, 20 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0574,"Buprenorphine/naloxone, oral, greater than 6 mg, but less than or equal to 10 mg buprenorphine",Included rule,,,,,,,Yes
+,,,HCPCS,J0585,"Injection, onabotulinumtoxina, 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,J0285,"Injection, amphotericin b, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0561,"Injection, penicillin g benzathine, 100,000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0480,"Injection, basiliximab, 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0571,"Buprenorphine, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0573,"Buprenorphine/naloxone, oral, greater than 3 mg, but less than or equal to 6 mg buprenorphine",Included rule,,,,,,,Yes
+,,,HCPCS,J0291,"Injection, plazomicin, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0208,"Injection, sodium thiosulfate (pedmark), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4310,"Procenta, per 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8655,"Netupitant 300 mg and palonosetron 0.5 mg, oral",Included rule,,,,,,,Yes
+,,,HCPCS,J7505,"Muromonab-cd3, parenteral, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7309,"Methyl aminolevulinate (mal) for topical administration, 16.8%, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J1655,"Injection, tinzaparin sodium, 1000 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J3355,"Injection, urofollitropin, 75 iu",Included rule,,,,,,,Yes
+,,,HCPCS,A9601,"Flortaucipir f 18 injection, diagnostic, 1 millicurie",Included rule,,,,,,,Yes
+,,,HCPCS,A9615,"Injection, pegulicianine, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9576,"Injection, gadoteridol, (prohance multipack), per ml",Included rule,,,,,,,Yes
+,,,HCPCS,A9578,"Injection, gadobenate dimeglumine (multihance multipack), per ml",Included rule,,,,,,,Yes
+,,,HCPCS,A9581,"Injection, gadoxetate disodium, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J9349,"Injection, tafasitamab-cxix, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3032,"Injection, eptinezumab-jjmr, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1201,"Injection, cetirizine hydrochloride, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9143,"Cocaine hydrochloride nasal solution (numbrino), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0596,"Injection, c1 esterase inhibitor (recombinant), ruconest, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J9032,"Injection, belinostat, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9257,"Injection, bevacizumab, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9293,"Injection, glucarpidase, 10 units",Included rule,,,,,,,Yes
+,,,HCPCS,J2350,"Injection, ocrelizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2797,"Injection, rolapitant, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2502,"Injection, pasireotide long acting, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2327,"Injection, risankizumab-rzaa, intravenous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2404,"Injection, nicardipine, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2357,"Injection, omalizumab, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2354,"Injection, octreotide, non-depot form for subcutaneous or intravenous injection, 25 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1938,"Injection, furosemide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1956,"Injection, levofloxacin, 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2281,"Injection, moxifloxacin (fresenius kabi), not therapeutically equivalent to j2280, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2175,"Injection, meperidine hydrochloride, per 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2290,"Injection, nafcillin sodium, 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2267,"Injection, mirikizumab-mrkz, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7351,"Injection, bimatoprost, intracameral implant, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J7500,"Azathioprine, oral, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7332,"Hyaluronan or derivative, triluron, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7330,"Autologous cultured chondrocytes, implant",Included rule,,,,,,,Yes
+,,,HCPCS,J7512,"Prednisone, immediate release or delayed release, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7502,"Cyclosporine, oral, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7185,"Injection, factor viii (antihemophilic factor, recombinant) (xyntha), per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7187,"Injection, von willebrand factor complex (humate-p), per iu vwf:rco",Included rule,,,,,,,Yes
+,,,HCPCS,J7196,"Injection, antithrombin recombinant, 50 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J7199,"Hemophilia clotting factor, not otherwise classified",Included rule,,,,,,,Yes
+,,,HCPCS,Q5114,"Injection, trastuzumab-dkst, biosimilar, (ogivri), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1410,"Injection, estrogen conjugated, per 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1370,"Injection, esomeprazole sodium, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1440,"Fecal microbiota, live - jslm, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J1412,"Injection, valoctocogene roxaparvovec-rvox, per ml, containing nominal 2 x 10^13 vector genomes",Included rule,,,,,,,Yes
+,,,HCPCS,J1162,"Injection, digoxin immune fab (ovine), per vial",Included rule,,,,,,,Yes
+,,,HCPCS,J1212,"Injection, dmso, dimethyl sulfoxide, 50%, 50 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J1323,"Injection, elranatamab-bcmm, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1306,"Injection, inclisiran, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0133,"Injection, acyclovir, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0169,"Injection, epinephrine (adrenalin), not therapeutically equivalent to j0165, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0153,"Injection, adenosine, 1 mg (not to be used to report any adenosine phosphate compounds)",Included rule,,,,,,,Yes
+,,,HCPCS,J1885,"Injection, ketorolac tromethamine, per 15 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1817,"Insulin for administration through dme (i.e., insulin pump) per 50 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1921,"Injection, labetalol hydrochloride (hikma), not therapeutically equivalent to j1920, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1745,"Injection, infliximab, excludes biosimilar, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1741,"Injection, ibuprofen, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1643,"Injection, heparin sodium (pfizer), not therapeutically equivalent to j1644, per 1000 units",Included rule,,,,,,,Yes
+,,,HCPCS,J1700,"Injection, hydrocortisone acetate, up to 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1556,"Injection, immune globulin (bivigam), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1560,"Injection, gamma globulin, intramuscular, over 10 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J1595,"Injection, glatiramer acetate, 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1573,"Injection, hepatitis b immune globulin (hepagam b), intravenous, 0.5 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J3385,"Injection, velaglucerase alfa, 100 units",Included rule,,,,,,,Yes
+,,,HCPCS,J3392,"Injection, exagamglogene autotemcel, per treatment",Included rule,,,,,,,Yes
+,,,HCPCS,J3250,"Injection, trimethobenzamide hcl, up to 200 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3244,"Injection, tigecycline (accord), not therapeutically equivalent to j3243, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3530,Nasal vaccine inhalation,Included rule,,,,,,,Yes
+,,,HCPCS,J3590,Unclassified biologics,Included rule,,,,,,,Yes
+,,,HCPCS,J7177,"Injection, human fibrinogen concentrate (fibryga), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7174,"Injection, fitusiran, 0.04 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3470,"Injection, hyaluronidase, up to 150 units",Included rule,,,,,,,Yes
+,,,HCPCS,J3490,Unclassified drugs,Included rule,,,,,,,Yes
+,,,HCPCS,J9322,"Injection, pemetrexed (bluepoint), not therapeutically equivalent to j9305, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9328,"Injection, temozolomide, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9332,"Injection, efgartigimod alfa-fcab, 2mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9301,"Injection, obinutuzumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9312,"Injection, rituximab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9293,"Injection, mitoxantrone hydrochloride, per 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4155,"Neoxflo or clarixflo, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0578,"Injection, buprenorphine extended release (brixadi), greater than 7 days and up to 28 days of therapy",Included rule,,,,,,,Yes
+,,,HCPCS,J0575,"Buprenorphine/naloxone, oral, greater than 10 mg buprenorphine",Included rule,,,,,,,Yes
+,,,HCPCS,J0593,"Injection, lanadelumab-flyo, 1 mg (code may be used for medicare when drug administered under direct supervision of a physician, not for use when drug is self-administered)",Included rule,,,,,,,Yes
+,,,HCPCS,J0391,"Injection, artesunate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0475,"Injection, baclofen, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0456,"Injection, azithromycin, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0330,"Injection, succinylcholine chloride, up to 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0290,"Injection, ampicillin sodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0216,"Injection, alfentanil hydrochloride, 500 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J0278,"Injection, amikacin sulfate, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0180,"Injection, agalsidase beta, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5128,"Injection, ranibizumab-eqrn (cimerli), biosimilar, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5134,"Injection, natalizumab-sztn (tyruko), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5130,"Injection, pegfilgrastim-pbbk (fylnetra), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9997,"Injection, ustekinumab-ttwe (pyzchiva), intravenous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9957,"Injection, perflutren lipid microspheres, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q5151,"Injection, eculizumab-aagh (epysqli), biosimilar, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9961,"High osmolar contrast material, 250-299 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q9959,"High osmolar contrast material, 150-199 mg/ml iodine concentration, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J2802,"Injection, romiplostim, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J2916,"Injection, sodium ferric gluconate complex in sucrose injection, 12.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2798,"Injection, risperidone, (perseris), 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2778,"Injection, ranibizumab, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2788,"Injection, rho d immune globulin, human, minidose, 50 micrograms (250 i.u.)",Included rule,,,,,,,Yes
+,,,HCPCS,J2792,"Injection, rho d immune globulin, intravenous, human, solvent detergent, 100 iu",Included rule,,,,,,,Yes
+,,,HCPCS,J2720,"Injection, protamine sulfate, per 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2795,"Injection, ropivacaine hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2515,"Injection, pentobarbital sodium, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2599,"Injection, vasopressin (american regent), not therapeutically equivalent to j2598, 1 unit",Included rule,,,,,,,Yes
+,,,HCPCS,S0119,"Ondansetron, oral, 4 mg (for circumstances falling under the medicare statute, use hcpcs q code)",Included rule,,,,,,,Yes
+,,,HCPCS,S0145,"Injection, pegylated interferon alfa-2a, 180 mcg per ml",Included rule,,,,,,,Yes
+,,,HCPCS,S0136,"Clozapine, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0183,"Prochlorperazine maleate, oral, 5 mg (for circumstances falling under the medicare statute, use q0164)",Included rule,,,,,,,Yes
+,,,HCPCS,S0092,"Injection, hydromorphone hydrochloride, 250 mg (loading dose for infusion pump)",Included rule,,,,,,,Yes
+,,,HCPCS,Q0162,"Ondansetron 1 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0161,"Chlorpromazine hydrochloride, 5 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,Q0169,"Promethazine hydrochloride, 12.5 mg, oral, fda approved prescription anti-emetic, for use as a complete therapeutic substitute for an iv anti-emetic at the time of chemotherapy treatment, not to exceed a 48 hour dosage regimen",Included rule,,,,,,,Yes
+,,,HCPCS,S0189,"Testosterone pellet, 75 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0074,"Injection, cefotetan disodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9145,"Injection, aprepitant, (aponvie), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,A9697,"Injection, carboxydextran-coated superparamagnetic iron oxide, per study dose",Included rule,,,,,,,Yes
+,,,HCPCS,A9583,"Injection, gadofosveset trisodium, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,Q5120,"Injection, pegfilgrastim-bmez (ziextenzo), biosimilar, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9101,"Injection, oliceridine, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7201,"Injection, factor ix, fc fusion protein, (recombinant), alprolix, 1 i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,J2407,"Injection, oritavancin (orbactiv), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9039,"Injection, blinatumomab, 1 microgram",Included rule,,,,,,,Yes
+,,,HCPCS,J1326,"Injection, zolbetuximab-clzb, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,C9285,"Lidocaine 70 mg/tetracaine 70 mg, per patch",Included rule,,,,,,,Yes
+,,,HCPCS,J3380,"Injection, vedolizumab, intravenous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9119,"Injection, cemiplimab-rwlc, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0642,"Injection, levoleucovorin (khapzory), 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2326,"Injection, nusinersen, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2840,"Injection, sebelipase alfa, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9295,"Injection, necitumumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0565,"Injection, bezlotoxumab, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2329,"Injection, ublituximab-xiiy, 1mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2323,"Injection, natalizumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1980,"Injection, hyoscyamine sulfate, up to 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1961,"Injection, lenacapavir (only for use as hiv treatment), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1941,"Injection, furosemide (furoscix), 20 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1944,"Injection, aripiprazole lauroxil, (aristada), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2185,"Injection, meropenem, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2184,"Injection, meropenem (b. braun), not therapeutically equivalent to j2185, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2260,"Injection, milrinone lactate, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2272,"Injection, morphine sulfate (fresenius kabi), not therapeutically equivalent to j2270, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7520,"Sirolimus, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7601,"Ensifentrine, inhalation suspension, fda approved final product, non-compounded, administered through dme, unit dose form, 3 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7354,"Cantharidin for topical administration, 0.7%, single unit dose applicator (3.2 mg)",Included rule,,,,,,,Yes
+,,,HCPCS,J7329,"Hyaluronan or derivative, trivisc, for intra-articular injection, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7324,"Hyaluronan or derivative, orthovisc, for intra-articular injection, per dose",Included rule,,,,,,,Yes
+,,,HCPCS,J7304,"Contraceptive supply, hormone containing patch, each",Included rule,,,,,,,Yes
+,,,HCPCS,J7306,"Levonorgestrel (contraceptive) implant system, including implants and supplies",Included rule,,,,,,,Yes
+,,,HCPCS,J7298,"Levonorgestrel-releasing intrauterine contraceptive system (mirena), 52 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7352,"Afamelanotide implant, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7509,"Methylprednisolone oral, per 4 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7194,"Factor ix, complex, per i.u.",Included rule,,,,,,,Yes
+,,,HCPCS,Q5098,"Injection, ustekinumab-srlf (imuldosa), biosimilar, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5105,"Injection, epoetin alfa-epbx, biosimilar, (retacrit) (for esrd on dialysis), 100 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0584,"Injection, burosumab-twza 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0600,"Injection, edetate calcium disodium, up to 1000 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0587,"Injection, rimabotulinumtoxinb, 100 units",Included rule,,,,,,,Yes
+,,,HCPCS,J0458,"Injection, aztreonam/avibactam, 7.5 mg/2.5 mg (10 mg)",Included rule,,,,,,,Yes
+,,,HCPCS,J0364,"Injection, apomorphine hydrochloride, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0390,"Injection, chloroquine hydrochloride, up to 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0289,"Injection, amphotericin b liposome, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0256,"Injection, alpha 1 proteinase inhibitor (human), not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9999,"Not otherwise classified, antineoplastic drugs",Included rule,,,,,,,Yes
+,,,HCPCS,J9026,"Injection, tarlatamab-dlle, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8610,"Methotrexate; oral, 2.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8705,"Topotecan, oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7683,"Triamcinolone, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7681,"Terbutaline sulfate, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7658,"Isoproterenol hcl, inhalation solution, fda-approved final product, non-compounded, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7639,"Dornase alfa, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7644,"Ipratropium bromide, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7628,"Bitolterol mesylate, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J0873,"Injection, daptomycin (xellia), not therapeutically equivalent to j0878 or j0872, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0706,"Injection, caffeine citrate, 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0736,"Injection, clindamycin phosphate, 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0716,"Injection, centruroides immune f(ab)2, up to 120 milligrams",Included rule,,,,,,,Yes
+,,,HCPCS,J0742,"Injection, imipenem 4 mg, cilastatin 4 mg and relebactam 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0739,"Injection, cabotegravir, 1mg, fda approved prescription, only for use as hiv pre-exposure prophylaxis (not for use as treatment for hiv)",Included rule,,,,,,,Yes
+,,,HCPCS,J0780,"Injection, prochlorperazine, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0878,"Injection, daptomycin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0891,"Injection, argatroban (accord), not therapeutically equivalent to j0883, 1 mg (for non-esrd use)",Included rule,,,,,,,Yes
+,,,HCPCS,J0636,"Injection, calcitriol, 0.1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J0638,"Injection, canakinumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0698,"Injection, cefotaxime sodium, per gm",Included rule,,,,,,,Yes
+,,,HCPCS,Q5146,"Injection, trastuzumab-strf (hercessi), biosimilar, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0202,"Injection, alemtuzumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9248,"Injection, melphalan (hepzato), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9260,"Injection, methotrexate sodium, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9214,"Injection, interferon, alfa-2b, recombinant, 1 million units",Included rule,,,,,,,Yes
+,,,HCPCS,J9185,"Injection, fludarabine phosphate, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9198,"Injection, gemcitabine hydrochloride, (infugem), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9208,"Injection, ifosfamide, 1 gram",Included rule,,,,,,,Yes
+,,,HCPCS,J9179,"Injection, eribulin mesylate, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9076,"Injection, cyclophosphamide (baxter), 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2805,"Injection, sincalide, 5 micrograms",Included rule,,,,,,,Yes
+,,,HCPCS,J3070,"Injection, pentazocine, 30 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J2941,"Injection, somatropin, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0023,"Injection, cimetidine hydrochloride, 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,S0034,"Injection, ofloxacin, 400 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4215,"Axolotl ambient or axolotl cryo, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1445,"Injection, ferric pyrophosphate citrate solution (triferic avnu), 0.1 mg of iron",Included rule,,,,,,,Yes
+,,,HCPCS,J3280,"Injection, thiethylperazine maleate, up to 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3320,"Injection, spectinomycin dihydrochloride, up to 2 gm",Included rule,,,,,,,Yes
+,,,HCPCS,J8650,"Nabilone, oral, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1426,"Injection, casimersen, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1165,"Injection, phenytoin sodium, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0901,"Vadadustat, oral, 1 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J1072,"Injection, testosterone cypionate (azmiro), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1271,"Injection, doxycycline hyclate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1270,"Injection, doxercalciferol, 1 mcg",Included rule,,,,,,,Yes
+,,,HCPCS,J1335,"Injection, ertapenem sodium, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1299,"Injection, eculizumab, 2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1305,"Injection, evinacumab-dgnb, 5mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0134,"Injection, acetaminophen (fresenius kabi), not therapeutically equivalent to j0131, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0167,"Injection, epinephrine (hospira), not therapeutically equivalent to j0165, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0120,"Injection, tetracycline, up to 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0165,"Injection, epinephrine, not otherwise specified, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0139,"Injection, adalimumab, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0163,"Injection, epinephrine in sodium chloride (endo), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,G9663,Any ldl-c laboratory result >= 190 mg/dl,Included rule,,,,,,,Yes
+,,,HCPCS,J1834,"Injection, isoniazid, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1746,"Injection, ibalizumab-uiyk, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1742,"Injection, ibutilide fumarate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1631,"Injection, haloperidol decanoate, per 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1650,"Injection, enoxaparin sodium, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1730,"Injection, diazoxide, up to 300 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1569,"Injection, immune globulin, (gammagard liquid), non-lyophilized, (e.g., liquid), 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1458,"Injection, galsulfase, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1551,"Injection, immune globulin (cutaquig), 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1597,"Injection, glycopyrrolate (glyrx-pf), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1599,"Injection, immune globulin, intravenous, non-lyophilized (e.g., liquid), not otherwise specified, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J1580,"Injection, garamycin, gentamicin, up to 80 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3411,"Injection, thiamine hcl, 100 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3315,"Injection, triptorelin pamoate, 3.75 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3121,"Injection, testosterone enanthate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3246,"Injection, tirofiban hcl, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3465,"Injection, voriconazole, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7168,"Prothrombin complex concentrate (human), kcentra, per i.u. of factor ix activity",Included rule,,,,,,,Yes
+,,,HCPCS,J7070,"Infusion, d5w, 1000 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J3430,"Injection, phytonadione (vitamin k), per 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J3486,"Injection, ziprasidone mesylate, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9319,"Injection, romidepsin, lyophilized, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9334,"Injection, efgartigimod alfa, 2 mg and hyaluronidase-qvfc",Included rule,,,,,,,Yes
+,,,HCPCS,J9333,"Injection, rozanolixizumab-noli, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9296,"Injection, pemetrexed (accord), not therapeutically equivalent to j9305, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4118,"Matristem micromatrix, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q4139,"Amniomatrix or biodmatrix, injectable, 1 cc",Included rule,,,,,,,Yes
+,,,HCPCS,J0595,"Injection, butorphanol tartrate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0601,"Sevelamer carbonate (renvela or therapeutically equivalent), oral, 20 mg (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0572,"Buprenorphine/naloxone, oral, less than or equal to 3 mg buprenorphine",Included rule,,,,,,,Yes
+,,,HCPCS,J0570,"Buprenorphine implant, 74.2 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0520,"Injection, bethanechol chloride, myotonachol or urecholine, up to 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0401,"Injection, aripiprazole (abilify maintena), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0280,"Injection, aminophyllin, up to 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0217,"Injection, velmanase alfa-tycv, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0287,"Injection, amphotericin b lipid complex, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0210,"Injection, methyldopate hcl, up to 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9380,"Injection, teclistamab-cqyv, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9394,"Injection, fulvestrant (fresenius kabi) not therapeutically equivalent to j9395, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9350,"Injection, mosunetuzumab-axgb, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9400,"Injection, ziv-aflibercept, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7686,"Treprostinil, inhalation solution, fda-approved final product, non-compounded, administered through dme, unit dose form, 1.74 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9000,"Injection, doxorubicin hydrochloride, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8530,"Cyclophosphamide; oral, 25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J8540,"Dexamethasone, oral, 0.25 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7660,"Isoproterenol hcl, inhalation solution, compounded product, administered through dme, unit dose form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7635,"Atropine, inhalation solution, compounded product, administered through dme, concentrated form, per milligram",Included rule,,,,,,,Yes
+,,,HCPCS,J7620,"Albuterol, up to 2.5 mg and ipratropium bromide, up to 0.5 mg, fda-approved final product, non-compounded, administered through dme",Included rule,,,,,,,Yes
+,,,HCPCS,J0714,"Injection, ceftazidime and avibactam, 0.5 g/0.125 g",Included rule,,,,,,,Yes
+,,,HCPCS,J0741,"Injection, cabotegravir and rilpivirine, 2mg/3mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0882,"Injection, darbepoetin alfa, 1 microgram (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0614,"Injection, treosulfan, 50 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0616,"Injection, metoprolol tartrate, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0604,"Cinacalcet, oral, 1 mg, (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J0620,"Injection, calcium glycerophosphate and calcium lactate, per 10 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J0696,"Injection, ceftriaxone sodium, per 250 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0665,"Injection, bupivicaine, not otherwise specified, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J0687,"Injection, cefazolin sodium (wg critical care), not therapeutically equivalent to j0690, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5138,"Injection, ustekinumab-auub (wezlana), biosimilar, intravenous, 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q5123,"Injection, rituximab-arrx, biosimilar, (riabni), 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J7170,"Injection, emicizumab-kxwh, 0.5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,Q9953,"Injection, iron-based magnetic resonance contrast agent, per ml",Included rule,,,,,,,Yes
+,,,HCPCS,J0887,"Injection, epoetin beta, 1 microgram, (for esrd on dialysis)",Included rule,,,,,,,Yes
+,,,HCPCS,J1729,"Injection, hydroxyprogesterone caproate, not otherwise specified, 10 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9054,"Injection, bortezomib (boruzu), 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9049,"Injection, bortezomib (hospira), not therapeutically equivalent to j9041, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9041,"Injection, bortezomib, 0.1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9036,"Injection, bendamustine hydrochloride, (belrapzo/bendamustine), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9249,"Injection, melphalan (apotex), 1 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9219,"Leuprolide acetate implant, 65 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9200,"Injection, floxuridine, 500 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9175,"Injection, elliotts' b solution, 1 ml",Included rule,,,,,,,Yes
+,,,HCPCS,J9074,"Injection, cyclophosphamide (sandoz), 5 mg",Included rule,,,,,,,Yes
+,,,HCPCS,J9171,"Injection, docetaxel, 1 mg",Included rule,,,,,,,Yes
