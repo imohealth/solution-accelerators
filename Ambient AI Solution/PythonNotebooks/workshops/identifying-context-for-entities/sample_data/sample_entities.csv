@@ -1,0 +1,27 @@
+entity,offset,length
+hypertension,34,12
+heart failure,51,13
+hypertension,110,12
+heart failure,127,13
+Hypertension,145,12
+heart failure,302,13
+Systolic Heart Failure,391,22
+systolic heart failure,467,22
+decompensation,516,14
+Bilateral lower extremity edema,532,31
+crackles,568,8
+history of hypertension,821,23
+systolic heart failure,857,22
+shortness of breath,906,19
+leg swelling,930,12
+dyspnea on exertion,1047,19
+orthopnea,1071,9
+requiring 3 pillows to sleep,1086,28
+bilateral lower extremity swelling,1134,34
+Jugular venous distension,1409,25
+S3 gallop,1461,9
+Bilateral crackles in lower lung fields,1472,39
+Bilateral 2+ pitting edema to knees,1548,35
+- Hypertension,1600,14
+Heart Failure,1617,13
+Shortness of breath,1650,19

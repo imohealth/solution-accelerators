@@ -1,0 +1,5 @@
+MSH|^~\&|LAB_APP|LAB_FACILITY|EMR_APP|EMR_FACILITY|202301151200||ORU^R01|MSG0001|P|2.5.1
+PID|1||PAT1^^^HOSPIT~PAT456^^^CLINIC||DOE1^JOHN||19900510|M|||123 MAIN ST^^ANYTOWN^CA^12345||555-123-4567|||M
+ORC|RE|ORD789|||CM
+OBR|1|ORD789|RES987|12345-6^GLUCOSE^LN|R|||202301151100|||||||||LAB_DR
+OBX|1|CWE|17968-9^Bacteria6:Prid:Pt:Stool:Nom:Culture^LN^^^^2.33^^result1|1|27268008^Salmonella^SCT^^^^20090731^^Salmonella species|||A^A^HL70078^^^^2.5|||P|||20120301|||^^^^^^^^Bacterial Culture||201203140957||||State Hygienic Laboratory^L^^^^IA Public Health Lab&2.16.840.1.114222.4.1.10411&ISO^FI^^^16D0648109|State Hygienic Laboratory^UI Research Park - Coralville^Iowa City^IA^52242-5002^USA^B^^19103|^Atchison^Christopher^^^^^^^L

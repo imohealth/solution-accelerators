@@ -1,0 +1,39 @@
+Transcript:
+
+Dr. White: Good afternoon, Mr. Brown. How are you feeling today?
+
+Robert: Good afternoon, Dr. White. I’ve been feeling really unwell. I’ve been extremely tired, thirsty, and I’ve noticed some blurred vision.
+
+Dr. White: I see. Let’s start by reviewing your current condition. Your blood sugar levels have been consistently very high, with readings over 400 mg/dL. Have you been monitoring your blood sugar at home?
+
+Robert: Yes, I have. It’s been over 400 mg/dL for the past few days.
+
+Dr. White: Have you noticed any other symptoms, such as frequent urination, increased hunger, or slow-healing wounds?
+
+Robert: Yes, I’ve been urinating a lot more than usual, and I’ve been very hungry all the time.
+
+Dr. White: Any recent changes in your diet, physical activity, stress levels, or medications?
+
+Robert: I haven’t changed my diet much, but I’ve been under a lot of stress lately. Also my knee pain is getting worse, mainly on the left leg. I haven’t changed my medications.
+
+Dr. White: Alright, Mr. Brown. Given your extremely high blood sugar levels and symptoms, it’s important that we address this immediately. I’ll need to perform a thorough physical exam and order some tests to check for any complications, such as ketoacidosis. We’ll also need to adjust your diabetes management plan.
+
+Robert: What should I do?
+
+Dr. White: First, we’ll start by administering insulin to bring your blood sugar levels down. We’ll monitor your blood sugar closely and adjust the insulin dosage as needed. I’ll also order some blood tests, including an HbA1c, ketone levels, and electrolytes, to get a better picture of your overall condition.
+
+Robert: Okay, I understand.
+
+(Physical exam conducted)
+
+Dr. White: Your physical exam doesn’t show any immediate signs of severe complications, but we need to get your blood sugar under control. In addition to insulin, we’ll review your diet and possibly adjust your oral medications. It’s crucial that you follow the diet plan provided by our dietitian and take your medications as prescribed.
+
+Robert: I will do my best.
+
+Dr. White: Great. We’ll keep you under close monitoring here in the hospital until your blood sugar levels stabilize. Once you’re stable, we’ll discuss a detailed plan for home, including regular monitoring, diet, exercise, and medication. We’ll also schedule follow-up appointments to ensure your blood sugar remains within a healthy range.
+
+Robert: Thank you, Dr. White. I appreciate your help.
+
+Dr. White: You’re welcome, Mr. Brown. We’ll work together to get your blood sugar under control and keep you healthy. If you have any questions or concerns, please let me know.
+
+End of Transcript
