@@ -1,0 +1,9 @@
+{
+  "_comment": "Copy this file to config.json and fill in your IMO credentials. config.json is git-ignored.",
+
+  "precision_normalize": {
+    "client_id":     "<YOUR_PRECISION_NORMALIZE_CLIENT_ID>",
+    "client_secret": "<YOUR_PRECISION_NORMALIZE_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token"
+  }
+}

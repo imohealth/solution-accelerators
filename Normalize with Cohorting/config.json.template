@@ -1,0 +1,17 @@
+{
+  "_comment": "Copy this file to config.json and fill in your IMO credentials. config.json is git-ignored.",
+
+  "precision_normalize": {
+    "client_id":     "<YOUR_PRECISION_NORMALIZE_CLIENT_ID>",
+    "client_secret": "<YOUR_PRECISION_NORMALIZE_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token"
+  },
+
+  "value_set": {
+    "client_id":     "<YOUR_VALUE_SET_CLIENT_ID>",
+    "client_secret": "<YOUR_VALUE_SET_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token",
+    "vs_search_url": "<YOUR_FHIR_VALUESET_SEARCH_URL>",
+    "vs_detail_url": "<YOUR_FHIR_VALUESET_DETAIL_URL_WITH_{ValueSetId}>"
+  }
+}

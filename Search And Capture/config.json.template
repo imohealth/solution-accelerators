@@ -1,0 +1,19 @@
+{
+  "_comment": "Copy this file to config.json and fill in your IMO credentials. config.json is git-ignored.",
+
+  "core_search": {
+    "client_id":     "<YOUR_CORE_SEARCH_CLIENT_ID>",
+    "client_secret": "<YOUR_CORE_SEARCH_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token"
+  },
+  "problem_list": {
+    "client_id":     "<YOUR_PROBLEM_LIST_CLIENT_ID>",
+    "client_secret": "<YOUR_PROBLEM_LIST_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token"
+  },
+  "coding_intelligence": {
+    "client_id":     "<YOUR_CODING_INTEL_CLIENT_ID>",
+    "client_secret": "<YOUR_CODING_INTEL_CLIENT_SECRET>",
+    "token_url":     "https://api.imohealth.com/oauth/token"
+  }
+}

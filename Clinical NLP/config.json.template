@@ -1,0 +1,15 @@
+{
+  "_comment": "Copy this file to config.json and fill in your IMO API credentials.",
+
+  "entity_extraction": {
+    "_comment": "Credentials for the IMO Entity Extraction API (Clinical AI product).",
+    "client_id":     "YOUR_ENTITY_EXTRACTION_CLIENT_ID",
+    "client_secret": "YOUR_ENTITY_EXTRACTION_CLIENT_SECRET"
+  },
+
+  "problem_list": {
+    "_comment": "Credentials for the IMO Problem List Management APIs (Categorize & Clean).",
+    "client_id":     "YOUR_PROBLEM_LIST_CLIENT_ID",
+    "client_secret": "YOUR_PROBLEM_LIST_CLIENT_SECRET"
+  }
+}
