@@ -39,6 +39,66 @@ Real-World Evidence (RWE) solutions for patient cohort identification and OMOP d
 
 ---
 
+### 3. Clinical NLP
+Clinical NLP workflows for extracting, categorizing, and cleaning clinical problems from unstructured notes.
+
+**Key Capabilities:**
+- Clinical entity extraction from unstructured text
+- Problem list categorization using terminology-aware workflows
+- Problem list cleanup and preparation for downstream normalization
+
+📖 [View Clinical NLP Documentation](Clinical%20NLP/README.md)
+
+---
+
+### 4. CodingIntelligence
+Coding-focused intelligence workflows to support clinical coding quality and downstream data usability.
+
+**Key Capabilities:**
+- Coding intelligence notebook workflows
+- Reusable assets and supporting static resources
+- Reference implementation for coding-focused solution patterns
+
+📖 [View CodingIntelligence Documentation](CodingIntelligence/README.md)
+
+---
+
+### 5. Normalize with Cohorting
+End-to-end workflows for normalization and cohort criteria generation from clinical data.
+
+**Key Capabilities:**
+- Precision normalization workflows
+- Value set inclusion and exclusion criteria handling
+- Cohort-ready outputs for analytics and evidence generation
+
+📖 [View Normalize with Cohorting Documentation](Normalize%20with%20Cohorting/README.md)
+
+---
+
+### 6. Normalize with Enrichment
+Normalization pipelines enhanced with enrichment to improve clinical context and downstream analysis.
+
+**Key Capabilities:**
+- Enrichment-aware normalization workflows
+- Terminology mapping improvements for higher data quality
+- Notebook-driven reference implementation
+
+📖 [View Normalize with Enrichment Documentation](Normalize%20with%20Enrichment/README.md)
+
+---
+
+### 7. Search and Capture
+Search-driven data capture workflows for discovering relevant clinical concepts and building structured outputs.
+
+**Key Capabilities:**
+- Core search setup and execution workflows
+- Problem list categorization integrated with search
+- Problem cleanup and coding intelligence integration
+
+📖 [View Search and Capture Documentation](Search%20And%20Capture/README.md)
+
+---
+
 ## Getting Started
 
 Each solution includes:
@@ -54,10 +114,14 @@ solution-engineering/
 ├── Ambient AI Solution/          # AI-powered clinical documentation solutions
 │   ├── PythonNotebooks/          # Implementation notebooks
 │   └── Readme.md                 # Solution documentation
-│
-└── RWE-Cohort-Identification/    # Real-world evidence and cohort solutions
-    ├── PythonNotebooks/          # Implementation notebooks
-    └── requirements.txt          # Python dependencies
+├── Clinical NLP/                 # Clinical NLP extraction and problem list workflows
+├── CodingIntelligence/           # Coding intelligence reference implementation
+├── Normalize with Cohorting/     # Normalization and cohort criteria workflows
+├── Normalize with Enrichment/    # Enrichment-aware normalization workflows
+├── RWE-Cohort-Identification/    # Real-world evidence and cohort solutions
+│   ├── PythonNotebooks/          # Implementation notebooks
+│   └── requirements.txt          # Python dependencies
+└── Search And Capture/           # Search-driven data capture workflows
 ```
 
 ## Prerequisites
