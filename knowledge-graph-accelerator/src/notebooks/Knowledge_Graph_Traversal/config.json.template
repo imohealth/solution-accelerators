@@ -1,0 +1,10 @@
+{
+  "_comment": "Copy this file to config.json and fill in your IMO credentials. config.json is git-ignored.",
+
+  "knowledge_graph": {
+    "client_id": "",
+    "client_secret": "",
+    "token_url": "https://api.imohealth.com/oauth/token",
+    "graphql_url": "https://api.imohealth.com/knowledgegraph/graphql/"
+  }
+}
