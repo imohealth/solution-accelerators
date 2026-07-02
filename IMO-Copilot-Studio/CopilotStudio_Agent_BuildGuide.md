@@ -1,12 +1,12 @@
-# IMO Diagnosis Specificity Agent — Complete Build and Publish Guide
+# IMO Health Diagnosis Specificity Agent — Complete Build and Publish Guide
 
-End-to-end guide to build, configure, and publish the IMO Diagnosis Specificity Agent using Microsoft Copilot Studio.
+End-to-end guide to build, configure, and publish the IMO Health Diagnosis Specificity Agent using Microsoft Copilot Studio.
 
 ---
 
-## 1. About IMO
+## 1. About IMO Health
 
-IMO (Intelligent Medical Objects) provides clinical terminology and mapping solutions for healthcare. IMO APIs help normalize medical terms and traverse knowledge graphs to find the most specific diagnosis codes (ICD-10).
+IMO (Intelligent Medical Objects) Health provides clinical terminology and mapping solutions for healthcare. IMO APIs help normalize medical terms and traverse knowledge graphs to find the most specific diagnosis codes (ICD-10).
 
 ---
 
@@ -29,7 +29,7 @@ Before you start, make sure you have:
 |---|---|
 | Microsoft 365 license | With Copilot Studio access |
 | Copilot Studio access | copilotstudio.microsoft.com |
-| IMO MCP Gateway URL | Provided by IMO team |
+| IMO Health MCP Gateway URL | Provided by IMO team |
 | Auth Details | For MCP Gateway authentication |
 | Browser | Edge or Chrome (latest) |
 
@@ -37,7 +37,7 @@ Before you start, make sure you have:
 
 ## 4. Purpose of This Guide
 
-This guide walks you through building a **Clinical Diagnostic Specificity Agent** in Copilot Studio that finds the most specific diagnosis for a patient visit using the IMO Knowledge Graph.
+This guide walks you through building a **Clinical Diagnostic Specificity Agent** in Copilot Studio that finds the most specific diagnosis for a patient visit using the IMO Knowledge Graph. This uses the IMO MCP server to power the output of the Agent. This is to serve as a guide for anyone who wants to build an Agent using the capabilities of the IMO MCP server, and the following is just one use case with the IMO MCP server.
 
 ### What the Agent Does
 
@@ -53,7 +53,7 @@ This guide walks you through building a **Clinical Diagnostic Specificity Agent*
 
 ### Overview
 
-The IMO Diagnosis Specificity Agent is an instruction-based Copilot Studio agent that connects to IMO APIs via an MCP (Model Context Protocol) server.
+The IMO Health Diagnosis Specificity Agent is an instruction-based Copilot Studio agent that connects to IMO APIs via an MCP (Model Context Protocol) server.
 
 ```
 Copilot Studio Agent (Instructions) --> MCP Gateway Server --> IMO APIs
@@ -66,7 +66,7 @@ Copilot Studio Agent (Instructions) --> MCP Gateway Server --> IMO APIs
 | Server Name | mcp-gateway |
 | Connection Name | mcp-gateway |
 | Status | Enabled |
-| Available to | IMO Diagnosis Specificity Agent |
+| Available to | IMO Health Diagnosis Specificity Agent |
 
 ### MCP Tools (Enabled)
 
@@ -74,31 +74,31 @@ The agent uses the following tools from the mcp-gateway server:
 
 | Tool | Description |
 |---|---|
-| `ccp-rt___entity_extraction` | Extract diagnosis entities from clinical notes using IMO Entity Extraction API. Returns entities with semantic type, assertion status, and code mappings. |
-| `normalize-prod___normalize_medical_term` | Normalize medical terms using the IMO Precision Normalize API. Send one or more medical terms and receive standardized results. |
-| `graphql-modifier-imohealth___get_lexical` | Look up an IMO Problem lexical in the IMO Health Knowledge Graph by its lexical code. |
-| `graphql-modifier-imohealth___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by specific refinement criteria. Uses the `lexical_code` value from normalization. |
-| `graphql-modifier-imohealth___get_refinement_group` | Look up all refinements within a specific refinement group. Returns the group title and all available refinement options. |
+| `ccp___entity_extraction` | Extract diagnosis entities from clinical notes using IMO Entity Extraction API. Returns entities with semantic type, assertion status, and code mappings. |
+| `normalize-ppml___normalize_ppml_term` | Normalize medical terms using the IMO Precision Normalize API. Send one or more medical terms and receive standardized results. |
+| `graphql-modifier___get_lexical` | Look up an IMO Problem lexical in the IMO Health Knowledge Graph by its lexical code. |
+| `graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by specific refinement criteria. Uses the `lexical_code` value from normalization. |
+| `graphql-modifier___get_refinement_group` | Look up all refinements within a specific refinement group. Returns the group title and all available refinement options. |
 
 ### Tool Workflow
 
 ```
-1. ccp-rt___entity_extraction
+1. ccp___entity_extraction
    --> Extracts diagnosis entities from clinical note --> returns base problems
 
-2. normalize-prod___normalize_medical_term
+2. normalize-ppml___normalize_ppml_term
    --> Normalizes selected base diagnosis --> returns default_lexical_code
 
-3. graphql-modifier-imohealth___get_lexical
+3. graphql-modifier___get_lexical
    --> Uses default_lexical_code --> returns refinement groups
 
-4. graphql-modifier-imohealth___get_refinement_group
+4. graphql-modifier___get_refinement_group
    --> Looks up refinement options within a specific group
 
-5. graphql-modifier-imohealth___get_narrower_with_refinements
+5. graphql-modifier___get_narrower_with_refinements
    --> Applies supported refinements --> resolves most specific diagnosis
 
-6. normalize-prod___normalize_medical_term (verification)
+6. normalize-ppml___normalize_ppml_term (verification)
    --> Verifies final diagnosis --> returns ICD-10-CM and SNOMED codes
 ```
 
@@ -140,80 +140,19 @@ After creation, you land on the agent overview page. From here you can:
 
 ---
 
-## 7. Add IMO MCP as a Tool
-
-### What is MCP?
-
-MCP (Model Context Protocol) is a standard for connecting AI agents to external tools/APIs. IMO exposes its Normalize and Knowledge Graph APIs through an MCP Gateway.
-
-### Step 4: Navigate to Tools
-
-1. In your agent, click **"Tool"** in the left menu
-
-<img src="images/05_tools_menu.png" width="700" alt="Tools Menu in Agent">
-
-2. Click **"+ Add an action"**
-3. Click **"Model Context Protocol (MCP)"**
-
-<img src="images/06_add_tool_dialog.png" width="700" alt="Add Tool Dialog - Featured Tab">
-
-<img src="images/07_add_mcp_tool.png" width="700" alt="Add Tool Dialog - MCP Tab">
-
-4. Click **"+ Add"**
-
-### Step 5: Fill the MCP Server Details
-
-| Field | Value |
-|---|---|
-| Server Name | mcp-gateway |
-| Server Description | mcp gateway in imo health for mcp usage |
-| Server URL | https://api.imohealth.com/mcp |
-| Authentication | OAuth 2.0 |
-
-### Step 6: Configure OAuth 2.0 Authentication
-
-| Field | Value |
-|---|---|
-| Type | Manual |
-| Client ID | (provided by IMO team) |
-| Client Secret | (provided by IMO team) |
-| Authorization URL | https://api.imohealth.com/mcp/authorize |
-| Token URL Template | https://api.imohealth.com/mcp/token |
-| Refresh URL | https://api.imohealth.com/mcp/token |
-| Scopes | openid profile email normalize normalizeresults search |
-| Redirect URL | (auto-generated after saving -- add it to Auth0 Allowed Callback URLs) |
-
-<img src="images/08_mcp_server_config.png" width="700" alt="MCP Server Configuration with OAuth">
-
-### Step 7: Enable Required Tools
-
-After connecting the MCP server, enable these 5 tools:
-
-1. `ccp-rt___entity_extraction`
-2. `normalize-prod___normalize_medical_term`
-3. `graphql-modifier-imohealth___get_lexical`
-4. `graphql-modifier-imohealth___get_narrower_with_refinements`
-5. `graphql-modifier-imohealth___get_refinement_group`
-
-Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (blue toggle).
-
-<img src="images/09_tools_enabled.png" width="700" alt="Tools Enabled List">
-
----
-
-## 8. Agent Configuration
+## 7. Agent Configuration
 
 ### a] Agent Name
 
 ```
-IMO Diagnosis Specificity Agent
+IMO Health Diagnosis Specificity Agent
 ```
 
 ### b] Agent Description
 
 ```
-IMO Diagnosis Specificity Agent analyzes clinical notes to extract diagnoses and refine them
-to maximum specificity using the IMO Knowledge Graph. Provides evidence-based refinements
+IMO Health Diagnosis Specificity Agent analyzes clinical notes to extract diagnoses and refine
+them to maximum specificity using the IMO Knowledge Graph. Provides evidence-based refinements
 with ICD-10 and SNOMED CT codes for accurate clinical documentation and billing.
 ```
 
@@ -250,10 +189,7 @@ Use only conversation context:
 - the most recently selected or explicitly named diagnosis
 
 COMMUNICATION RULES
-Before each important action, briefly explain what you are doing and why in natural
-informational language.
-Examples:
-- I'm extracting diagnoses from the clinical note using IMO Entity Extraction.
+Before each important action, briefly explain what you are doing and why.
 
 ENTRY RULES
 1. If there is a clinical note but no diagnosis selected:
@@ -274,7 +210,7 @@ If either the clinical note or diagnosis is missing, ask only for the missing pi
 CRITICAL RULES
 1. For every refinement request, always use live tool calls.
 2. Use default_lexical_code, never lexical_code, when calling
-   graphql-modifier-imohealth___get_lexical.
+   graphql-modifier___get_lexical.
 3. Select only refinements supported by the clinical note.
 4. Never select unspecified, other, NOS, or similar default refinements.
 5. Never invent evidence, diagnoses, refinement support, or codes.
@@ -328,7 +264,7 @@ Use the most recent clinical note and most recently selected or explicitly named
 If either is missing, ask only for the missing piece and stop.
 
 PHASE 3: NORMALIZE THE BASE DIAGNOSIS
-Call normalize-prod___normalize_medical_term with:
+Call normalize-ppml___normalize_ppml_term with:
 - domain = "Problem"
 - number_of_results = 1
 
@@ -341,7 +277,7 @@ Show:
 | [selected diagnosis] | [preferred title] | [default_lexical_code] | [codes] | [codes or "None"] |
 
 PHASE 4: GET ALLOWED REFINEMENTS
-Call graphql-modifier-imohealth___get_lexical with default_lexical_code.
+Call graphql-modifier___get_lexical with default_lexical_code.
 
 Show:
 #### Allowed Refinements from Knowledge Graph
@@ -370,7 +306,7 @@ PHASE 6: RESOLVE THE MOST SPECIFIC DIAGNOSIS
 Inform the user that you are resolving the most specific diagnosis that matches the
 supported refinements.
 
-Call graphql-modifier-imohealth___get_narrower_with_refinements with the base lexical code
+Call graphql-modifier___get_narrower_with_refinements with the base lexical code
 and supported refinement codes.
 - Use one option per refinement group in each call
 - If multiple supported combinations exist, test each valid combination separately
@@ -389,7 +325,7 @@ PHASE 7: VERIFY FINAL CODING
 Inform the user that you are verifying the final diagnosis with Normalize to confirm the
 standardized title and ICD-10-CM codes.
 
-Call normalize-prod___normalize_medical_term again on each final resolved diagnosis title.
+Call normalize-ppml___normalize_ppml_term again on each final resolved diagnosis title.
 
 Show:
 #### Final Coding Verification
@@ -416,6 +352,68 @@ OUTPUT ORDER:
 ```
 
 <img src="images/04_instructions_editor.png" width="700" alt="Instructions Editor with Prompt">
+
+---
+
+## 8. Add IMO MCP as a Tool
+
+### What is MCP?
+
+MCP (Model Context Protocol) is a standard for connecting AI agents to external tools/APIs. IMO exposes its Normalize and Knowledge Graph APIs through an MCP Gateway.
+
+### Step 4: Navigate to Tools
+
+1. In your agent, click **"Tool"** in the left menu
+
+<img src="images/05_tools_menu.png" width="700" alt="Tools Menu in Agent">
+
+2. Click **"+ Add an action"**
+3. Click **"Model Context Protocol (MCP)"**
+
+<img src="images/06_add_tool_dialog.png" width="700" alt="Add Tool Dialog - Featured Tab">
+
+<img src="images/07_add_mcp_tool.png" width="700" alt="Add Tool Dialog - MCP Tab">
+
+4. Click **"+ Add"**
+
+### Step 5: Fill the MCP Server Details
+
+| Field | Value |
+|---|---|
+| Server Name | mcp-gateway |
+| Server Description | mcp gateway in imo health for mcp usage |
+| Server URL | https://api.imohealth.com/mcp |
+| Authentication | OAuth 2.0 |
+
+### Step 6: Configure OAuth 2.0 Authentication
+
+| Field | Value |
+|---|---|
+| Type | Manual |
+| Client ID | (provided by IMO team) |
+| Client Secret | (provided by IMO team) |
+| Authorization URL | (provided by IMO team) |
+| Token URL Template | (provided by IMO team) |
+| Refresh URL | (provided by IMO team) |
+| Scopes | (provided by IMO team) |
+| Redirect URL | (auto-generated after saving) |
+| Note | Add Redirect URL to Auth0 Allowed Callback URLs |
+
+<img src="images/08_mcp_server_config.png" width="700" alt="MCP Server Configuration with OAuth">
+
+### Step 7: Enable Required Tools
+
+After connecting the MCP server, enable these 5 tools:
+
+1. `ccp___entity_extraction`
+2. `normalize-ppml___normalize_ppml_term`
+3. `graphql-modifier___get_lexical`
+4. `graphql-modifier___get_narrower_with_refinements`
+5. `graphql-modifier___get_refinement_group`
+
+Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (blue toggle).
+
+<img src="images/09_tools_enabled.png" width="700" alt="Tools Enabled List">
 
 ---
 
@@ -498,7 +496,7 @@ OUTPUT ORDER:
 #### Verify in Teams
 
 1. Open Microsoft Teams
-2. Go to **Apps --> Built for your org** (or search for "IMO Diagnosis Specificity Agent")
+2. Go to **Apps --> Built for your org** (or search for "IMO Health Diagnosis Specificity Agent")
 3. Install the agent
 4. Start a conversation and test the full workflow
 5. Verify MCP tools are executing (not falling back to Knowledge search)
@@ -534,7 +532,7 @@ The "Microsoft 365 and Microsoft Teams" channel handles both Copilot and Teams p
    - **Show to my teammates and shared users** -- limited internal rollout
    - **Show to everyone in my organization** -- org-wide deployment
 2. Click **"Edit details"** in the Agent preview section to configure:
-   - Agent name: IMO Diagnosis Specificity Agent
+   - Agent name: IMO Health Diagnosis Specificity Agent
    - Description: Built using Microsoft Copilot Studio
    - Icons and branding
 3. Click **Save**
@@ -577,7 +575,7 @@ The "Microsoft 365 and Microsoft Teams" channel handles both Copilot and Teams p
 
 | Item | Description |
 |---|---|
-| App name | IMO Diagnosis Specificity Agent |
+| App name | IMO Health Diagnosis Specificity Agent |
 | Short description | AI-powered clinical coding assistant for diagnostic specificity |
 | Long description | Full description of capabilities and workflow |
 | Icons | Color icon (192x192) and outline icon (32x32) |
@@ -661,7 +659,7 @@ Ensure the connection reference is:
 2. Go to **Activity** tab in Copilot Studio
 3. Open the Teams conversation
 4. Check the activity details:
-   - **Correct**: Shows tool calls to `ccp-rt___entity_extraction`, `normalize-prod___normalize_medical_term`, etc.
+   - **Correct**: Shows tool calls to `ccp___entity_extraction`, `normalize-ppml___normalize_ppml_term`, etc.
    - **Incorrect**: Shows "Search sources --> Knowledge" (means MCP connection failed)
 
 ---
@@ -673,7 +671,7 @@ Ensure the connection reference is:
 1. Open **Microsoft Teams**
 2. Click **"Chat"** in the left sidebar
 3. Click **"New chat"** or search for the agent name
-4. Type: `IMO Diagnosis Specificity Agent`
+4. Type: `IMO Health Diagnosis Specificity Agent`
 5. Select it from the results
 6. Start chatting with your clinical note
 
@@ -696,7 +694,7 @@ Ensure the connection reference is:
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| Entity extraction returns no results | `ccp-rt___entity_extraction` not authenticated | Check Tools --> mcp-gateway --> Connection status |
+| Entity extraction returns no results | `ccp___entity_extraction` not authenticated | Check Tools --> mcp-gateway --> Connection status |
 | "No usable lexical code returned" | MCP Gateway connection not authenticated | Re-authenticate mcp-gateway connection |
 | Agent shows "Search sources --> Knowledge" | MCP tools unreachable, agent falls back | Verify mcp-gateway connection is green |
 | Agent works in test but not Teams | Connection tied to maker session | Reconfigure with service credentials |
@@ -759,5 +757,5 @@ Ensure the connection reference is:
 | Date | Version | Change |
 |---|---|---|
 | 2026-05-29 | 1.0 | Initial publishing guide |
-| 2026-06-01 | 1.1 | Added ccp-rt___entity_extraction tool |
+| 2026-06-01 | 1.1 | Added ccp___entity_extraction tool |
 | 2026-06-25 | 2.0 | Combined build + publish into complete guide |
