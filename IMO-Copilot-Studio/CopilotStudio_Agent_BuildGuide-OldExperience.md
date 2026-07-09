@@ -235,12 +235,11 @@ The agent uses the following tools from the mcp-gateway server:
 | Type | Manual |
 | Client ID | (provided by IMO team) |
 | Client Secret | (provided by IMO team) |
-| Authorization URL | (provided by IMO team) |
-| Token URL Template | (provided by IMO team) |
-| Refresh URL | (provided by IMO team) |
-| Scopes | (provided by IMO team) |
-| Redirect URL | (auto-generated after saving) |
-| Note | Add Redirect URL to Auth0 Allowed Callback URLs |
+| Authorization URL | https://api.imohealth.com/mcp/authorize |
+| Token URL Template | https://api.imohealth.com/mcp/token |
+| Refresh URL | https://api.imohealth.com/mcp/token |
+| Scopes | openid profile email normalize normalizeresults search |
+| Redirect URL | (auto-generated after saving — add it to Auth0 Allowed Callback URLs) |
 
 <img src="images/09_add_and_configure.png" width="700" alt="Add and Configure MCP Server">
 
