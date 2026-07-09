@@ -1,6 +1,6 @@
 # IMO Health Diagnosis Specificity Agent
 
-Complete Build and Publish Guide - Microsoft Copilot Studio
+Complete build and Publish Guide - Microsoft Copilot Studio
 
 End-to-end guide to build, configure, and publish the IMO Diagnosis Specificity Agent using Microsoft Copilot Studio.
 
