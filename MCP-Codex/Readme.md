@@ -6,10 +6,10 @@ Connect Codex to IMO Health's clinical terminology MCP server for terminology no
 
 The Codex integration is a repository plugin:
 
-- `plugins/imo-health/.codex-plugin/plugin.json` — plugin metadata
-- `plugins/imo-health/.mcp.json` — IMO's Streamable HTTP MCP configuration
-- `plugins/imo-health/skills/imo-mcp-connect/SKILL.md` — setup, troubleshooting, and safe-use guidance
-- `.agents/plugins/marketplace.json` — the repository marketplace entry
+- `MCP-Codex/plugins/imo-health/.codex-plugin/plugin.json` — plugin metadata
+- `MCP-Codex/plugins/imo-health/.mcp.json` — IMO's Streamable HTTP MCP configuration
+- `MCP-Codex/plugins/imo-health/skills/imo-mcp-connect/SKILL.md` — setup, troubleshooting, and safe-use guidance
+- `.agents/plugins/marketplace.json` — the repository marketplace entry, which points to the plugin under `MCP-Codex/`
 
 ## Install from this repository
 
@@ -18,7 +18,8 @@ Add the repository marketplace, pinning the Codex branch:
 ```bash
 codex plugin marketplace add imohealth/solution-accelerators \\
   --ref add-mcp-codex-guide \\
-  --sparse .agents/plugins
+  --sparse .agents/plugins \\
+  --sparse MCP-Codex
 ```
 
 Restart the ChatGPT desktop app. Open **Plugins**, choose **IMO Health**, and install **IMO Health MCP**. Then open **Settings → MCP servers**, select **IMO Health**, and choose **Authenticate**. In a Codex task, use `/mcp` to verify that the server is connected.
