@@ -1,0 +1,25 @@
+{
+  "name": "imo-health",
+  "version": "1.0.0",
+  "description": "Connect Codex to IMO Health clinical terminology tools.",
+  "author": {
+    "name": "IMO Health",
+    "email": "support@imohealth.com",
+    "url": "https://developer.imohealth.com"
+  },
+  "homepage": "https://developer.imohealth.com",
+  "repository": "https://github.com/imohealth/solution-accelerators",
+  "license": "MIT",
+  "keywords": ["healthcare", "clinical", "terminology", "mcp", "imo", "normalization", "icd", "snomed"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "IMO Health MCP",
+    "shortDescription": "Clinical terminology normalization, search, and code mapping.",
+    "longDescription": "Connect Codex to IMO Health's clinical terminology normalization, search, and knowledge graph tools.",
+    "developerName": "IMO Health",
+    "category": "Healthcare",
+    "capabilities": ["Read"],
+    "defaultPrompt": "Use the IMO Health MCP tools to normalize this clinical term and show its supported code mappings."
+  },
+  "mcpServers": "./.mcp.json"
+}
