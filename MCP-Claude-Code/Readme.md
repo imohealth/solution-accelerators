@@ -61,8 +61,8 @@ This repo is a **Claude Code plugin** that registers the IMO Health MCP server a
 ### Step 1: Clone this repo
 
 ```bash
-git clone https://github.com/imohealth/imo-mcp-guide.git
-cd imo-mcp-guide
+git clone https://github.com/imohealth/solution-accelerators.git
+cd solution-accelerators/MCP-Claude-Code
 ```
 
 ### Step 2: Export your credentials
