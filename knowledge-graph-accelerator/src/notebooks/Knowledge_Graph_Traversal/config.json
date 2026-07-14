@@ -11,9 +11,9 @@
   "mcp": {
     "client_id": "",
     "client_secret": "",
-    "token_url": "https://api.imohealth.com/mcp/token",
+    "token_url": "https://api.imohealth.com/oauth/token",
     "server_url": "https://api.imohealth.com/mcp",
-    "bedrock_model_id": "us.anthropic.claude-sonnet-4-6",
+    "bedrock_model_id": "c3ccht7cnzsf",
     "aws_region": "us-east-1"
   }
 }
