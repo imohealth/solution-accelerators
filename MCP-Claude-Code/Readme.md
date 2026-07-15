@@ -44,17 +44,7 @@ This repo is a **Claude Code plugin** that registers the IMO Health MCP server a
 
 ### Getting Your Credentials
 
-1. Go to [developer.imohealth.com](https://developer.imohealth.com)
-2. Click **Log in** (top right) → **Create Account**
-3. Complete the registration form and activate via email
-4. Navigate to **My Credentials** (`/user/apps`)
-5. Click **+ New Trial**, name your app, select the APIs you want access to
-6. Click **Create Trial App**
-7. Click the **View** icon on your app row to reveal:
-   - **Consumer Key** → this is your `IMO_CLIENT_ID`
-   - **Consumer Secret** → this is your `MCP_CLIENT_SECRET`
-
----
+This guide assumes that one already has API credentials for the IMO Health MCP server with a client id and secret. If you do not have credentials, please contact the IMO Health API team at support.imohealth.com in order to receive the appropriate credentials to walk through this repository. 
 
 ## Setup
 
