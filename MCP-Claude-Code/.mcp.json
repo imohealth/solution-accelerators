@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "imo-health": {
+      "type": "http",
+      "url": "https://api.imohealth.com/mcp",
+      "clientId": "${IMO_CLIENT_ID}",
+      "clientSecret": "${MCP_CLIENT_SECRET}",
+      "scope": "openid profile email normalize normalizeresults search"
+    }
+  }
+}
