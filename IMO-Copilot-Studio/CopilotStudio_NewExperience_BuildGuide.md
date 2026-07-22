@@ -52,7 +52,9 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 2. Sign in with your Microsoft 365 account
 3. You will land on the Home page
 
-<img src="copilotstudio-new-images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
+> **Note:** To sign in to Microsoft Copilot Studio, you need a **work or school Microsoft account**. Personal Microsoft accounts (e.g., @outlook.com, @hotmail.com) are not supported.
+
+<img src="copilotstudio-new-images/copilotstudio-new-images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
 
 ### Step 2: Switch to New Experience (if needed)
 
@@ -64,7 +66,7 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 
 ## 6. Create a New Agent
 
-<img src="copilotstudio-new-images/02_new_experience_create.png" width="700" alt="New Experience - Create Agent">
+<img src="copilotstudio-new-images/copilotstudio-new-images/02_new_experience_create.png" width="700" alt="New Experience - Create Agent">
 
 ### Step 3: Create Agent
 
@@ -72,7 +74,7 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 2. Enter a brief description of what your agent should do
 3. The AI will generate suggestions for name, description, and instructions
 
-<img src="copilotstudio-new-images/03_create_agent.png" width="700" alt="Create New Agent">
+<img src="copilotstudio-new-images/copilotstudio-new-images/03_create_agent.png" width="700" alt="Create New Agent">
 
 ### Step 4: Agent Build Tab
 
@@ -80,7 +82,7 @@ After creation, you will land on the **Build** tab with:
 - Left side — Instructions editor (agent name, icon, instructions text)
 - Right side — Components Panel (Model, Tools, Knowledge, Skills, etc.)
 
-<img src="copilotstudio-new-images/04_build_tab_overview.png" width="700" alt="Build Tab Overview">
+<img src="copilotstudio-new-images/copilotstudio-new-images/04_build_tab_overview.png" width="700" alt="Build Tab Overview">
 
 ---
 
@@ -91,7 +93,7 @@ After creation, you will land on the **Build** tab with:
 1. In the Build tab, click on the agent name at the top to edit it
 2. Set the name: `IMO Health Diagnosis Specificity Agent`
 
-<img src="copilotstudio-new-images/05_agent_name.png" width="700" alt="Agent Name">
+<img src="copilotstudio-new-images/copilotstudio-new-images/05_agent_name.png" width="700" alt="Agent Name">
 
 ### Step 6: Add Agent Instructions
 
@@ -128,7 +130,7 @@ coding questions.
 </rules>
 ```
 
-<img src="copilotstudio-new-images/06_agent_instructions.png" width="700" alt="Agent Instructions">
+<img src="copilotstudio-new-images/copilotstudio-new-images/06_agent_instructions.png" width="700" alt="Agent Instructions">
 
 ### Step 7: Select Model
 
@@ -136,7 +138,7 @@ coding questions.
 2. Select your preferred LLM model (e.g., GPT-4o, Claude, etc.)
 3. Click **Save**
 
-<img src="copilotstudio-new-images/07_model_selection.png" width="700" alt="Model Selection">
+<img src="copilotstudio-new-images/copilotstudio-new-images/07_model_selection.png" width="700" alt="Model Selection">
 
 ---
 
@@ -155,7 +157,7 @@ Copilot Studio Agent (Instructions) → MCP Gateway Server → IMO APIs
 1. In the **Components Panel** (right side), click **Tools**
 2. Click **"+ Add a tool"**
 
-<img src="copilotstudio-new-images/08_tools_panel.png" width="700" alt="Tools Panel">
+<img src="copilotstudio-new-images/copilotstudio-new-images/08_tools_panel.png" width="700" alt="Tools Panel">
 
 ### Step 9: Add MCP Server
 
@@ -171,7 +173,7 @@ Copilot Studio Agent (Instructions) → MCP Gateway Server → IMO APIs
 
 3. Click **Add**
 
-<img src="copilotstudio-new-images/09_add_mcp_server.png" width="700" alt="Add MCP Server">
+<img src="copilotstudio-new-images/copilotstudio-new-images/09_add_mcp_server.png" width="700" alt="Add MCP Server">
 
 ### Step 10: Configure OAuth 2.0 Authentication
 
@@ -183,7 +185,7 @@ Copilot Studio Agent (Instructions) → MCP Gateway Server → IMO APIs
 | Token URL | (provided by IMO team) |
 | Scopes | (provided by IMO team) |
 
-<img src="copilotstudio-new-images/10_oauth_config.png" width="700" alt="OAuth Configuration">
+<img src="copilotstudio-new-images/copilotstudio-new-images/10_oauth_config.png" width="700" alt="OAuth Configuration">
 
 ### Step 11: Authenticate with IMO Health
 
@@ -193,7 +195,7 @@ Copilot Studio Agent (Instructions) → MCP Gateway Server → IMO APIs
 4. Click **LOGIN**
 5. This completes the OAuth authentication
 
-<img src="copilotstudio-new-images/11_imo_health_login.png" width="700" alt="IMO Health Login">
+<img src="copilotstudio-new-images/copilotstudio-new-images/11_imo_health_login.png" width="700" alt="IMO Health Login">
 
 > **Note:** In the new experience, tools from the MCP server are automatically discovered and available to the agent. No manual enable/disable needed.
 
@@ -205,11 +207,21 @@ After connecting, these tools are automatically available from the MCP Gateway:
 
 | Tool | Description |
 |---|---|
-| `ccp___entity_extraction` | Extract diagnosis entities from clinical notes |
-| `normalize-ppml___normalize_ppml_term` | Normalize medical terms using IMO Precision Normalize API |
-| `graphql-modifier___get_lexical` | Look up an IMO Problem lexical by its lexical code |
-| `graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by refinement criteria |
-| `graphql-modifier___get_refinement_group` | Look up all refinements within a refinement group |
+| `mcp__imo-health__categorize___categorize_problems` | Categorize medical problems |
+| `mcp__imo-health__ccp___entity_extraction` | Extract clinical entities from text |
+| `mcp__imo-health__core-search___get_term_detail` | Get details for a specific term |
+| `mcp__imo-health__core-search___lookup_term_by_code` | Look up a term by its code |
+| `mcp__imo-health__core-search___search_medical_term` | Search for medical terms |
+| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Get allowed refinements for a term |
+| `mcp__imo-health__graphql-modifier___get_cross_domain` | Get cross-domain mappings |
+| `mcp__imo-health__graphql-modifier___get_lexical` | Get lexical information |
+| `mcp__imo-health__graphql-modifier___get_mappings` | Get term mappings |
+| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Get narrower hierarchy |
+| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Get narrower sequential refinements |
+| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Get narrower terms with refinements |
+| `mcp__imo-health__graphql-modifier___get_refinement_group` | Get refinement groups |
+| `mcp__imo-health__graphql-modifier___get_related_problems` | Get related problems |
+| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalize a term using PPML |
 
 ### Tool Workflow
 
@@ -242,7 +254,7 @@ What are the specificity paths for chest pain?
    - Returns structured results with lexical codes and ICD-10 codes
    - Suggests follow-up questions at the end
 
-<img src="copilotstudio-new-images/12_preview_test.png" width="700" alt="Preview Test">
+<img src="copilotstudio-new-images/copilotstudio-new-images/12_preview_test.png" width="700" alt="Preview Test">
 
 ### Step 13: Verify Tool Calls
 
@@ -250,7 +262,7 @@ What are the specificity paths for chest pain?
 2. You should see tool invocations in the response flow
 3. Verify results contain IMO lexical codes
 
-<img src="copilotstudio-new-images/13_tool_calls.png" width="700" alt="Tool Calls Verification">
+<img src="copilotstudio-new-images/copilotstudio-new-images/13_tool_calls.png" width="700" alt="Tool Calls Verification">
 
 ---
 
@@ -263,7 +275,7 @@ What are the specificity paths for chest pain?
 3. Click **Publish** to confirm
 4. Wait for the status to show published (green banner)
 
-<img src="copilotstudio-new-images/14_publish.png" width="700" alt="Publish Agent">
+<img src="copilotstudio-new-images/copilotstudio-new-images/14_publish.png" width="700" alt="Publish Agent">
 
 ---
 
@@ -276,7 +288,7 @@ What are the specificity paths for chest pain?
 3. Authentication is automatically set to Microsoft Entra ID for Teams
 4. Click **Save**
 
-<img src="copilotstudio-new-images/15_channels_teams.png" width="700" alt="Teams Channel">
+<img src="copilotstudio-new-images/copilotstudio-new-images/15_channels_teams.png" width="700" alt="Teams Channel">
 
 ### Step 16: Make Agent Available
 

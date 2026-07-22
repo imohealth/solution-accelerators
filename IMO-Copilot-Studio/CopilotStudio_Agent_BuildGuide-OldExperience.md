@@ -51,20 +51,22 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 2. Sign in with your Microsoft 365 account
 3. You will land on the Home page
 
-<img src="images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
+> **Note:** To sign in to Microsoft Copilot Studio, you need a **work or school Microsoft account**. Personal Microsoft accounts (e.g., @outlook.com, @hotmail.com) are not supported.
 
-<img src="images/02_agents_sidebar.png" width="700" alt="Agents Sidebar">
+<img src="copilotstudio_old_images/copilotstudio_old_images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
+
+<img src="copilotstudio_old_images/copilotstudio_old_images/02_agents_sidebar.png" width="700" alt="Agents Sidebar">
 
 ### Step 2: Create a New Agent
 
 1. Click "+ Agent" in the left sidebar
 2. Select **"+ Create blank agent"**
 
-<img src="images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
+<img src="copilotstudio_old_images/copilotstudio_old_images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
 
 3. Fill in: Provide name to blank agent.
 
-<img src="images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
 
 4. Fill the agent specific details:
    - Name: Provide name to agent
@@ -81,7 +83,7 @@ After creation, you land on the agent overview page. From here you can:
 - Test the agent
 - Publish
 
-<img src="images/05_agent_overview.png" width="700" alt="Agent Overview Page">
+<img src="copilotstudio_old_images/copilotstudio_old_images/05_agent_overview.png" width="700" alt="Agent Overview Page">
 
 ---
 
@@ -157,7 +159,7 @@ CRITICAL RULES
 (See MD file for full Phase 1-7 prompt details)
 ```
 
-<img src="images/05_agent_overview.png" width="700" alt="Agent Configuration Page">
+<img src="copilotstudio_old_images/copilotstudio_old_images/05_agent_overview.png" width="700" alt="Agent Configuration Page">
 
 ---
 
@@ -187,11 +189,21 @@ The agent uses the following tools from the mcp-gateway server:
 
 | Tool | Description |
 |---|---|
-| `ccp___entity_extraction` | Extract diagnosis entities from clinical notes using IMO Entity Extraction API. |
-| `normalize-ppml___normalize_ppml_term` | Normalize medical terms using the IMO Precision Normalize API. |
-| `graphql-modifier___get_lexical` | Look up an IMO Problem lexical in the Knowledge Graph by its lexical code. |
-| `graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by specific refinement criteria. |
-| `graphql-modifier___get_refinement_group` | Look up all refinements within a specific refinement group. |
+| `mcp__imo-health__categorize___categorize_problems` | Categorize medical problems |
+| `mcp__imo-health__ccp___entity_extraction` | Extract clinical entities from text |
+| `mcp__imo-health__core-search___get_term_detail` | Get details for a specific term |
+| `mcp__imo-health__core-search___lookup_term_by_code` | Look up a term by its code |
+| `mcp__imo-health__core-search___search_medical_term` | Search for medical terms |
+| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Get allowed refinements for a term |
+| `mcp__imo-health__graphql-modifier___get_cross_domain` | Get cross-domain mappings |
+| `mcp__imo-health__graphql-modifier___get_lexical` | Get lexical information |
+| `mcp__imo-health__graphql-modifier___get_mappings` | Get term mappings |
+| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Get narrower hierarchy |
+| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Get narrower sequential refinements |
+| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Get narrower terms with refinements |
+| `mcp__imo-health__graphql-modifier___get_refinement_group` | Get refinement groups |
+| `mcp__imo-health__graphql-modifier___get_related_problems` | Get related problems |
+| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalize a term using PPML |
 
 ### Tool Workflow
 
@@ -209,15 +221,15 @@ The agent uses the following tools from the mcp-gateway server:
 1. In your agent, click **"Tool"** in the left menu
 2. Click **"+ Add a tool"**
 
-<img src="images/06_tools_tab_add_tool.png" width="700" alt="Tools Tab - Add a Tool">
+<img src="copilotstudio_old_images/copilotstudio_old_images/06_tools_tab_add_tool.png" width="700" alt="Tools Tab - Add a Tool">
 
 3. Click **"Model Context Protocol (MCP)"**
 
-<img src="images/07_add_tool_dialog.png" width="700" alt="Add Tool Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/07_add_tool_dialog.png" width="700" alt="Add Tool Dialog">
 
 4. Note: If the MCP server already added, you can search your MCP Server by its name in search of Add tool.
 
-<img src="images/08_search_mcp_gateway.png" width="700" alt="Search MCP Gateway">
+<img src="copilotstudio_old_images/copilotstudio_old_images/08_search_mcp_gateway.png" width="700" alt="Search MCP Gateway">
 
 ### Step 5: Fill the MCP Server Details
 
@@ -241,7 +253,7 @@ The agent uses the following tools from the mcp-gateway server:
 | Scopes | openid profile email normalize normalizeresults search |
 | Redirect URL | (auto-generated after saving — add it to Auth0 Allowed Callback URLs) |
 
-<img src="images/09_add_and_configure.png" width="700" alt="Add and Configure MCP Server">
+<img src="copilotstudio_old_images/copilotstudio_old_images/09_add_and_configure.png" width="700" alt="Add and Configure MCP Server">
 
 ### Step 7: Configure the MCP server with user level auth.
 
@@ -250,27 +262,37 @@ Once the mcp server is added as a tool:
 1. Click on the mcp server from tools, perform configuration with user id.
 2. Click on **"Add and configure"**
 
-<img src="images/09_add_and_configure.png" width="700" alt="Add and Configure">
+<img src="copilotstudio_old_images/copilotstudio_old_images/09_add_and_configure.png" width="700" alt="Add and Configure">
 
 3. Complete the IMO Health login when prompted.
 
-<img src="images/10_imo_health_login.png" width="700" alt="IMO Health Login">
+<img src="copilotstudio_old_images/copilotstudio_old_images/10_imo_health_login.png" width="700" alt="IMO Health Login">
 
 > **Note:** After adding the IMO MCP server as a tool, user needs to connect to the MCP gateway by performing user level auth.
 
 ### Step 8: Enable Required Tools
 
-After connecting the MCP server, enable these 5 tools:
+After connecting the MCP server, enable these tools:
 
-1. `ccp___entity_extraction`
-2. `normalize-ppml___normalize_ppml_term`
-3. `graphql-modifier___get_lexical`
-4. `graphql-modifier___get_narrower_with_refinements`
-5. `graphql-modifier___get_refinement_group`
+1. `mcp__imo-health__categorize___categorize_problems`
+2. `mcp__imo-health__ccp___entity_extraction`
+3. `mcp__imo-health__core-search___get_term_detail`
+4. `mcp__imo-health__core-search___lookup_term_by_code`
+5. `mcp__imo-health__core-search___search_medical_term`
+6. `mcp__imo-health__graphql-modifier___get_allowed_refinements`
+7. `mcp__imo-health__graphql-modifier___get_cross_domain`
+8. `mcp__imo-health__graphql-modifier___get_lexical`
+9. `mcp__imo-health__graphql-modifier___get_mappings`
+10. `mcp__imo-health__graphql-modifier___get_narrower_hierarchy`
+11. `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements`
+12. `mcp__imo-health__graphql-modifier___get_narrower_with_refinements`
+13. `mcp__imo-health__graphql-modifier___get_refinement_group`
+14. `mcp__imo-health__graphql-modifier___get_related_problems`
+15. `mcp__imo-health__normalize-ppml___normalize_ppml_term`
 
 Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (blue toggle).
 
-<img src="images/11_tools_enabled.png" width="700" alt="Tools Enabled List">
+<img src="copilotstudio_old_images/copilotstudio_old_images/11_tools_enabled.png" width="700" alt="Tools Enabled List">
 
 > **Note:** There is provision of choosing which tool you want from mcp as per requirement; user needs to disable the ALLOW ALL toggle.
 
@@ -287,7 +309,7 @@ Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (b
    - Returns specific diagnosis with ICD-10 codes
 4. Check Activity tab to confirm MCP tool calls are executing
 
-<img src="images/06_tools_tab_add_tool.png" width="700" alt="Test Panel with Response">
+<img src="copilotstudio_old_images/copilotstudio_old_images/06_tools_tab_add_tool.png" width="700" alt="Test Panel with Response">
 
 ---
 
@@ -306,13 +328,13 @@ Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (b
 Steps:
 1. Click on **"Channels"** from top options from studio.
 
-<img src="images/12_channels_tab.png" width="700" alt="Channels Tab">
+<img src="copilotstudio_old_images/copilotstudio_old_images/12_channels_tab.png" width="700" alt="Channels Tab">
 
 2. Click on the MS Channels
 3. Choose to which channel the agent need to publish
 4. Finally click on **"Save changes"**
 
-<img src="images/13_m365_teams_channel.png" width="700" alt="Microsoft 365 and Teams Channel">
+<img src="copilotstudio_old_images/copilotstudio_old_images/13_m365_teams_channel.png" width="700" alt="Microsoft 365 and Teams Channel">
 
 ---
 
@@ -323,7 +345,7 @@ Steps:
 3. Click **"Publish"** to confirm
 4. Wait for the status to show **"Published"**
 
-<img src="images/14_publish_agent.png" width="700" alt="Publish Agent Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/14_publish_agent.png" width="700" alt="Publish Agent Dialog">
 
 ### Deploy to Microsoft Teams
 
@@ -331,7 +353,7 @@ Steps:
 2. Go to Settings --> Security --> Authentication
 3. Select "Authenticate with Microsoft" (Entra ID)
 
-<img src="images/15_authentication_settings.png" width="700" alt="Authentication Settings">
+<img src="copilotstudio_old_images/copilotstudio_old_images/15_authentication_settings.png" width="700" alt="Authentication Settings">
 4. Go to Channels tab --> Click Microsoft Teams
 5. Toggle "Enable Teams" to On
 6. Click "Open availability options"

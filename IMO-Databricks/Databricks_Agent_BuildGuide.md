@@ -119,7 +119,6 @@ You will see the connection detail page showing:
 | Description | mcp gateway in imo health for mcp usage |
 | Connection type | HTTP |
 | URL | `https://api.imohealth.com:443/mcp` |
-| Owner | svc_terraform |
 
 <img src="databricks-images/02_connection_details.png" width="700" alt="MCP Connection Details">
 
@@ -177,11 +176,21 @@ After connecting, these tools are available from the MCP Gateway:
 
 | Tool | Description |
 |---|---|
-| `normalize-ppml___normalize_ppml_term` | Normalize medical terms using IMO Precision Normalize API |
-| `graphql-modifier___get_lexical` | Look up an IMO Problem lexical by its lexical code |
-| `graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by refinement criteria |
-| `graphql-modifier___get_refinement_group` | Look up all refinements within a refinement group |
-| `ccp___entity_extraction` | Extract diagnosis entities from clinical notes |
+| `mcp__imo-health__categorize___categorize_problems` | Categorize medical problems |
+| `mcp__imo-health__ccp___entity_extraction` | Extract clinical entities from text |
+| `mcp__imo-health__core-search___get_term_detail` | Get details for a specific term |
+| `mcp__imo-health__core-search___lookup_term_by_code` | Look up a term by its code |
+| `mcp__imo-health__core-search___search_medical_term` | Search for medical terms |
+| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Get allowed refinements for a term |
+| `mcp__imo-health__graphql-modifier___get_cross_domain` | Get cross-domain mappings |
+| `mcp__imo-health__graphql-modifier___get_lexical` | Get lexical information |
+| `mcp__imo-health__graphql-modifier___get_mappings` | Get term mappings |
+| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Get narrower hierarchy |
+| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Get narrower sequential refinements |
+| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Get narrower terms with refinements |
+| `mcp__imo-health__graphql-modifier___get_refinement_group` | Get refinement groups |
+| `mcp__imo-health__graphql-modifier___get_related_problems` | Get related problems |
+| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalize a term using PPML |
 
 ### Tool Workflow
 
