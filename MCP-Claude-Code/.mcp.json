@@ -5,7 +5,7 @@
       "url": "https://api.imohealth.com/mcp",
       "clientId": "${IMO_CLIENT_ID}",
       "clientSecret": "${MCP_CLIENT_SECRET}",
-      "scope": "openid profile email normalize normalizeresults search"
+      "scope": "plm.core plm.associate normalize nlp knowledgegraph.read coresearch"
     }
   }
 }

@@ -44,25 +44,15 @@ This repo is a **Claude Code plugin** that registers the IMO Health MCP server a
 
 ### Getting Your Credentials
 
-1. Go to [developer.imohealth.com](https://developer.imohealth.com)
-2. Click **Log in** (top right) → **Create Account**
-3. Complete the registration form and activate via email
-4. Navigate to **My Credentials** (`/user/apps`)
-5. Click **+ New Trial**, name your app, select the APIs you want access to
-6. Click **Create Trial App**
-7. Click the **View** icon on your app row to reveal:
-   - **Consumer Key** → this is your `IMO_CLIENT_ID`
-   - **Consumer Secret** → this is your `MCP_CLIENT_SECRET`
-
----
+This guide assumes that one already has API credentials for the IMO Health MCP server with a client id and secret. If you do not have credentials, please contact the IMO Health API team at support.imohealth.com in order to receive the appropriate credentials to walk through this repository. 
 
 ## Setup
 
 ### Step 1: Clone this repo
 
 ```bash
-git clone https://github.com/imohealth/imo-mcp-guide.git
-cd imo-mcp-guide
+git clone https://github.com/imohealth/solution-accelerators.git
+cd solution-accelerators/MCP-Claude-Code
 ```
 
 ### Step 2: Export your credentials
@@ -124,54 +114,38 @@ You should see `imo-health` listed with a green checkmark and its tools availabl
 
 ## Available Tools
 
-Once connected, Claude Code has access to **17 tools** across the following capability areas:
+Once connected, Claude Code has access to **10 tools** across three capability areas:
+
+### Precision Normalization
+
+These tools standardize inconsistent clinical terminology into a common, clinically validated standard.
+
+| Tool | Description |
+|------|-------------|
+| `normalize_problem` | Normalizes a free-text problem (e.g., "heart attack") to IMO's standard clinical terminology with mapped codes (ICD-10, SNOMED CT) |
+| `normalize_procedure` | Normalizes a free-text procedure to standard clinical terminology |
+| `normalize_code` | Takes a source code (ICD or SNOMED) and normalizes it to the current IMO ID |
+| `batch_normalize` | Processes multiple terms or codes in a single request for bulk workflows |
 
 ### Core Search
 
-| Tool | Description |
-|------|-------------|
-| `mcp__imo-health__core-search___search_medical_term` | Searches for clinical concepts by free-text query across all domains |
-| `mcp__imo-health__core-search___get_term_detail` | Retrieves detailed information for a specific clinical term |
-| `mcp__imo-health__core-search___lookup_term_by_code` | Looks up a clinical term by a specific code (ICD, SNOMED, CPT, etc.) |
-
-### GraphQL Modifier
+These tools query IMO's clinical terminology database by text, code, or partial input.
 
 | Tool | Description |
 |------|-------------|
-| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Gets allowed refinements for a clinical concept |
-| `mcp__imo-health__graphql-modifier___get_cross_domain` | Retrieves cross-domain mappings for a concept |
-| `mcp__imo-health__graphql-modifier___get_lexical` | Gets lexical variants and related terms |
-| `mcp__imo-health__graphql-modifier___get_mappings` | Maps a concept across coding systems (ICD-10, SNOMED CT, CPT, etc.) |
-| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Navigates the narrower/child hierarchy of a clinical concept |
-| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Gets narrower sequential refinement options |
-| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Gets narrower concepts with available refinements |
-| `mcp__imo-health__graphql-modifier___get_refinement_group` | Retrieves refinement group details for a concept |
-| `mcp__imo-health__graphql-modifier___get_related_problems` | Gets related problems and associations for a clinical concept |
+| `search_problem` | Searches for clinical concepts by free-text query across all domains |
+| `search_code` | Searches for clinical concepts by a specific code (ICD, SNOMED, CPT, etc.) |
+| `get_suggestions` | Returns autocomplete suggestions for partial clinical text input |
 
-### CCP (Clinical Content Processing)
+### Knowledge Graph
+
+These tools navigate relationships, hierarchies, and cross-system mappings in IMO's clinical knowledge graph.
 
 | Tool | Description |
 |------|-------------|
-| `mcp__imo-health__ccp___entity_extraction` | Extracts clinical entities from free-text clinical notes |
-
-### Categorize
-
-| Tool | Description |
-|------|-------------|
-| `mcp__imo-health__categorize___categorize_problems` | Categorizes clinical problems into standardized groups |
-
-### Normalize (PPML)
-
-| Tool | Description |
-|------|-------------|
-| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalizes a free-text term to IMO's standard clinical terminology with mapped codes |
-
-### IDE Tools
-
-| Tool | Description |
-|------|-------------|
-| `mcp__ide__executeCode` | Executes code within the IDE environment |
-| `mcp__ide__getDiagnostics` | Gets diagnostic information from the IDE |
+| `get_relationships` | Retrieves relationship data and associations for a clinical concept |
+| `get_hierarchy` | Navigates the parent/child hierarchy of a clinical concept |
+| `cross_map` | Maps a concept across coding systems (ICD-10 ↔ SNOMED CT ↔ CPT, etc.) |
 
 ---
 
