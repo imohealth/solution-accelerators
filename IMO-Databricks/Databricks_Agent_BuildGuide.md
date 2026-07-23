@@ -153,12 +153,63 @@ The IMO Health MCP server is available on the Databricks Marketplace. This is th
 1. Click on the **IMO Health MCP Server** listing from search results
 2. You will see the MCP server detail page with Overview, Tools, and Details
 3. Click **Install** button (top-right)
-4. Select the target catalog and schema where you want to install (e.g., `genai_workshop.poc`)
-5. Click **Install** to confirm
+4. The **"Install IMO Health MCP Server"** dialog will appear
 
 <img src="databricks-images/04_marketplace_install.png" width="700" alt="Marketplace MCP Server Install">
 
-### Step 8: Authenticate After Installation
+### Step 8: Fill in Installation Credentials
+
+Fill in the following fields in the installation dialog:
+
+| Field | Value |
+|---|---|
+| Connection name | Enter a name for this connection (e.g., `imo-health-mcp-gateway`) |
+| Host | `https://api.imohealth.com` |
+| Base path | `/mcp` |
+| Client ID | Your IMO Health Consumer Key |
+| Client secret | Your IMO Health Consumer Secret |
+| Credential type | `OAuth U2M` |
+| Port | `443` |
+| Authorization endpoint | |
+| OAuth scope | |
+| Token endpoint | |
+
+Click **Install** to confirm.
+
+> **Note:** Get your Client ID and Client Secret from the [IMO Health Developer Portal](https://developer.imohealth.com) under **My Credentials** → your trial app → **View**.
+
+### Step 9: Configure the Redirect URL
+
+After installation, you need to configure the OAuth redirect URL for the token exchange to work:
+
+1. Navigate to the installed MCP connection in **Catalog → Connections**
+2. Click the **three-dot menu (⋮)** on the top-right of the connection page
+3. Select **"Manage access request destinations"**
+
+<img src="databricks-images/05_connection_manage_access.png" width="700" alt="Connection Page - Manage Access Request Destinations">
+
+4. In the **"Access request destinations"** dialog, add your Databricks workspace OAuth callback under **Redirect URL**
+5. Click **Update**
+
+<img src="databricks-images/05_redirect_url_dialog.png" width="700" alt="Access Request Destinations - Redirect URL">
+
+The redirect URL should be set to your Databricks workspace OAuth callback:
+
+
+```
+https://<your-workspace-url>/login/oauth/http.html
+```
+
+For example: `https://dbc-82f56080-1c38.cloud.databricks.com/login/oauth/http.html`
+
+> **Tip:** You can find this URL in your browser's URL bar as the `redirect_uri` parameter during the OAuth flow.
+
+**If you have an existing email destination configured:**
+- Click the trash icon next to the email destination to delete it — Databricks won't allow a redirect URL alongside other destination types
+- Then add the redirect URL
+- Click **Update**
+
+### Step 10: Authenticate After Installation
 
 1. After installation, navigate to the installed MCP service in your catalog
 2. Click **Login** to authenticate with IMO Health
