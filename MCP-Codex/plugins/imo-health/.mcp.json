@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "imo-health": {
+      "url": "https://api.imohealth.com/mcp",
+      "auth": "oauth",
+      "scopes": [
+        "openid",
+        "profile",
+        "email",
+        "normalize",
+        "normalizeresults",
+        "search"
+      ],
+      "default_tools_approval_mode": "auto"
+    }
+  }
+}

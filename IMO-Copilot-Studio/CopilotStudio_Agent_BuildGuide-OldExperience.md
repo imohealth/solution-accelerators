@@ -51,20 +51,22 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 2. Sign in with your Microsoft 365 account
 3. You will land on the Home page
 
-<img src="images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
+> **Note:** To sign in to Microsoft Copilot Studio, you need a **work or school Microsoft account**. Personal Microsoft accounts (e.g., @outlook.com, @hotmail.com) are not supported.
 
-<img src="images/02_agents_sidebar.png" width="700" alt="Agents Sidebar">
+<img src="copilotstudio_old_images/copilotstudio_old_images/01_copilot_studio_home.png" width="700" alt="Copilot Studio Home Page">
+
+<img src="copilotstudio_old_images/copilotstudio_old_images/02_agents_sidebar.png" width="700" alt="Agents Sidebar">
 
 ### Step 2: Create a New Agent
 
 1. Click "+ Agent" in the left sidebar
 2. Select **"+ Create blank agent"**
 
-<img src="images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
+<img src="copilotstudio_old_images/copilotstudio_old_images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
 
 3. Fill in: Provide name to blank agent.
 
-<img src="images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
 
 4. Fill the agent specific details:
    - Name: Provide name to agent
@@ -81,7 +83,7 @@ After creation, you land on the agent overview page. From here you can:
 - Test the agent
 - Publish
 
-<img src="images/05_agent_overview.png" width="700" alt="Agent Overview Page">
+<img src="copilotstudio_old_images/copilotstudio_old_images/05_agent_overview.png" width="700" alt="Agent Overview Page">
 
 ---
 
@@ -157,7 +159,7 @@ CRITICAL RULES
 (See MD file for full Phase 1-7 prompt details)
 ```
 
-<img src="images/05_agent_overview.png" width="700" alt="Agent Configuration Page">
+<img src="copilotstudio_old_images/copilotstudio_old_images/05_agent_overview.png" width="700" alt="Agent Configuration Page">
 
 ---
 
@@ -185,23 +187,228 @@ Copilot Studio Agent (Instructions) --> MCP Gateway Server --> IMO APIs
 
 The agent uses the following tools from the mcp-gateway server:
 
-| Tool | Description |
-|---|---|
-| `ccp___entity_extraction` | Extract diagnosis entities from clinical notes using IMO Entity Extraction API. |
-| `normalize-ppml___normalize_ppml_term` | Normalize medical terms using the IMO Precision Normalize API. |
-| `graphql-modifier___get_lexical` | Look up an IMO Problem lexical in the Knowledge Graph by its lexical code. |
-| `graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by specific refinement criteria. |
-| `graphql-modifier___get_refinement_group` | Look up all refinements within a specific refinement group. |
+---
+
+#### 1. `mcp__imo-health__ccp___entity_extraction`
+
+**Description:** Extract clinical entities (problems, medications, labs, allergens) from free text using IMO CCP NLP. Analyzes clinical text to identify medical entities with semantic information and code mappings to ICD-10-CM, SNOMED, UMLS, and IMO terminologies.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `text` | string | Yes | Clinical text to extract entities from, such as a discharge summary or progress note. |
+| `version` | string | No | API version. Default: 3.0. |
+
+---
+
+#### 2. `mcp__imo-health__core-search___search_medical_term`
+
+**Description:** Search for medical terms using the IMO Core Search API (ProblemIT Professional). Returns ranked search results with IMO lexical codes, titles, and mapped codes (ICD-10-CM, SNOMED CT, HCC risk categories). Use the returned IMO lexical codes with `get_term_detail` for supplemental information, or with the Knowledge Graph `get_lexical` tool for modifier/refinement data.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `search_term` | string | Yes | The medical term to search for, such as 'chest pain' or 'diabetes'. |
+| `number_of_results` | integer | No | Maximum number of search results to return. Default: 10. |
+
+---
+
+#### 3. `mcp__imo-health__core-search___get_term_detail`
+
+**Description:** Get detailed supplemental information for IMO lexical codes via the Core Search API. Returns the full detail payload for each code, including mapped codes (ICD-10-CM, SNOMED CT), HCC risk categories, and clinical attributes. Use IMO lexical codes obtained from `search_medical_term` or `normalize_medical_term` results.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `codes` | string | Yes | Comma-separated IMO lexical codes to get details |
+
+---
+
+#### 4. `mcp__imo-health__core-search___lookup_term_by_code`
+
+**Description:** Look up medical terms by their IMO lexical codes using the Core Search API. Returns the search payload for each known IMO lexical code, including the term title, ICD-10-CM/SNOMED mappings, and clinical attributes. Use this when you already have IMO lexical codes (e.g., from `normalize_medical_term`) and need the Core Search terminology data for those codes.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `codes` | string | Yes | Comma-separated IMO lexical codes to look up |
+
+---
+
+#### 5. `mcp__imo-health__normalize-ppml___normalize_ppml_term`
+
+**Description:** Normalize medical terms using the IMO Precision Normalize API across Problem, Procedure, Medication, and Lab domains. Send one or more medical terms and receive raw normalization results from the API. For Medication domain, returns 20 results per term. For Problem, Procedure, and Lab domains, returns 1 result per term.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `terms` | array of strings | Yes | List of medical terms to normalize, such as ['diabetes', 'chest pain', 'amoxicillin', 'CBC']. |
+| `domain` | string | Yes | The domain of the medical terms. Must be one of: 'Problem', 'Procedure', 'Medication', or 'Lab'. |
+
+---
+
+#### 6. `mcp__imo-health__categorize___categorize_problems`
+
+**Description:** Organize a list of clinical problems into intuitive disease categories. Groups related conditions together using IMO clinical intelligence to declutter problem lists. Useful for patient chart review and clinical summaries.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `problems` | array of objects | Yes | List of problems to categorize. Each problem is an object with keys such as id, title, lexical_code, icd10, and snomed. At least one of title, icd10, or snomed is required. |
+| `priority_specialty` | string or null | No | Optional provider specialty code to prioritize in category ordering. |
+
+---
+
+#### 7. `mcp__imo-health__graphql-modifier___get_allowed_refinements`
+
+**Description:** Look up allowed refinements (also known as modifiers) for an IMO Problem lexical in the Knowledge Graph. Returns the refinement group(s) and refinement option(s) that can be applied to make the IMO lexical more specific (e.g., laterality, chronicity, location). Each allowed refinement includes its group code and title for categorization.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code). Allowed refinements are only available for the 'problem' domain.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' for knee pain. |
+| `domain` | string | No | The lexical domain. Default: 'problem'. |
+
+---
+
+#### 8. `mcp__imo-health__graphql-modifier___get_cross_domain`
+
+**Description:** Discover cross-domain clinical relationships for an IMO Problem lexical in the Knowledge Graph. Returns clinical relationships linked to the problem across other domains: associated diagnostics/findings/procedures/lab procedures, treatments (primary/supportive/preventative/contraindicated medications), causative agents and due-to causes (etiology), temporally-related concepts (during/after/before), realizations, finding methods, routine lab procedures, and interpreted procedures.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code).
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' for carcinoma of right breast or 'imo_code' for Crohn's disease. |
+
+---
+
+#### 9. `mcp__imo-health__graphql-modifier___get_lexical`
+
+**Description:** Look up an IMO lexical in the IMO Health Knowledge Graph by its lexical code. Returns the title, broader (parent) concepts, applied refinements (refinements already reflected in the lexical), and allowed refinements grouped by category. Use the allowed refinements to understand what options can increase diagnostic specificity.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code). Applied refinements and allowed refinements are only available for the 'problem' domain.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' |
+| `domain` | string | No | The lexical domain. Default: 'problem'. |
+
+---
+
+#### 10. `mcp__imo-health__graphql-modifier___get_mappings`
+
+**Description:** Retrieve external code mappings for an IMO lexical from the Knowledge Graph. Returns equivalent codes in industry standard coding systems. Problem: ICD-10-CM, ICD-10-CA, ICD-9-CM, SNOMED CT, DSM-5, ICD-O, MONDO. Procedure: CPT, HCPCS, ICD-10-PCS, LOINC, SNOMED CT. Medication: RxNorm, NDC, CVX, SNOMED CT. Each mapping includes the code, title, code system, and relationship type (exactMatch, closeMatch, broadMatch, narrowMatch, relatedMatch).
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code).
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' for knee pain. |
+| `domain` | string | No | The lexical domain: 'problem' (default), 'procedure', or 'medication'. |
+| `code_systems` | array of strings or null | No | Optional list of code systems to filter by, such as icd10cm, snomedInternational, rxnorm, or cpt. |
+| `include_hcc` | boolean | No | Problem domain only. If true, include HCC data on ICD-10-CM mappings. Default: false. |
+
+---
+
+#### 11. `mcp__imo-health__graphql-modifier___get_narrower_hierarchy`
+
+**Description:** Explore the hierarchy of an IMO lexical in the Knowledge Graph — both up and down. Returns two levels of broader (parent, grandparent) and two levels of narrower (children, grandchildren) IMO lexicals from the problem hierarchy. Use this to navigate the hierarchy and identify related terms at different specificity levels.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code). The problem hierarchy is only available for the 'problem' domain.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' for knee pain. |
+| `domain` | string | No | The lexical domain. Default: 'problem'. |
+
+---
+
+#### 12. `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements`
+
+**Description:** Apply refinements as nested GraphQL traversal to find progressively more specific IMO lexicals. Builds a single nested GraphQL query where each refinement level creates a deeper narrower() call. The depth of nesting is determined dynamically by the length of refinement sequence. Ideal for agents that need to drill down through multiple refinement levels in a single query.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code).
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The starting lexical_code from normalize_medical_term results, such as 'imo_code' |
+| `refinement_sequence` | array of arrays of strings | Yes | Ordered sequence of refinement code lists to apply as nested filters. Example: 'imo_code' creates three levels of nesting. |
+| `domain` | string | No | The lexical domain. Default: 'problem'. |
+| `include_allowed_refinements` | boolean | No | If true, include allowedRefinements at every nesting level. Default: false. |
+| `include_mappings` | boolean | No | If true, include code mappings such as ICD-10 and SNOMED at the deepest level. Default: false. |
+
+---
+
+#### 13. `mcp__imo-health__graphql-modifier___get_narrower_with_refinements`
+
+**Description:** Get narrower IMO lexicals filtered by specific refinement criteria. Returns only the narrower (more specific) IMO lexicals that match the given refinement codes. Use this after calling `get_allowed_refinements` to filter children by specific refinement options (e.g., find all knee pain variants with laterality:right).
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code). Applied refinements are only available for the 'problem' domain.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code from normalize_medical_term results, such as 'imo_code' for knee pain. |
+| `refinement_codes` | array of strings | Yes | List of refinement codes to filter narrower lexicals by, such as 'imo_code' for laterality:right. |
+| `domain` | string | No | The lexical domain. Default: 'problem'. |
+
+---
+
+#### 14. `mcp__imo-health__graphql-modifier___get_refinement_group`
+
+**Description:** Look up all refinements within a specific refinement group. Returns the group title and all available refinement options within the category. Use this to see all possible values for a refinement type (e.g., all laterality options: right, left, bilateral, unilateral, unspecified). Get the group notation from the group. Code field in get_allowed_refinements or get_lexical results.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `notation` | string | Yes | The refinement group notation/code, such as 'imo_code' for laterality. |
+
+---
+
+#### 15. `mcp__imo-health__graphql-modifier___get_related_problems`
+
+**Description:** Find the clinical problems related to a procedure or medication (reverse lookup). Traverses the cross-domain graph in reverse. Procedure: returns associatedProblems, interpretedFindings, determinedProblems, causedProblems, realizedProblems. Medication: returns treatedProblems, contraindicatedProblems, preventedProblems, causedProblems.
+
+**Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code).
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | The lexical_code of a procedure or medication from normalize_medical_term results. |
+| `domain` | string | No | The domain of the input code: 'procedure' or 'medication'. Default: 'procedure'. |
 
 ### Tool Workflow
 
 ```
-1. ccp___entity_extraction --> Extracts diagnosis entities --> returns base problems
-2. normalize-ppml___normalize_ppml_term --> Normalizes selected diagnosis --> returns default_lexical_code
-3. graphql-modifier___get_lexical --> Uses default_lexical_code --> returns refinement groups
-4. graphql-modifier___get_refinement_group --> Looks up refinement options within a group
-5. graphql-modifier___get_narrower_with_refinements --> Applies refinements --> resolves most specific diagnosis
-6. normalize-ppml___normalize_ppml_term (verification) --> Verifies final diagnosis --> returns ICD-10-CM and SNOMED codes
+1. mcp__imo-health__ccp___entity_extraction --> Extracts diagnosis entities --> returns base problems
+2. mcp__imo-health__normalize-ppml___normalize_ppml_term --> Normalizes selected diagnosis --> returns default_lexical_code
+3. mcp__imo-health__graphql-modifier___get_lexical --> Uses default_lexical_code --> returns refinement groups
+4. mcp__imo-health__graphql-modifier___get_refinement_group --> Looks up refinement options within a group
+5. mcp__imo-health__graphql-modifier___get_narrower_with_refinements --> Applies refinements --> resolves most specific diagnosis
+6. mcp__imo-health__normalize-ppml___normalize_ppml_term (verification) --> Verifies final diagnosis --> returns ICD-10-CM and SNOMED codes
 ```
 
 ### Step 4: Navigate to Tools
@@ -209,15 +416,15 @@ The agent uses the following tools from the mcp-gateway server:
 1. In your agent, click **"Tool"** in the left menu
 2. Click **"+ Add a tool"**
 
-<img src="images/06_tools_tab_add_tool.png" width="700" alt="Tools Tab - Add a Tool">
+<img src="copilotstudio_old_images/copilotstudio_old_images/06_tools_tab_add_tool.png" width="700" alt="Tools Tab - Add a Tool">
 
 3. Click **"Model Context Protocol (MCP)"**
 
-<img src="images/07_add_tool_dialog.png" width="700" alt="Add Tool Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/07_add_tool_dialog.png" width="700" alt="Add Tool Dialog">
 
 4. Note: If the MCP server already added, you can search your MCP Server by its name in search of Add tool.
 
-<img src="images/08_search_mcp_gateway.png" width="700" alt="Search MCP Gateway">
+<img src="copilotstudio_old_images/copilotstudio_old_images/08_search_mcp_gateway.png" width="700" alt="Search MCP Gateway">
 
 ### Step 5: Fill the MCP Server Details
 
@@ -235,44 +442,43 @@ The agent uses the following tools from the mcp-gateway server:
 | Type | Manual |
 | Client ID | (provided by IMO team) |
 | Client Secret | (provided by IMO team) |
-| Authorization URL | https://api.imohealth.com/mcp/authorize |
-| Token URL Template | https://api.imohealth.com/mcp/token |
-| Refresh URL | https://api.imohealth.com/mcp/token |
-| Scopes | openid profile email normalize normalizeresults search |
-| Redirect URL | (auto-generated after saving — add it to Auth0 Allowed Callback URLs) |
+| Authorization URL | Will be provided by IMO |
+| Token URL Template | Will be provided by IMO |
+| Refresh URL | Will be provided by IMO |
+| Scopes | Will be provided by IMO |
+| Redirect URL | (auto-generated after saving) |
+| Note | Add Redirect URL to Auth0 Allowed Callback URLs |
 
-<img src="images/09_add_and_configure.png" width="700" alt="Add and Configure MCP Server">
+<img src="copilotstudio_old_images/copilotstudio_old_images/09_add_and_configure.png" width="700" alt="Add and Configure MCP Server">
 
 ### Step 7: Configure the MCP server with user level auth.
 
-Once the mcp server is added as a tool:
+Once the mcp server is added as a tool.
 
 1. Click on the mcp server from tools, perform configuration with user id.
-2. Click on **"Add and configure"**
+2. Click on **"Add and config"**
 
-<img src="images/09_add_and_configure.png" width="700" alt="Add and Configure">
+<img src="copilotstudio_old_images/copilotstudio_old_images/09_add_and_configure.png" width="700" alt="Add and Configure">
 
-3. Complete the IMO Health login when prompted.
+> **Note:** After adding the IMO MCP server as a tool and, user needs to connect to the MCP gateway by performing user level auth.
 
-<img src="images/10_imo_health_login.png" width="700" alt="IMO Health Login">
+<img src="copilotstudio_old_images/copilotstudio_old_images/10_imo_health_login.png" width="700" alt="IMO Health Login">
 
-> **Note:** After adding the IMO MCP server as a tool, user needs to connect to the MCP gateway by performing user level auth.
-
-### Step 8: Enable Required Tools
+### Step 7: Enable Required Tools
 
 After connecting the MCP server, enable these 5 tools:
 
-1. `ccp___entity_extraction`
-2. `normalize-ppml___normalize_ppml_term`
-3. `graphql-modifier___get_lexical`
-4. `graphql-modifier___get_narrower_with_refinements`
-5. `graphql-modifier___get_refinement_group`
+1. `mcp__imo-health__ccp___entity_extraction`
+2. `mcp__imo-health__normalize-ppml___normalize_ppml_term`
+3. `mcp__imo-health__graphql-modifier___get_lexical`
+4. `mcp__imo-health__graphql-modifier___get_narrower_with_refinements`
+5. `mcp__imo-health__graphql-modifier___get_refinement_group`
 
 Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (blue toggle).
 
-<img src="images/11_tools_enabled.png" width="700" alt="Tools Enabled List">
+<img src="copilotstudio_old_images/copilotstudio_old_images/11_tools_enabled.png" width="700" alt="Tools Enabled List">
 
-> **Note:** There is provision of choosing which tool you want from mcp as per requirement; user needs to disable the ALLOW ALL toggle.
+> **Note:** There is provision of choosing the which tool you want from mcp as per requirement; user need to disable the ALLOW ALL toggle.
 
 ---
 
@@ -287,7 +493,7 @@ Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (b
    - Returns specific diagnosis with ICD-10 codes
 4. Check Activity tab to confirm MCP tool calls are executing
 
-<img src="images/06_tools_tab_add_tool.png" width="700" alt="Test Panel with Response">
+<img src="copilotstudio_old_images/copilotstudio_old_images/06_tools_tab_add_tool.png" width="700" alt="Test Panel with Response">
 
 ---
 
@@ -306,13 +512,13 @@ Go to **Tools --> mcp-gateway --> Tools** and toggle each tool to **Enabled** (b
 Steps:
 1. Click on **"Channels"** from top options from studio.
 
-<img src="images/12_channels_tab.png" width="700" alt="Channels Tab">
+<img src="copilotstudio_old_images/copilotstudio_old_images/12_channels_tab.png" width="700" alt="Channels Tab">
 
 2. Click on the MS Channels
 3. Choose to which channel the agent need to publish
 4. Finally click on **"Save changes"**
 
-<img src="images/13_m365_teams_channel.png" width="700" alt="Microsoft 365 and Teams Channel">
+<img src="copilotstudio_old_images/copilotstudio_old_images/13_m365_teams_channel.png" width="700" alt="Microsoft 365 and Teams Channel">
 
 ---
 
@@ -323,7 +529,7 @@ Steps:
 3. Click **"Publish"** to confirm
 4. Wait for the status to show **"Published"**
 
-<img src="images/14_publish_agent.png" width="700" alt="Publish Agent Dialog">
+<img src="copilotstudio_old_images/copilotstudio_old_images/14_publish_agent.png" width="700" alt="Publish Agent Dialog">
 
 ### Deploy to Microsoft Teams
 
@@ -331,7 +537,7 @@ Steps:
 2. Go to Settings --> Security --> Authentication
 3. Select "Authenticate with Microsoft" (Entra ID)
 
-<img src="images/15_authentication_settings.png" width="700" alt="Authentication Settings">
+<img src="copilotstudio_old_images/copilotstudio_old_images/15_authentication_settings.png" width="700" alt="Authentication Settings">
 4. Go to Channels tab --> Click Microsoft Teams
 5. Toggle "Enable Teams" to On
 6. Click "Open availability options"

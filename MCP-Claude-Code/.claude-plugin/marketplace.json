@@ -1,0 +1,21 @@
+{
+  "name": "imo-health-marketplace",
+  "owner": {
+    "name": "IMO Health",
+    "email": "support@imohealth.com"
+  },
+  "description": "IMO Health clinical terminology tools for Claude Code",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "imo-health",
+      "source": ".",
+      "description": "Connect to the IMO Health MCP server for clinical terminology normalization, search, and knowledge graph access",
+      "version": "1.0.0",
+      "displayName": "IMO Health MCP",
+      "author": { "name": "IMO Health" },
+      "homepage": "https://developer.imohealth.com",
+      "tags": ["healthcare", "clinical", "terminology", "mcp", "normalization"]
+    }
+  ]
+}
