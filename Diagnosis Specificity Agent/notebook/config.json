@@ -1,0 +1,16 @@
+{
+  "mcp": {
+        "client_id": "",
+        "client_secret": "",
+        "token_url": "https://api.imohealth.com/oauth/token",
+        "server_url": "",
+        "bedrock_model_id": "",
+        "aws_region": "us-east-1"
+    },
+  "aws": {
+        "access_key_id": "",
+        "secret_access_key": "",
+        "session_token": "",
+        "region": "us-east-1"
+  }
+}
