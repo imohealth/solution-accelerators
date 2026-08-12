@@ -14,11 +14,13 @@ Use this skill only for setting up or troubleshooting the IMO Health MCP connect
 - Authentication: OAuth 2.0 authorization-code flow
 - Requested scopes: `openid`, `profile`, `email`, `normalize`, `normalizeresults`, `search`
 
+
+
 ## Setup flow
 
 1. Confirm the IMO Health plugin is installed and enabled.
 2. In the ChatGPT desktop app, open **Settings → MCP servers**, select **IMO Health**, and choose **Authenticate**. Restart the app if the server does not appear.
-3. In Codex CLI, use `codex mcp login imo-health --scopes openid,profile,email,normalize,normalizeresults,search` when the server appears in `codex mcp list`.
+3. In Codex CLI, use `codex mcp login imo-health --scopes plm.core,plm.associate,normalize,nlp,knowledgegraph.read,coresearch` when the server appears in `codex mcp list`.
 4. Verify the connection using `/mcp` in a Codex task or `codex mcp list` in the CLI.
 
 ## Expected tools

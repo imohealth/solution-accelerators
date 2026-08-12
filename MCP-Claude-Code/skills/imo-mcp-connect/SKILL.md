@@ -78,7 +78,7 @@ The plugin has already registered the MCP server. When Claude Code connects for 
 
 1. Open the browser to `https://api.imohealth.com/mcp/authorize`
 2. Prompt the user to log in with their IMO Health credentials
-3. Request access to scopes: `openid profile email normalize normalizeresults search`
+3. Request access to scopes: `plm.core plm.associate normalize nlp knowledgegraph.read coresearch`
 4. Redirect back to Claude Code with an authorization code
 5. Exchange the code for an access token
 

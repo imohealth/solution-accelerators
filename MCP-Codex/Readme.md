@@ -2,6 +2,18 @@
 
 Connect Codex to IMO Health's clinical terminology MCP server for terminology normalization, clinical search, knowledge-graph navigation, and code-system cross-mapping.
 
+## Features
+
+- **Clinical terminology tools** — `normalize_problem`, `normalize_procedure`, `normalize_code`, `batch_normalize`, `search_problem`, `search_code`, `get_suggestions`, `get_relationships`, `get_hierarchy`, and `cross_map`.
+- **Natural language interface** — ask questions in plain English; Codex calls the right MCP tools behind the scenes.
+- **Multi-system code mapping** — translate between ICD-10-CM, SNOMED CT, CPT, and IMO vocabularies in one step.
+- **Knowledge graph navigation** — explore concept relationships, parent/child hierarchies, and related terms.
+- **Plugin-based setup** — install from the repository marketplace with guided authentication in ChatGPT desktop app or Codex CLI.
+- **Guided onboarding** — run `/mcp` to verify connection status and tool availability.
+- **Clinical-use guardrails** — normalize documented terms before selecting codes; never infer undocumented specificity.
+
+---
+
 ## What this package contains
 
 The Codex integration is a repository plugin:
