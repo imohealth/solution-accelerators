@@ -1,6 +1,9 @@
 # Local environment — contains AWS profile name, never commit
 .env
 
+# Config with credentials — never commit (use config.json.template)
+config.json
+
 # Virtual environment
 .venv/
 venv/
