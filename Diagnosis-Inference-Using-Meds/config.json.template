@@ -1,0 +1,41 @@
+{
+  "imo_api": {
+    "client_id": "",
+    "client_secret": "",
+    "token_url": "https://api.imohealth.com/oauth/token",
+    "audience": "https://api.imohealth.com",
+    "normalize_url": "https://api.imohealth.com/precision/normalize",
+    "graphql_url": "https://api.imohealth.com/knowledgegraph/graphql/"
+  },
+  "imo_kg": {
+    "client_id": "",
+    "client_secret": ""
+  },
+  "llm": {
+    "provider": "bedrock",
+    "bedrock": {
+      "model_id": "",
+      "region": ""
+    },
+    "openai": {
+      "api_key": "",
+      "model": "gpt-4o"
+    },
+    "anthropic": {
+      "api_key": "",
+      "model": "claude-sonnet-4-20250514"
+    },
+    "azure_openai": {
+      "api_key": "",
+      "endpoint": "",
+      "deployment": "",
+      "api_version": "2024-02-15-preview"
+    }
+  },
+  "aws": {
+    "access_key_id": "",
+    "secret_access_key": "",
+    "session_token": "",
+    "region": ""
+  }
+}
