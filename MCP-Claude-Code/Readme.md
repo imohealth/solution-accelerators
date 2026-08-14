@@ -78,6 +78,14 @@ echo 'export MCP_CLIENT_SECRET="<your_consumer_secret>"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
+OR
+
+```bash
+echo 'export IMO_CLIENT_ID="<your_consumer_key>"' >> ~/.bashrc
+echo 'export MCP_CLIENT_SECRET="<your_consumer_secret>"' >> ~/.bashrc
+source ~/.bashrc
+```
+
 > **Security note:** Never commit credentials to version control. These environment variables are referenced by the plugin at runtime.
 
 ### Step 3: Add the marketplace and install the plugin
