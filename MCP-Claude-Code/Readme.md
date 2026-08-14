@@ -14,6 +14,19 @@ When connected to Claude Code, you can ask questions like:
 
 Claude will call the appropriate MCP tools behind the scenes, returning clinically precise results.
 
+## Features
+
+- **Clinical terminology tools** — Core Search, Normalization, Hierarchy Traversal, Cross-Mapping, Entity Extraction, and Categorization.
+- **Natural language interface** — ask questions in plain English; Claude calls the right MCP tools behind the scenes.
+- **Multi-system code mapping** — translate between ICD-10-CM, SNOMED CT, CPT, and IMO vocabularies in one step.
+- **Clinical entity extraction** — pull structured diagnoses, procedures, and medications from free-text notes.
+- **Hierarchy navigation** — explore parent/child concept relationships to find more specific or broader terms.
+- **Diagnostic specificity agents** — automated pipelines that refine codes to the highest supported level of detail.
+- **Plugin-based setup** — install via Claude Code marketplace with OAuth authentication and credential management built in.
+- **Guided onboarding** — run `/imo-mcp-connect` for step-by-step authentication and connection verification.
+
+---
+
 ## Why Connect to Claude Code?
 
 Claude Code is an agentic coding assistant that can chain tool calls together to solve complex problems. By connecting the IMO Health MCP server, you enable Claude to:
@@ -63,6 +76,13 @@ Add your credentials to your shell profile so they persist across sessions:
 echo 'export IMO_CLIENT_ID="<your_consumer_key>"' >> ~/.zshrc
 echo 'export MCP_CLIENT_SECRET="<your_consumer_secret>"' >> ~/.zshrc
 source ~/.zshrc
+```
+OR
+
+```bash
+echo 'export IMO_CLIENT_ID="<your_consumer_key>"' >> ~/.bashrc
+echo 'export MCP_CLIENT_SECRET="<your_consumer_secret>"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 > **Security note:** Never commit credentials to version control. These environment variables are referenced by the plugin at runtime.
