@@ -167,58 +167,196 @@ class KGApiClient:
             return {"success": False, "error": f"KG GraphQL exception: {str(e)}"}
 
     def get_lexical(self, imo_lexical_code: str, domain: str = "Problem") -> Dict[str, Any]:
-        """Get lexical concept from the Knowledge Graph.
-
-        MedicationLexical returns: treatedProblems, preventedProblems, causedProblems.
         """
-        query = """query GetLexical($code: String!, $domain: IMODomain!) {
-  lexical(code: $code, domain: $domain) {
+        Get lexical concept from the Knowledge Graph with full relationship data.
+
+        Uses offset/size pagination: fetches first page for all fields, then
+        loops on any field that hits the SIZE limit to fetch remaining pages.
+
+        MedicationLexical returns: treatedProblems, causedProblems.
+        ProblemLexical returns: domainBroader, domainNarrower, appliedRefinements,
+                                allowedRefinements, refinementFamilies.
+        """
+        gql_domain = domain.lower()
+        SIZE = 1000
+
+        query = f"""query GetLexical($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
     code
     title
-    synonyms { code title }
-    ... on ProblemLexical {
-      domainBroader { code title }
-      domainNarrower { code title }
-      mappings { code title codeSystem relationshipType }
-      appliedRefinements { code title group { code title } }
-      allowedRefinements { code title group { code title } }
-      refinementFamilies { code title lexicals { code title } }
-    }
-    ... on MedicationLexical {
-      mappings { code title codeSystem relationshipType }
-      treatedProblems { code title }
-      preventedProblems { code title }
-      causedProblems { code title }
-    }
-    ... on ProcedureLexical {
-      mappings { code title codeSystem relationshipType }
-    }
-  }
-}"""
-        result = self._graphql_query(query, {"code": imo_lexical_code, "domain": domain.lower()})
-        if result.get("success") and result.get("data"):
-            return {"success": True, "lexical": result["data"].get("lexical")}
-        return result
+    synonyms {{ code title }}
+    ... on ProblemLexical {{
+      domainBroader(offset: 0, size: {SIZE}) {{ code title }}
+      domainNarrower(offset: 0, size: {SIZE}) {{ code title }}
+      mappings {{ code title codeSystem relationshipType }}
+      appliedRefinements(offset: 0, size: {SIZE}) {{ code title group {{ code title }} }}
+      allowedRefinements(offset: 0, size: {SIZE}) {{ code title group {{ code title }} }}
+      refinementFamilies(offset: 0, size: {SIZE}) {{ code title lexicals {{ code title }} }}
+    }}
+    ... on MedicationLexical {{
+      mappings {{ code title codeSystem relationshipType }}
+      treatedProblems(offset: 0, size: {SIZE}) {{ code title }}
+      causedProblems(offset: 0, size: {SIZE}) {{ code title }}
+    }}
+    ... on ProcedureLexical {{
+      mappings {{ code title codeSystem relationshipType }}
+    }}
+  }}
+}}"""
+
+        variables = {"code": imo_lexical_code, "domain": gql_domain}
+        result = self._graphql_query(query, variables)
+
+        if not result.get("success") or not result.get("data"):
+            return result
+
+        lexical = result["data"].get("lexical")
+        if not lexical:
+            return {"success": True, "lexical": None}
+
+        paginated_fields = {
+            "problem": ["domainBroader", "domainNarrower",
+                        "appliedRefinements", "allowedRefinements", "refinementFamilies"],
+            "medication": ["treatedProblems", "causedProblems"],
+            "procedure": [],
+        }
+
+        fields_to_check = paginated_fields.get(gql_domain, [])
+
+        for field in fields_to_check:
+            field_data = lexical.get(field)
+            if not isinstance(field_data, list) or len(field_data) < SIZE:
+                continue
+
+            offset = SIZE
+            while True:
+                page_query = self._build_single_field_page_query(field, gql_domain, offset, SIZE)
+                page_result = self._graphql_query(page_query, variables)
+
+                if not page_result.get("success") or not page_result.get("data"):
+                    break
+
+                page_lexical = page_result["data"].get("lexical")
+                if not page_lexical:
+                    break
+
+                page = page_lexical.get(field, [])
+                lexical[field].extend(page)
+
+                if len(page) < SIZE:
+                    break
+                offset += SIZE
+
+        return {"success": True, "lexical": lexical}
+
+    def _build_single_field_page_query(self, field: str, domain: str, offset: int, size: int) -> str:
+        """Build a query to fetch a single paginated field at a given offset."""
+        field_fragments = {
+            "domainBroader": f"domainBroader(offset: {offset}, size: {size}) {{ code title }}",
+            "domainNarrower": f"domainNarrower(offset: {offset}, size: {size}) {{ code title }}",
+            "appliedRefinements": f"appliedRefinements(offset: {offset}, size: {size}) {{ code title group {{ code title }} }}",
+            "allowedRefinements": f"allowedRefinements(offset: {offset}, size: {size}) {{ code title group {{ code title }} }}",
+            "refinementFamilies": f"refinementFamilies(offset: {offset}, size: {size}) {{ code title lexicals {{ code title }} }}",
+            "treatedProblems": f"treatedProblems(offset: {offset}, size: {size}) {{ code title }}",
+            "causedProblems": f"causedProblems(offset: {offset}, size: {size}) {{ code title }}",
+        }
+
+        fragment = field_fragments[field]
+
+        if domain == "medication":
+            return f"""query GetLexical($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    ... on MedicationLexical {{
+      {fragment}
+    }}
+  }}
+}}"""
+        elif domain == "procedure":
+            return f"""query GetLexical($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    ... on ProcedureLexical {{
+      {fragment}
+    }}
+  }}
+}}"""
+        else:
+            return f"""query GetLexical($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    ... on ProblemLexical {{
+      {fragment}
+    }}
+  }}
+}}"""
 
     def get_domain_hierarchy(self, imo_lexical_code: str, direction: str = "narrower", domain: str = "Problem") -> Dict[str, Any]:
-        """Get domain hierarchy (children or parents) for a concept."""
+        """
+        Get domain hierarchy (children or parents) for a concept.
+
+        Uses offset/size pagination on domainNarrower/domainBroader.
+        Loops with offset until len(page) < SIZE to fetch all items.
+        """
+        gql_domain = domain.lower()
+        SIZE = 1000
+        hierarchy_field = "domainBroader" if direction == "broader" else "domainNarrower"
+
         if direction == "broader":
-            query = """query GetDomainBroader($code: String!, $domain: IMODomain!) {
-  lexical(code: $code, domain: $domain) {
-    code title
-    synonyms { code title }
-    ... on ProblemLexical { domainBroader { code title } }
-  }
-}"""
+            query = f"""query GetDomainBroader($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    code
+    title
+    synonyms {{ code title }}
+    ... on ProblemLexical {{
+      domainBroader(offset: 0, size: {SIZE}) {{ code title }}
+    }}
+  }}
+}}"""
         else:
-            query = """query GetDomainNarrower($code: String!, $domain: IMODomain!) {
-  lexical(code: $code, domain: $domain) {
-    code title
-    synonyms { code title }
-    ... on ProblemLexical { domainNarrower { code title } }
-  }
-}"""
-        result = self._graphql_query(query, {"code": imo_lexical_code, "domain": domain.lower()})
-        if result.get("success") and result.get("data"):
-            return {"success": True, "lexical": result["data"].get("lexical")}
-        return result
+            query = f"""query GetDomainNarrower($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    code
+    title
+    synonyms {{ code title }}
+    ... on ProblemLexical {{
+      domainNarrower(offset: 0, size: {SIZE}) {{ code title }}
+    }}
+  }}
+}}"""
+
+        variables = {"code": imo_lexical_code, "domain": gql_domain}
+        result = self._graphql_query(query, variables)
+
+        if not result.get("success") or not result.get("data"):
+            return result
+
+        lexical = result["data"].get("lexical")
+        if not lexical:
+            return {"success": True, "lexical": None}
+
+        hierarchy_data = lexical.get(hierarchy_field, [])
+        if isinstance(hierarchy_data, list) and len(hierarchy_data) >= SIZE:
+            offset = SIZE
+            while True:
+                page_query = f"""query GetDomainHierarchyPage($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
+    ... on ProblemLexical {{
+      {hierarchy_field}(offset: {offset}, size: {SIZE}) {{ code title }}
+    }}
+  }}
+}}"""
+                page_result = self._graphql_query(page_query, variables)
+
+                if not page_result.get("success") or not page_result.get("data"):
+                    break
+
+                page_lexical = page_result["data"].get("lexical")
+                if not page_lexical:
+                    break
+
+                page = page_lexical.get(hierarchy_field, [])
+                lexical[hierarchy_field].extend(page)
+
+                if len(page) < SIZE:
+                    break
+                offset += SIZE
+
+        return {"success": True, "lexical": lexical}

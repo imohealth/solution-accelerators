@@ -171,30 +171,59 @@ class KGApiClient:
         """
         Get medication groups and their associated medications for a problem concept.
 
+        Uses offset/size pagination on medicationGroups.
+        Loops with offset until len(page) < SIZE to fetch all groups.
+
         Args:
             imo_lexical_code: The IMO lexical code of the problem
 
         Returns:
             Dict with medicationGroups list, each containing code, title, and medications [{code, title}]
         """
-        query = """query GetMedicationGroups($code: String!, $domain: IMODomain!) {
-  lexical(code: $code, domain: $domain) {
+        SIZE = 1000
+        all_groups = []
+        lexical_base = None
+        offset = 0
+
+        while True:
+            query = f"""query GetMedicationGroups($code: String!, $domain: IMODomain!) {{
+  lexical(code: $code, domain: $domain) {{
     code
     title
-    ... on ProblemLexical {
-      medicationGroups {
+    ... on ProblemLexical {{
+      medicationGroups(offset: {offset}, size: {SIZE}) {{
         code
         title
-        medications {
+        medications {{
           code
           title
-        }
-      }
-    }
-  }
-}"""
-        variables = {"code": imo_lexical_code, "domain": "problem"}
-        result = self._graphql_query(query, variables)
-        if result.get("success") and result.get("data"):
-            return {"success": True, "lexical": result["data"].get("lexical")}
-        return result
+        }}
+      }}
+    }}
+  }}
+}}"""
+            variables = {"code": imo_lexical_code, "domain": "problem"}
+            result = self._graphql_query(query, variables)
+
+            if not result.get("success") or not result.get("data"):
+                return result
+
+            lexical_data = result["data"].get("lexical")
+            if not lexical_data:
+                return {"success": True, "lexical": None}
+
+            if lexical_base is None:
+                lexical_base = {
+                    "code": lexical_data.get("code"),
+                    "title": lexical_data.get("title"),
+                }
+
+            page = lexical_data.get("medicationGroups", [])
+            all_groups.extend(page)
+
+            if len(page) < SIZE:
+                break
+            offset += SIZE
+
+        lexical_base["medicationGroups"] = all_groups
+        return {"success": True, "lexical": lexical_base}
