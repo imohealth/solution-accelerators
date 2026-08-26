@@ -25,12 +25,12 @@ IMO_AUDIENCE = "https://api.imohealth.com"
 # Normalize API
 IMO_NORMALIZE_URL = "https://api.imohealth.com/precision/normalize"
 IMO_NORMALIZE_CLIENT_ID = (
-    get_ssm_param("/diagnosis-specificity-agent/imo_normalize_client_id")
+    get_ssm_param("")
     or os.getenv("IMO_NORMALIZE_CLIENT_ID", "")
     or os.getenv("IMO_CLIENT_ID", "")
 )
 IMO_NORMALIZE_CLIENT_SECRET = (
-    get_ssm_param("/diagnosis-specificity-agent/imo_normalize_client_secret")
+    get_ssm_param("")
     or os.getenv("IMO_NORMALIZE_SECRET", "")
     or os.getenv("IMO_CLIENT_SECRET", "")
 )
@@ -38,10 +38,10 @@ IMO_NORMALIZE_CLIENT_SECRET = (
 # Knowledge Graph (GOAT) API
 KG_GRAPHQL_URL = "https://api.imohealth.com/knowledgegraph/graphql/"
 IMO_KG_CLIENT_ID = (
-    get_ssm_param("/diagnosis-specificity-agent/imo_kg_client_id")
+    get_ssm_param("")
     or os.getenv("IMO_KG_CLIENT_ID", "")
 )
 IMO_KG_CLIENT_SECRET = (
-    get_ssm_param("/diagnosis-specificity-agent/imo_kg_client_secret")
+    get_ssm_param("")
     or os.getenv("IMO_KG_CLIENT_SECRET", "")
 )
