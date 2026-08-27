@@ -177,6 +177,9 @@ class KGApiClient:
         have ties to the supplied medication codes, via the
         `domainNarrowerByMedications` field on ProblemLexical.
 
+        Uses offset/size pagination on domainNarrowerByMedications.
+        Loops with offset until len(page) < SIZE to fetch all items.
+
         Args:
             diagnosis_code: Base diagnosis lexical code (from normalize with
                 domain="Problem"). Example: 334677 for "type 2 diabetes mellitus".
@@ -192,13 +195,18 @@ class KGApiClient:
         if not medication_codes:
             return {"success": False, "error": "medication_codes list is empty"}
 
+        SIZE = 1000
         medications_arg = ", ".join(f'"{c}"' for c in medication_codes if c)
+        all_narrower = []
+        lexical_base = None
+        offset = 0
 
-        query = f"""{{
+        while True:
+            query = f"""{{
   lexical(code: "{diagnosis_code}", domain: problem) {{
     title
     ... on ProblemLexical {{
-      domainNarrowerByMedications(medications: [{medications_arg}]) {{
+      domainNarrowerByMedications(medications: [{medications_arg}], offset: {offset}, size: {SIZE}) {{
         code
         title
         ... on ProblemLexical {{
@@ -209,8 +217,26 @@ class KGApiClient:
   }}
 }}"""
 
-        result = self._graphql_query(query, {})
+            result = self._graphql_query(query, {})
 
-        if result.get("success") and result.get("data"):
-            return {"success": True, "lexical": result["data"].get("lexical")}
-        return result
+            if not result.get("success") or not result.get("data"):
+                return result
+
+            lexical_data = result["data"].get("lexical")
+            if not lexical_data:
+                return {"success": True, "lexical": None}
+
+            if lexical_base is None:
+                lexical_base = {
+                    "title": lexical_data.get("title"),
+                }
+
+            page = lexical_data.get("domainNarrowerByMedications", [])
+            all_narrower.extend(page)
+
+            if len(page) < SIZE:
+                break
+            offset += SIZE
+
+        lexical_base["domainNarrowerByMedications"] = all_narrower
+        return {"success": True, "lexical": lexical_base}

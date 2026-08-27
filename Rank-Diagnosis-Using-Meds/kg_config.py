@@ -1,15 +1,9 @@
 """
 Configuration for IMO Normalize API and Knowledge Graph (GOAT) API.
-Credentials are loaded from environment variables.
 """
 
 import os
-
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass  # python-dotenv not installed (SageMaker or minimal envs) — rely on env vars
+import boto3
 
 
 # IMO OAuth
