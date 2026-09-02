@@ -1,0 +1,6 @@
+config.json
+.env
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.claude/
