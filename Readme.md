@@ -491,7 +491,7 @@ Each solution accelerator includes everything you need to get up and running:
 |:------------|:--------|
 | **Python** | 3.8 or higher |
 | **Jupyter** | Notebook or Lab environment |
-| **IMO Health APIs** | [Contact us](mailto:support@imohealth.com) for API credentials |
+| **IMO Health APIs** | [Contact us](#contact) for API credentials |
 | **Cloud (optional)** | Azure subscription or AWS account for cloud-based solutions |
 
 ### Repository Structure
