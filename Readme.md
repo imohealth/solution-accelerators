@@ -445,70 +445,12 @@ This repository contains **15 solution accelerators** organized into five catego
 
 <br>
 
-<table>
-<tr>
-<td align="center" width="25%">
-
-**Claude Code**
-
-<br>
-
-<img src="https://img.shields.io/badge/Claude-Code-5B21B6?style=for-the-badge" alt="Claude Code"/>
-
-17 MCP tools, plugin-based setup, diagnostic specificity agents, natural language clinical queries
-
-<br>
-
-<a href="MCP-Claude-Code/Readme.md">View Guide</a>
-
-</td>
-<td align="center" width="25%">
-
-**Microsoft Copilot Studio**
-
-<br>
-
-<img src="https://img.shields.io/badge/Copilot-Studio-0078D4?style=for-the-badge" alt="Copilot Studio"/>
-
-Low-code agent building, MCP server integration, diagnostic specificity workflows
-
-<br>
-
-<a href="IMO-Copilot-Studio/README.md">View Guide</a>
-
-</td>
-<td align="center" width="25%">
-
-**Databricks**
-
-<br>
-
-<img src="https://img.shields.io/badge/Databricks-Agent-FF3621?style=for-the-badge" alt="Databricks"/>
-
-Unity Catalog integration, Supervisor Agent orchestration, production serving endpoints
-
-<br>
-
-<a href="IMO-Databricks/README.md">View Guide</a>
-
-</td>
-<td align="center" width="25%">
-
-**OpenAI Codex (VS Code)**
-
-<br>
-
-<img src="https://img.shields.io/badge/Codex-Extension-412991?style=for-the-badge" alt="Codex Extension"/>
-
-15 MCP tools inside VS Code, OAuth authentication, natural language clinical queries in IDE
-
-<br>
-
-<a href="IMO-Codex-Using-Extension/Codex_Extension_BuildGuide.md">View Guide</a>
-
-</td>
-</tr>
-</table>
+| Platform | Description | MCP Tools | Guide |
+|:---------|:------------|:---------:|:-----:|
+| **Claude Code** | Plugin-based setup, diagnostic specificity agents, natural language clinical queries | 17 | [View Guide](MCP-Claude-Code/Readme.md) |
+| **Microsoft Copilot Studio** | Low-code agent building, MCP server integration, diagnostic specificity workflows | 15+ | [View Guide](IMO-Copilot-Studio/README.md) |
+| **Databricks** | Unity Catalog integration, Supervisor Agent orchestration, production serving endpoints | 15+ | [View Guide](IMO-Databricks/README.md) |
+| **OpenAI Codex (VS Code)** | In-IDE clinical queries, OAuth authentication, entity extraction and normalization | 15 | [View Guide](IMO-Codex-Using-Extension/Codex_Extension_BuildGuide.md) |
 
 ---
 
