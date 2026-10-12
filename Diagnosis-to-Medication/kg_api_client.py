@@ -1,6 +1,6 @@
 """
 Direct HTTP client for IMO Normalize API and Knowledge Graph (GOAT) GraphQL API.
-Supports diagnosis-to-medication validation via medicationGroups.
+Supports diagnosis-to-medication validation via associatedTreatments.
 """
 
 import time
@@ -167,37 +167,33 @@ class KGApiClient:
         except Exception as e:
             return {"success": False, "error": f"KG GraphQL exception: {str(e)}"}
 
-    def get_medication_groups(self, imo_lexical_code: str) -> Dict[str, Any]:
+    def get_treatments_for_problem(self, imo_lexical_code: str) -> Dict[str, Any]:
         """
-        Get medication groups and their associated medications for a problem concept.
+        Get associated treatments for a problem concept.
 
-        Uses offset/size pagination on medicationGroups.
-        Loops with offset until len(page) < SIZE to fetch all groups.
+        Uses offset/size pagination on associatedTreatments.
 
         Args:
             imo_lexical_code: The IMO lexical code of the problem
 
         Returns:
-            Dict with medicationGroups list, each containing code, title, and medications [{code, title}]
+            Dict with associatedTreatments list, each containing code and title.
         """
         SIZE = 1000
-        all_groups = []
+        all_associated = []
         lexical_base = None
         offset = 0
 
         while True:
-            query = f"""query GetMedicationGroups($code: String!, $domain: IMODomain!) {{
+            query = f"""query GetTreatments($code: String!, $domain: IMODomain!) {{
   lexical(code: $code, domain: $domain) {{
     code
     title
     ... on ProblemLexical {{
-      medicationGroups(offset: {offset}, size: {SIZE}) {{
-        code
-        title
-        medications {{
-          code
-          title
-        }}
+      numberOfAssociatedTreatments
+      associatedTreatments(offset: {offset}, size: {SIZE}) {{
+        ... on Lexical {{ code title }}
+        ... on MedicationLexical {{ code title }}
       }}
     }}
   }}
@@ -216,14 +212,15 @@ class KGApiClient:
                 lexical_base = {
                     "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
+                    "numberOfAssociatedTreatments": lexical_data.get("numberOfAssociatedTreatments"),
                 }
 
-            page = lexical_data.get("medicationGroups", [])
-            all_groups.extend(page)
+            page = lexical_data.get("associatedTreatments", [])
+            all_associated.extend(page)
 
             if len(page) < SIZE:
                 break
             offset += SIZE
 
-        lexical_base["medicationGroups"] = all_groups
+        lexical_base["associatedTreatments"] = all_associated
         return {"success": True, "lexical": lexical_base}
