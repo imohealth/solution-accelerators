@@ -1,0 +1,20 @@
+{
+  "name": "imo-health-plugins",
+  "interface": {
+    "displayName": "IMO Health Plugins"
+  },
+  "plugins": [
+    {
+      "name": "imo-health-clinical-intelligence",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Healthcare"
+    }
+  ]
+}

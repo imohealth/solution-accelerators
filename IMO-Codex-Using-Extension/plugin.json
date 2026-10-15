@@ -1,0 +1,54 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "imo-health-clinical-intelligence",
+  "version": "1.0.0",
+  "description": "Clinical terminology normalization, knowledge graph navigation, and code-system cross-mapping powered by IMO Health MCP. Includes skills for diagnosis specificity, entity extraction, term normalization, and cross-code mapping across ICD-10, SNOMED CT, CPT, RxNorm, and 10+ coding systems.",
+  "author": {
+    "name": "IMO Health",
+    "url": "https://www.imohealth.com"
+  },
+  "homepage": "https://www.imohealth.com",
+  "repository": "https://github.com/imohealth/solution-accelerators",
+  "license": "MIT",
+  "keywords": [
+    "clinical-terminology",
+    "icd-10",
+    "snomed-ct",
+    "medical-coding",
+    "nlp",
+    "knowledge-graph",
+    "healthcare",
+    "diagnosis-specificity",
+    "normalization",
+    "imo-health"
+  ],
+  "extensions": {
+    "com.openai": {
+      "apps": "./.app.json",
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "IMO Health Clinical Intelligence",
+        "shortDescription": "Clinical terminology normalization, search, and knowledge graph via IMO Health MCP",
+        "longDescription": "Connect to IMO Health's MCP server for AI-powered clinical terminology workflows. Normalize medical terms across Problem, Procedure, Medication, and Lab domains. Navigate the IMO Knowledge Graph to find the most specific ICD-10 codes. Extract clinical entities from free text. Map between ICD-10-CM, SNOMED CT, CPT, RxNorm, and 10+ code systems. Includes 6 guided skills for common clinical informatics workflows.",
+        "developerName": "IMO Health",
+        "category": "Healthcare",
+        "capabilities": ["Read"],
+        "websiteURL": "https://www.imohealth.com",
+        "privacyPolicyURL": "https://www.imohealth.com/privacy-policy",
+        "termsOfServiceURL": "https://www.imohealth.com/terms-of-service",
+        "defaultPrompt": [
+          "Normalize 'type 2 diabetes with kidney disease' and find the most specific ICD-10 code.",
+          "Extract all clinical entities from this discharge summary.",
+          "What refinements are available for hypertension?",
+          "Map SNOMED code 22298006 to ICD-10-CM."
+        ],
+        "brandColor": "#0077B6",
+        "composerIcon": "./assets/screenshots/09_mcp_connected_01.png",
+        "logo": "./assets/logo.png",
+        "screenshots": [
+          "./assets/screenshots/09_mcp_connected_01.png"
+        ]
+      }
+    }
+  }
+}
