@@ -35,7 +35,7 @@ IMO Health provides industry-leading clinical terminology, analytics, and AI-pow
 
 ## What's Inside
 
-This repository contains **15 solution accelerators** organized into five categories — each with Jupyter notebooks, sample data, and step-by-step documentation to get you from zero to working integration.
+This repository contains **13 solution accelerators** organized into five categories — each with Jupyter notebooks, sample data, and step-by-step documentation to get you from zero to working integration.
 
 <br>
 
@@ -48,7 +48,7 @@ This repository contains **15 solution accelerators** organized into five catego
 | Category | Solutions | Description |
 |:---------|:----------|:------------|
 | [Clinical AI & NLP](#clinical-ai--nlp) | Ambient AI, Clinical NLP | Entity extraction, clinical documentation, problem list management |
-| [Knowledge Graph & Diagnosis Intelligence](#knowledge-graph--diagnosis-intelligence) | KG Traversal, Diagnosis Inference, Dx-to-Meds, Rank Diagnosis | GraphQL-powered concept exploration, medication-based diagnosis workflows |
+| [Knowledge Graph & Diagnosis Intelligence](#knowledge-graph--diagnosis-intelligence) | Diagnostic Specificity Inference (9 scenarios), KG Traversal | Agentic diagnosis refinement, ranking, and inference via KG + Normalize APIs |
 | [Normalization & Data Quality](#normalization--data-quality) | Normalize + Cohorting, Normalize + Enrichment | Precision normalization with FHIR value sets and contextual enrichment |
 | [Clinical Coding & Search](#clinical-coding--search) | CodingIntelligence, Search and Capture | Code validation, CMS Excludes 1 detection, multi-domain clinical search |
 | [Real-World Evidence](#real-world-evidence) | Medallion Architecture, HL7 Workflow, OMOP Workflow | Patient cohort identification from structured and unstructured data |
@@ -126,95 +126,43 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ## Knowledge Graph & Diagnosis Intelligence
 
-### 3. Diagnosis Inference Using Medications
+### 3. Diagnostic Specificity Inference
 
-> LangGraph ReAct agent that infers the most specific diagnosis from a base diagnosis and patient medications via Knowledge Graph traversal.
+> **9 agentic inference scenarios** — LangGraph ReAct agents that refine, rank, and infer diagnoses from clinical notes, medications, procedures, and labs via Knowledge Graph traversal + Normalize API.
 
-**What it does:** Given an initial diagnosis and a list of medications, this agent iteratively drills down through the Knowledge Graph using `domainNarrowerByMedications` to find the most specific matching diagnosis. Supports multiple LLM backends (Bedrock, OpenAI, Anthropic, Azure) and includes an interactive chat mode.
+**What it does:** Each scenario is a standalone Jupyter notebook with a LangGraph ReAct agent, rich streaming HTML output, and direct API calls to the IMO Health platform. Scenarios cover problem-based refinement, medication-guided inference, procedure-based drill-down, and lab identification.
 
 <table>
 <tr><td>
 
-**Key Capabilities**
-- Iterative diagnosis refinement via medications
-- Multi-LLM support (Bedrock / OpenAI / Anthropic / Azure)
-- Interactive chat mode
-- Knowledge Graph `domainNarrowerByMedications` traversal
+**Inference Scenarios**
+- Diagnosis Specificity using Problems (4 tools)
+- Refine Diagnosis using Medication (9 tools)
+- Rank Diagnosis using Medication (2 tools)
+- Diagnosis Specificity using Medication (2 tools)
+- Medication Identification (3 tools)
+- Diagnosis to Medication (2 tools)
+- Diagnosis Specificity using Procedure (2 tools)
+- DS using Procedure with Temporality (2 tools)
+- Lab Identification — Prototype (2 tools)
 
 </td><td>
 
 **APIs & Tech**
 - IMO Precision Normalize API
 - IMO Knowledge Graph GraphQL
-- LangGraph / LangChain
-- AWS Bedrock, OpenAI, Anthropic, Azure OpenAI
-
-</td></tr>
-</table>
-
-<a href="Diagnosis-Inference-Using-Meds"><img src="https://img.shields.io/badge/View_Documentation-%E2%86%92-5B21B6?style=for-the-badge" alt="View Docs"/></a>
-
----
-
-### 4. Diagnosis to Medication Validation
-
-> Validates whether a patient's medications are clinically associated with a given diagnosis using Knowledge Graph medication groups.
-
-**What it does:** Normalizes a diagnosis and list of medications, queries the Knowledge Graph for `medicationGroups` associated with the diagnosis, then performs exact code-based matching (including parent codes) to produce an association validation report.
-
-<table>
-<tr><td>
-
-**Key Capabilities**
-- Diagnosis-to-medication association validation
-- Direct + parent code matching
-- KG `medicationGroups` query
-- Structured validation report
-
-</td><td>
-
-**APIs & Tech**
-- IMO Precision Normalize API
-- IMO Knowledge Graph GraphQL
+- LangGraph / LangChain ReAct Agent
+- AWS Bedrock (Claude Haiku 4.5)
 - Python / Jupyter
 
 </td></tr>
 </table>
 
-<a href="Diagnosis-to-Medication"><img src="https://img.shields.io/badge/View_Documentation-%E2%86%92-5B21B6?style=for-the-badge" alt="View Docs"/></a>
+<a href="Diagnostic-Specificity-Inference/README.md"><img src="https://img.shields.io/badge/View_Documentation-%E2%86%92-5B21B6?style=for-the-badge" alt="View Docs"/></a>
 
 ---
 
-### 5. Rank Diagnosis Using Medications
-
-> Ranks candidate diagnoses by medication evidence using a confidence scoring formula powered by the Knowledge Graph.
-
-**What it does:** Normalizes patient medications and queries the Knowledge Graph for `treatedProblems`, `preventedProblems`, and `causedProblems` relationships. Applies hierarchy-aware code matching and a scoring formula to rank diagnoses as Strong, Moderate, Neutral, Weak, or Contraindicated.
-
-<table>
-<tr><td>
-
-**Key Capabilities**
-- Medication-based diagnosis ranking
-- Confidence scoring (Strong / Moderate / Neutral / Weak / Contraindicated)
-- Hierarchy-aware code matching
-- Treated, prevented, and caused problem relationships
-
-</td><td>
-
-**APIs & Tech**
-- IMO Precision Normalize API
-- IMO Knowledge Graph GraphQL (MedicationLexical)
-- Python / Jupyter
-
-</td></tr>
-</table>
-
-<a href="Rank-Diagnosis-Using-Meds"><img src="https://img.shields.io/badge/View_Documentation-%E2%86%92-5B21B6?style=for-the-badge" alt="View Docs"/></a>
-
----
-
-### 6. Knowledge Graph Traversal
+### 4. Knowledge Graph Traversal
 
 > Interactive notebook demonstrating direct GraphQL queries against the IMO Knowledge Graph API.
 
@@ -246,7 +194,7 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ## Normalization & Data Quality
 
-### 7. Precision Normalize with Cohorting
+### 5. Precision Normalize with Cohorting
 
 > Three-notebook pipeline: normalize clinical terms, match against FHIR value sets, and build reproducible patient cohorts.
 
@@ -276,7 +224,7 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ---
 
-### 8. Precision Normalize with Enrichment
+### 6. Precision Normalize with Enrichment
 
 > Context-aware clinical term normalization comparing enriched vs. base results.
 
@@ -308,7 +256,7 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ## Clinical Coding & Search
 
-### 9. CodingIntelligence
+### 7. CodingIntelligence
 
 > Notebook workflow for validating diagnosis code sets and detecting CMS Excludes 1 conflicts.
 
@@ -338,7 +286,7 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ---
 
-### 10. Search and Capture
+### 8. Search and Capture
 
 > Full clinical coding lifecycle — interactive term search, specialty grouping, duplicate detection, and code validation.
 
@@ -372,14 +320,14 @@ This repository contains **15 solution accelerators** organized into five catego
 
 ## Real-World Evidence
 
-### 11. RWE Cohort Identification
+### 9. RWE Cohort Identification
 
 > Three approaches to patient cohort identification from different data sources and architectures.
 
 <br>
 
 <details>
-<summary><strong>11a. Medallion Architecture (Data Lake)</strong> — Bronze/Silver/Gold pipeline for scalable data processing and cohort identification</summary>
+<summary><strong>9a. Medallion Architecture (Data Lake)</strong> — Bronze/Silver/Gold pipeline for scalable data processing and cohort identification</summary>
 
 <br>
 
@@ -398,7 +346,7 @@ This repository contains **15 solution accelerators** organized into five catego
 </details>
 
 <details>
-<summary><strong>11b. HL7 Workflow</strong> — Parse HL7 v2.x messages, extract/normalize codes, and apply cohort criteria</summary>
+<summary><strong>9b. HL7 Workflow</strong> — Parse HL7 v2.x messages, extract/normalize codes, and apply cohort criteria</summary>
 
 <br>
 
@@ -417,7 +365,7 @@ This repository contains **15 solution accelerators** organized into five catego
 </details>
 
 <details>
-<summary><strong>11c. OMOP Workflow</strong> — Extract entities from clinical notes, convert to OMOP CDM, and identify cohorts</summary>
+<summary><strong>9c. OMOP Workflow</strong> — Extract entities from clinical notes, convert to OMOP CDM, and identify cohorts</summary>
 
 <br>
 
@@ -460,8 +408,8 @@ This repository contains **15 solution accelerators** organized into five catego
 
 | API | What it Does | Used In |
 |:----|:-------------|:--------|
-| **Precision Normalize** | Maps clinical terms to ICD-10-CM, SNOMED-CT, RxNorm, CPT, LOINC | Ambient AI, Cohorting, Enrichment, RWE, Diagnosis solutions |
-| **Knowledge Graph (GraphQL)** | Concept hierarchies, medication relationships, cross-terminology mappings | KG Traversal, Diagnosis Inference, Dx-to-Meds, Rank Diagnosis |
+| **Precision Normalize** | Maps clinical terms to ICD-10-CM, SNOMED-CT, RxNorm, CPT, LOINC | Ambient AI, Cohorting, Enrichment, RWE, Diagnostic Specificity Inference |
+| **Knowledge Graph (GraphQL)** | Concept hierarchies, medication relationships, cross-terminology mappings | KG Traversal, Diagnostic Specificity Inference (9 scenarios) |
 | **Clinical AI / NLP** | Entity extraction from unstructured clinical text | Clinical NLP, RWE (OMOP Workflow) |
 | **Core Search** | Multi-domain clinical terminology search with type-ahead | Search and Capture |
 | **Problem List Management** | Categorization by specialty, duplicate/stale detection, cleanup | Clinical NLP, Search and Capture |
@@ -501,8 +449,7 @@ solution-accelerators/
 ├── Ambient AI Solution/                  # Clinical transcript to coded documentation
 ├── Clinical NLP/                         # Entity extraction & problem list management
 ├── CodingIntelligence/                   # Code validation & CMS Excludes 1 detection
-├── Diagnosis-Inference-Using-Meds/       # LangGraph agent for diagnosis refinement
-├── Diagnosis-to-Medication/              # Medication-diagnosis association validation
+├── Diagnostic-Specificity-Inference/     # 9 agentic inference scenarios (meds, procs, labs)
 ├── IMO-Codex-Using-Extension/            # OpenAI Codex + IMO MCP integration
 ├── IMO-Copilot-Studio/                   # Microsoft Copilot Studio + IMO MCP
 ├── IMO-Databricks/                       # Databricks AI Agent + IMO MCP
@@ -510,7 +457,6 @@ solution-accelerators/
 ├── MCP-Claude-Code/                      # Claude Code + IMO MCP plugin
 ├── Precision Normalize with Cohorting/   # Normalization + FHIR value set cohorting
 ├── Precision Normalize with Enrichment/  # Context-aware enrichment normalization
-├── Rank-Diagnosis-Using-Meds/            # Medication-based diagnosis ranking
 ├── RWE-Cohort-Identification/            # Real-world evidence cohort pipelines
 │   ├── Medallion Architecture/           #   └── Data lake Bronze/Silver/Gold
 │   ├── HL7 Workflow/                     #   └── HL7 v2.x message processing

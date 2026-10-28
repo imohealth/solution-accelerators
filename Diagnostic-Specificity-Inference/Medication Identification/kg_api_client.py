@@ -1,6 +1,6 @@
 """
 Direct HTTP client for IMO Normalize API and Knowledge Graph (GOAT) GraphQL API.
-Supports diagnosis-to-medication validation via associatedTreatments.
+Provides: normalize_medical_term, get_containing_medications, get_hierarchy_for_containing_medication.
 """
 
 import time
@@ -27,7 +27,6 @@ class KGApiClient:
         audience: Optional[str] = None,
         auth_url: Optional[str] = None,
     ) -> Optional[str]:
-        """Get OAuth2 token using client credentials grant."""
         try:
             response = requests.post(
                 auth_url or kg_config.IMO_AUTH_URL,
@@ -58,7 +57,7 @@ class KGApiClient:
         )
         if token:
             self._normalize_token = token
-            self._normalize_token_expiry = time.time() + 3540  # 59 min
+            self._normalize_token_expiry = time.time() + 3540
         return token
 
     def _get_kg_token(self) -> Optional[str]:
@@ -73,13 +72,20 @@ class KGApiClient:
             self._kg_token_expiry = time.time() + 3540
         return token
 
-    # ─── Normalize API ──────────────────────────────────────────────────────
+    # --- Normalize API ---
 
-    def normalize_medical_term(self, input_term: str, domain: str = "Problem") -> Dict[str, Any]:
-        """Normalize a medical term using IMO Precision Normalize API."""
+    def normalize_medical_term(self, input_term: str, domain: str = "Problem", order_name: str = "") -> Dict[str, Any]:
         token = self._get_normalize_token()
         if not token:
             return {"success": False, "error": "Failed to obtain Normalize API token"}
+
+        request_entry = {
+            "record_id": str(uuid.uuid4()),
+            "domain": domain,
+            "input_term": input_term,
+        }
+        if order_name:
+            request_entry["order_name"] = order_name
 
         payload = {
             "organization_id": "IMO",
@@ -90,13 +96,7 @@ class KGApiClient:
                 "debug": True,
                 "size": 1,
             },
-            "requests": [
-                {
-                    "record_id": str(uuid.uuid4()),
-                    "domain": domain,
-                    "input_term": input_term,
-                }
-            ],
+            "requests": [request_entry],
         }
 
         try:
@@ -124,8 +124,14 @@ class KGApiClient:
                                 for c in icd10cm.get("codes", []):
                                     if c.get("code"):
                                         icd10_codes.append(c["code"])
+                                title = (
+                                    item.get("title")
+                                    or item.get("default_lexical_title")
+                                    or item.get("lexical_title")
+                                    or ""
+                                )
                                 matches.append({
-                                    "title": item.get("title", ""),
+                                    "title": title,
                                     "lexical_code": item.get("lexical_code", ""),
                                     "default_lexical_code": item.get("default_lexical_code", ""),
                                     "score": item.get("score", 0),
@@ -138,10 +144,9 @@ class KGApiClient:
         except Exception as e:
             return {"success": False, "error": f"Normalize API exception: {str(e)}"}
 
-    # ─── Knowledge Graph (GOAT) GraphQL API ────────────────────────────────
+    # --- Knowledge Graph (GOAT) GraphQL API ---
 
     def _graphql_query(self, query: str, variables: Dict[str, Any], endpoint: Optional[str] = None) -> Dict[str, Any]:
-        """Execute a GraphQL query against the GOAT KG API."""
         target_url = endpoint or kg_config.KG_GRAPHQL_URL
         token = self._get_kg_token()
         if not token:
@@ -167,39 +172,37 @@ class KGApiClient:
         except Exception as e:
             return {"success": False, "error": f"KG GraphQL exception: {str(e)}"}
 
-    def get_treatments_for_problem(self, imo_lexical_code: str) -> Dict[str, Any]:
+    def get_containing_medications(self, imo_lexical_code: str) -> Dict[str, Any]:
         """
-        Get associated treatments for a problem concept.
+        Step 1 of medication identification: get dose forms and root-level containing medications.
 
-        Uses offset/size pagination on associatedTreatments.
-
-        Args:
-            imo_lexical_code: The IMO lexical code of the problem
-
-        Returns:
-            Dict with associatedTreatments list, each containing code and title.
+        Returns domainNarrower as a flat list (code + title) and root-level containingMedications.
+        Uses pagination loop on domainNarrower (has offset/size in schema).
         """
         SIZE = 1000
-        all_associated = []
+        all_narrower = []
         lexical_base = None
-        offset = 0
 
+        offset = 0
         while True:
-            query = f"""query GetTreatments($code: String!, $domain: IMODomain!) {{
-  lexical(code: $code, domain: $domain) {{
-    code
+            query = f"""{{
+  lexical(code: "{imo_lexical_code}", domain: medication) {{
     title
-    ... on ProblemLexical {{
-      numberOfAssociatedTreatments
-      associatedTreatments(offset: {offset}, size: {SIZE}) {{
-        ... on Lexical {{ code title }}
-        ... on MedicationLexical {{ code title }}
+    code
+    ... on MedicationLexical {{
+      domainNarrower(offset: {offset}, size: {SIZE}) {{
+        code
+        title
+      }}
+      containingMedications {{
+        code
+        title
       }}
     }}
   }}
 }}"""
-            variables = {"code": imo_lexical_code, "domain": "problem"}
-            result = self._graphql_query(query, variables)
+
+            result = self._graphql_query(query, {})
 
             if not result.get("success") or not result.get("data"):
                 return result
@@ -210,17 +213,82 @@ class KGApiClient:
 
             if lexical_base is None:
                 lexical_base = {
-                    "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
-                    "numberOfAssociatedTreatments": lexical_data.get("numberOfAssociatedTreatments"),
+                    "code": lexical_data.get("code"),
+                    "containingMedications": lexical_data.get("containingMedications", []),
                 }
 
-            page = lexical_data.get("associatedTreatments", [])
-            all_associated.extend(page)
+            page = lexical_data.get("domainNarrower", [])
+            all_narrower.extend(page)
 
             if len(page) < SIZE:
                 break
             offset += SIZE
 
-        lexical_base["associatedTreatments"] = all_associated
+        lexical_base["domainNarrower"] = all_narrower
+        return {"success": True, "lexical": lexical_base}
+
+    def get_hierarchy_for_containing_medication(self, imo_lexical_code: str) -> Dict[str, Any]:
+        """
+        Step 2 of medication identification: get full hierarchy for a containing medication.
+
+        For each containingMedication code, fetches its domainNarrower hierarchy
+        (3 levels deep: strengths, dose forms, SCD/SBD names).
+        Uses pagination loop on top-level domainNarrower.
+        """
+        SIZE = 1000
+        all_narrower = []
+        lexical_base = None
+
+        offset = 0
+        while True:
+            query = f"""{{
+  lexical(code: "{imo_lexical_code}", domain: medication) {{
+    code
+    title
+    ... on MedicationLexical {{
+      domainNarrower(offset: {offset}, size: {SIZE}) {{
+        code
+        title
+        ... on MedicationLexical {{
+          domainNarrower(offset: 0, size: {SIZE}) {{
+            code
+            title
+            ... on MedicationLexical {{
+              domainNarrower(offset: 0, size: {SIZE}) {{
+                code
+                title
+              }}
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+}}"""
+
+            result = self._graphql_query(query, {})
+
+            if not result.get("success") or not result.get("data"):
+                return result
+
+            lexical_data = result["data"].get("lexical")
+            if not lexical_data:
+                return {"success": True, "lexical": None}
+
+            if lexical_base is None:
+                lexical_base = {
+                    "title": lexical_data.get("title"),
+                    "code": lexical_data.get("code"),
+                }
+
+            page = lexical_data.get("domainNarrower", [])
+            all_narrower.extend(page)
+
+            if len(page) < SIZE:
+                break
+            offset += SIZE
+
+        if lexical_base:
+            lexical_base["domainNarrower"] = all_narrower
         return {"success": True, "lexical": lexical_base}
