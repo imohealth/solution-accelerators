@@ -1,0 +1,32 @@
+{
+  "name": "imo-health-clinical-intelligence",
+  "displayName": "IMO Health Clinical Intelligence",
+  "version": "1.0.0",
+  "description": "Clinical terminology normalization, knowledge graph navigation, and code-system cross-mapping powered by IMO Health MCP.",
+  "author": {
+    "name": "IMO Health"
+  },
+  "homepage": "https://www.imohealth.com",
+  "license": "MIT",
+  "keywords": ["healthcare", "clinical", "terminology", "mcp", "normalization", "icd-10", "snomed"],
+  "defaultEnabled": true,
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/",
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "IMO Health Clinical Intelligence",
+    "shortDescription": "Clinical terminology normalization, search, and knowledge graph via IMO Health MCP",
+    "longDescription": "Connect to IMO Health's MCP server for AI-powered clinical terminology workflows. Normalize medical terms across Problem, Procedure, Medication, and Lab domains. Navigate the IMO Knowledge Graph to find the most specific ICD-10 codes. Extract clinical entities from free text. Map between ICD-10-CM, SNOMED CT, CPT, RxNorm, and 10+ code systems.",
+    "developerName": "IMO Health",
+    "category": "Healthcare",
+    "capabilities": ["Read"],
+    "websiteURL": "https://www.imohealth.com",
+    "defaultPrompt": [
+      "Normalize 'type 2 diabetes with kidney disease' and find the most specific ICD-10 code.",
+      "Extract all clinical entities from this discharge summary."
+    ],
+    "brandColor": "#0077B6",
+    "composerIcon": "./assets/screenshots/09_mcp_connected_01.png",
+    "logo": "./assets/logo.png"
+  }
+}

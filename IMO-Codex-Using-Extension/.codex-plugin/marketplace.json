@@ -1,0 +1,21 @@
+{
+  "name": "imo-health-codex-marketplace",
+  "owner": {
+    "name": "IMO Health",
+    "email": "support@imohealth.com"
+  },
+  "description": "IMO Health clinical terminology tools for Codex",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "imo-health-clinical-intelligence",
+      "source": ".",
+      "description": "Clinical terminology normalization, knowledge graph navigation, and code-system cross-mapping powered by IMO Health MCP",
+      "version": "1.0.0",
+      "displayName": "IMO Health Clinical Intelligence",
+      "author": { "name": "IMO Health" },
+      "homepage": "https://www.imohealth.com",
+      "tags": ["healthcare", "clinical", "terminology", "mcp", "normalization", "icd-10", "snomed"]
+    }
+  ]
+}
