@@ -1,4 +1,4 @@
-# Best Practices — Building Diagnostic Specificity Inference Agents
+# Best Practices rule — Building Diagnostic Specificity Inference Agents
 
 This document covers the lessons learned, patterns, and rules to follow when building or modifying any of the **9 diagnostic specificity inference scenarios**. It's organized by topic so you can jump to what you need.
 
