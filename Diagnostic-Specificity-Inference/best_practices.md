@@ -1,4 +1,4 @@
-# Best Practices — Building Diagnostic Specificity Inference Agents
+# Best Practices rule — Building Diagnostic Specificity Inference Agents
 
 This document covers the lessons learned, patterns, and rules to follow when building or modifying any of the **9 diagnostic specificity inference scenarios**. It's organized by topic so you can jump to what you need.
 
@@ -31,17 +31,643 @@ All 9 scenarios share the same foundation — **LangGraph `create_react_agent`**
 
 ### Scenario Overview
 
-| # | Scenario | Mode | KG Edge Used | Tools | Complexity |
-|---|----------|------|-------------|-------|------------|
-| 1 | Diagnosis Specificity using Problems | `ds-conditions` | `refinementNarrower` | 4 | High — multi-step refinement groups |
-| 2 | Refine Diagnosis using Medication | `refine` | `domainNarrowerByMedications` + `refinementNarrower` | 9 | Highest — two-phase (med drill-down + refinement) |
-| 3 | Rank Diagnosis using Medication | `rank` | `treatedProblems` / `preventedProblems` / `causedProblems` | 2 | Medium — scoring formula |
-| 4 | Diagnosis Specificity using Medication | `dx-infer` | `domainNarrowerByMedications` | 2 | Low — iterative drill-down |
-| 5 | Medication Identification | `med-id` | `domainNarrower` + `containingMedications` | 3 | Medium — medication hierarchy |
-| 6 | Diagnosis to Medication | `dx-to-med` | `associatedTreatments` | 2 | Low — single KG lookup |
-| 7 | Diagnosis Specificity using Procedure | `dx-infer-proc` | `domainNarrowerByProcedures` | 2 | Low — iterative drill-down |
-| 8 | DS using Procedure with Temporality | `procedure_inference` | `domainNarrowerByProcedures` + temporal logic | 2 | Medium — adds temporal context |
-| 9 | Lab Identification (Prototype) | `lab-id` | `domainNarrower` (Lab domain) | 2 | Low — lab hierarchy exploration |
+| # | Scenario | GraphQL Edge | Tools | Complexity |
+|---|----------|-------------|-------|------------|
+| 1 | Diagnosis Specificity using Problems | `refinementNarrower` | **4** — `normalize_medical_term`, `get_lexical`, `get_allowed_refinements`, `get_narrower_sequential_refinements` | High — multi-step refinement groups |
+| 2 | Refine Diagnosis using Medication | `domainNarrowerByMedications` + `refinementNarrower` | **9** — `normalize_medical_term`, `get_lexical`, `get_domain_hierarchy`, `get_treatments_for_problem`, `get_caused_problems`, `get_diagnostics_for_problem`, `get_allowed_refinements`, `get_narrower_sequential_refinements`, `get_medication_diagnosis_proto` | Highest — two-phase (med drill-down + refinement) |
+| 3 | Rank Diagnosis using Medication | `treatedProblems` / `preventedProblems` / `causedProblems` | **3** — `normalize_medication_only`, `get_lexical_for_ranking`, `get_domain_hierarchy` | Medium — scoring formula |
+| 4 | Diagnosis Specificity using Medication | `domainNarrowerByMedications` | **2** — `normalize_medical_term`, `get_medication_diagnosis_proto` | Low — iterative drill-down |
+| 5 | Medication Identification | `domainNarrower` + `containingMedications` | **3** — `normalize_medical_term`, `get_containing_medications`, `get_hierarchies_for_containing_medications` | Medium — medication hierarchy |
+| 6 | Diagnosis to Medication | `associatedTreatments` | **2** — `normalize_medical_term`, `validate_medication_association` | Low — single KG lookup |
+| 7 | Diagnosis Specificity using Procedure | `domainNarrowerByProcedures` | **2** — `normalize_medical_term`, `find_diagnosis_by_procedure` | Low — iterative drill-down |
+| 8 | DS using Procedure with Temporality | `domainNarrowerByProcedures` + temporal logic | **2** — `normalize_medical_term`, `find_temporal_diagnoses` | Medium — adds temporal context |
+| 9 | Lab Identification (Prototype) | `domainNarrower` (Lab domain) | **2** — `normalize_medical_term`, `identify_lab` | Low — lab hierarchy exploration |
+
+### Mode 1: Diagnosis Specificity using Problems (`ds-conditions`)
+
+**Tools:** `normalize_medical_term`, `get_lexical`, `get_allowed_refinements`, `get_narrower_sequential_refinements`
+
+#### KG GraphQL Schemas
+
+**`get_lexical` — Full concept lookup with refinements, hierarchy, and mappings:**
+
+```graphql
+query GetLexical($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    synonyms { code title }
+    ... on ProblemLexical {
+      domainBroader(offset: 0, size: 1000) { code title }
+      domainNarrower(offset: 0, size: 1000) { code title }
+      mappings { code title codeSystem relationshipType }
+      appliedRefinements(offset: 0, size: 1000) { code title group { code title } }
+      allowedRefinements(offset: 0, size: 1000) { code title group { code title } }
+      refinementFamilies(offset: 0, size: 1000) { code title lexicals { code title } }
+    }
+  }
+}
+```
+
+**`get_allowed_refinements` — Refinement groups only (lighter query):**
+
+```graphql
+query GetAllowedRefinements($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      allowedRefinements(offset: 0, size: 1000) { code title group { code title } }
+    }
+  }
+}
+```
+
+**`get_narrower_sequential_refinements` — Nested refinement drill-down (dynamically built, max 3 levels per query):**
+
+```graphql
+query GetRefinedNarrower($code: String!, $domain: IMODomain!, $ref0: [String!], $ref1: [String!], $ref2: [String!]) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      refinementNarrower(refinements: $ref0, offset: 0, size: 1000) {
+        code
+        title
+        ... on ProblemLexical {
+          appliedRefinements { code title }
+          refinementNarrower(refinements: $ref1, offset: 0, size: 1000) {
+            code
+            title
+            ... on ProblemLexical {
+              appliedRefinements { code title }
+              refinementNarrower(refinements: $ref2, offset: 0, size: 1000) {
+                code
+                title
+                ... on ProblemLexical {
+                  appliedRefinements { code title }
+                  allowedRefinements(offset: 0, size: 1000) { code title group { code title } }
+                  mappings { code title codeSystem relationshipType }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+> **Batching:** If >3 refinement steps, they are batched in groups of 3 — each batch resolves to a single code used as the starting point for the next batch. The innermost level of the LAST batch includes `appliedRefinements`, `allowedRefinements`, and `mappings`; intermediate levels only include `appliedRefinements`.
+
+> **Note:** `normalize_medical_term` uses the REST-based Normalize API, not GraphQL.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Pagination overflow** | All list fields (`domainBroader`, `domainNarrower`, `appliedRefinements`, `allowedRefinements`, `refinementFamilies`) use `offset/size: 1000` with automatic page-fetch if 1000 items returned |
+| **GraphQL depth limit (max 7)** | `refinementNarrower` nesting capped at 3 levels per query; >3 refinements are auto-batched and chained across multiple queries |
+| **Partial resolution** | When a refinement step returns empty `refinementNarrower: []`, the agent reports the deepest concept reached — not a failure |
+| **Refinement ordering** | Must follow clinical hierarchy: type → complication → laterality → severity → qualifier. Different orderings may produce different or empty results |
+| **Broad terms** | `get_lexical` includes `domainNarrower` which can return hundreds of items for broad terms like "diabetes" — pagination handles this but response is still large for the LLM |
+| **No matching refinement** | If a refinement code doesn't exist in the concept's `allowedRefinements`, `refinementNarrower` returns empty — the agent should try alternative refinement codes or report the best match reached |
+
+### Mode 2: Refine Diagnosis using Medication (`refine`)
+
+**Tools:** `normalize_medical_term`, `get_lexical`, `get_domain_hierarchy`, `get_treatments_for_problem`, `get_caused_problems`, `get_diagnostics_for_problem`, `get_allowed_refinements`, `get_narrower_sequential_refinements`, `get_medication_diagnosis_proto`
+
+#### KG GraphQL Schemas
+
+**`get_lexical`** — Same as Mode 1 (full concept lookup with refinements, hierarchy, mappings).
+
+**`get_allowed_refinements`** — Same as Mode 1 (refinement groups only).
+
+**`get_narrower_sequential_refinements`** — Same as Mode 1 (nested refinement drill-down, max 3 levels).
+
+**`get_domain_hierarchy` — Narrower or broader concepts with synonyms:**
+
+```graphql
+query GetDomainNarrower($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    synonyms { code title }
+    ... on ProblemLexical {
+      domainNarrower(offset: 0, size: 1000) { code title }
+    }
+  }
+}
+```
+
+> Also supports `domainBroader` via `direction="broader"` parameter.
+
+**`get_treatments_for_problem` — Associated and supportive treatments:**
+
+```graphql
+query GetTreatments($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      numberOfAssociatedTreatments
+      numberOfSupportiveTreatments
+      associatedTreatments(offset: 0, size: 1000) {
+        ... on Lexical { code title }
+        ... on MedicationLexical { code title }
+      }
+    }
+  }
+}
+```
+
+> Separately paginates `supportiveTreatments` in a second query.
+
+**`get_caused_problems` — Caused problems and causative agents (Problem domain):**
+
+```graphql
+query GetCausedProblems($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      numberOfCausedProblems
+      numberOfCausativeAgents
+      causedProblems(offset: 0, size: 1000) { code title }
+    }
+  }
+}
+```
+
+> For Medication domain, uses `... on MedicationLexical` instead. Problem domain also paginates `causativeAgents` separately.
+
+**`get_diagnostics_for_problem` — Associated diagnostic procedures:**
+
+```graphql
+query GetDiagnostics($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      numberOfAssociatedProcedures
+      associatedProcedures(offset: 0, size: 1000) { code title }
+    }
+  }
+}
+```
+
+**`get_medication_diagnosis_proto` — Medication-guided hierarchy drill-down (Phase 1):**
+
+```graphql
+{
+  lexical(code: "<diagnosis_code>", domain: problem) {
+    title
+    ... on ProblemLexical {
+      domainNarrowerByMedications(medications: ["<med_code1>", "<med_code2>"], offset: 0, size: 1000) {
+        code
+        title
+        ... on ProblemLexical {
+          numberOfDomainChildren
+        }
+      }
+    }
+  }
+}
+```
+
+> **Note:** This query uses string interpolation (not variables) for `diagnosis_code` and `medications` — matching the source implementation.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Two-phase workflow** | Phase 1 (`get_medication_diagnosis_proto`) drills down using medication evidence; Phase 2 (`get_allowed_refinements` + `get_narrower_sequential_refinements`) applies remaining note-driven refinement axes |
+| **Phase 1 empty result** | If `domainNarrowerByMedications` returns empty list, the medication has no KG link to the diagnosis hierarchy — agent skips to Phase 2 using the original base concept |
+| **Phase 1 leaf detection** | Drill-down stops when `numberOfDomainChildren` is 0 or missing — concept is a leaf |
+| **`get_caused_problems` dual domain** | Uses `ProblemLexical` fragment for Problem domain (includes `causativeAgents`), `MedicationLexical` fragment for Medication domain (no `causativeAgents`) |
+| **`get_treatments_for_problem` dual pagination** | `associatedTreatments` and `supportiveTreatments` are paginated in separate query loops |
+| **Pagination on all list fields** | All tools use `offset/size: 1000` with automatic page-fetch |
+| **9-tool complexity** | The LLM must decide which of 9 tools to call — clear system prompt and docstrings are critical to prevent confusion |
+
+---
+
+#### Mode 3 — `rank` (Rank Diagnosis using Medication)
+
+**Tools:** `normalize_medication_only`, `get_lexical_for_ranking`, `get_domain_hierarchy`
+
+#### KG GraphQL Schemas
+
+**`normalize_medication_only`** — REST only (no GraphQL). Calls the Normalize API with `domain: "Medication"` hardcoded. Same REST schema as `normalize_medical_term` but restricted to Medication domain only.
+
+**`get_lexical_for_ranking`** — Calls `get_lexical()` with the **MedicationLexical** fragment, then applies `_code_based_filter` for accurate scoring against candidate diagnoses.
+
+**Stage 1 — Fetch medication's treated/caused problems:**
+
+```graphql
+query GetLexical($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    synonyms { code title }
+    ... on MedicationLexical {
+      mappings { code title codeSystem relationshipType }
+      treatedProblems(offset: 0, size: 1000) { code title }
+      causedProblems(offset: 0, size: 1000) { code title }
+    }
+  }
+}
+```
+
+> **Pagination:** If `treatedProblems` or `causedProblems` returns 1000 items, auto-fetches subsequent pages with increasing `offset` until `len(page) < SIZE`.
+
+**Stage 2 — `_code_based_filter` (runs internally when list exceeds 200 items):**
+
+For each candidate diagnosis:
+1. Normalize → `normalize_medical_term(candidate, "Problem")` → gets IMO lexical code
+2. Get parent codes → `get_domain_hierarchy(code, "broader", "Problem")`:
+
+```graphql
+query GetDomainBroader($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    synonyms { code title }
+    ... on ProblemLexical {
+      domainBroader(offset: 0, size: 1000) { code title }
+    }
+  }
+}
+```
+
+3. Exact code matching: candidate code OR any `domainBroader` parent code found in KG `treatedProblems`/`causedProblems` list → **match**
+
+**`get_domain_hierarchy`** — Same schema as documented in Mode 2 (`domainNarrower` or `domainBroader` with pagination on `ProblemLexical`).
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Large KG lists (200+ items)** | `_code_based_filter` activates only when `treatedProblems` or `causedProblems` exceeds `_KG_LIST_THRESHOLD` (200) — otherwise returns full list for the agent to score directly |
+| **Code-based matching, not text** | Candidates are normalized to IMO codes, then matched by exact code — avoids false negatives from text mismatch (e.g., "CHF" matches "congestive heart failure" via shared IMO code) |
+| **Hierarchy matching** | If a candidate's direct code isn't in the KG list, its `domainBroader` parent codes are also checked — catches hierarchy-level matches |
+| **Scoring formula** | Baseline 0.50 + direct match (+0.20) + hierarchy match (+0.15) + additional medication support (+0.10). Labels: 0.80–1.00 Strong, 0.60–0.79 Moderate, 0.40–0.59 Neutral, 0.20–0.39 Weak, 0.00–0.19 Contraindicated |
+| **Medication-only normalize** | `normalize_medication_only` refuses non-medication terms — returns error if input is empty |
+| **Unmatched candidates** | Candidates with no code match in KG are reported as `_unmatched_candidates` and scored Neutral (0.50) |
+
+---
+
+#### Mode 4 — `dx-infer` (Diagnosis Specificity using Medication)
+
+**Tools:** `normalize_medical_term`, `get_medication_diagnosis_proto`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Same Normalize API as Mode 1. Called twice: once with `domain="Problem"` for the base diagnosis, once with `domain="Medication"` for each medication.
+
+**`get_medication_diagnosis_proto`** — Iterative medication-guided drill-down via `domainNarrowerByMedications`:
+
+```graphql
+{
+  lexical(code: "{diagnosis_code}", domain: problem) {
+    title
+    ... on ProblemLexical {
+      domainNarrowerByMedications(medications: [{medications_arg}], offset: {offset}, size: {SIZE}) {
+        code
+        title
+        ... on ProblemLexical {
+          numberOfDomainChildren
+        }
+      }
+    }
+  }
+}
+```
+
+> **Note:** Uses string interpolation (not GraphQL variables) for `diagnosis_code` and `medications` — matching the source implementation. Pagination via `offset/size: 1000` with auto-fetch loop.
+
+> **Result sorting:** The tool wrapper sorts returned items by `numberOfDomainChildren` descending — non-leaf concepts (drillable) appear first, ensuring they are visible even when the list is truncated.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Iterative drill-down** | Agent calls `get_medication_diagnosis_proto` repeatedly — picks best candidate at each level based on clinical note context, drills deeper until leaf reached |
+| **Leaf detection** | Stops when `numberOfDomainChildren` is `0` or missing/null — concept is a leaf with no further narrower children |
+| **Max iterations** | System prompt caps at 8 drill-down rounds to prevent infinite loops |
+| **Empty result at any level** | If `domainNarrowerByMedications` returns empty list, agent backs up and uses the last non-empty concept as final diagnosis |
+| **No Phase 2** | Unlike Mode 2 (`refine`), this mode has NO Phase 2 refinement step — focuses solely on medication-guided narrowing |
+| **Ambiguity handling** | If two candidates match equally and both are leaves, agent presents both; if both have children, prefers the one whose title better reflects the strongest clinical signal |
+
+---
+
+#### Mode 5 — `med-id` (Medication Identification)
+
+**Tools:** `normalize_medical_term`, `get_containing_medications`, `get_hierarchies_for_containing_medications`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Called with `domain="Medication"`.
+
+**`get_containing_medications`** — Step 1: Get dose forms and root-level containing medications for an ingredient-level medication.
+
+```graphql
+{
+  lexical(code: "{imo_lexical_code}", domain: medication) {
+    title
+    code
+    ... on MedicationLexical {
+      domainNarrower(offset: {offset}, size: {SIZE}) {
+        code
+        title
+      }
+      containingMedications {
+        code
+        title
+      }
+    }
+  }
+}
+```
+
+> **Pagination:** `domainNarrower` uses `offset/size: 1000` with auto-fetch loop. `containingMedications` does NOT have offset/size — no pagination needed (returns all items in one call).
+
+**`get_hierarchies_for_containing_medications`** — Batch tool: accepts comma-separated codes, internally calls `get_hierarchy_for_containing_medication` for each code. Returns 3-level nested `domainNarrower` hierarchy (strengths → dose forms → SCD/SBD names):
+
+```graphql
+{
+  lexical(code: "{imo_lexical_code}", domain: medication) {
+    code
+    title
+    ... on MedicationLexical {
+      domainNarrower(offset: {offset}, size: {SIZE}) {
+        code
+        title
+        ... on MedicationLexical {
+          domainNarrower(offset: 0, size: {SIZE}) {
+            code
+            title
+            ... on MedicationLexical {
+              domainNarrower(offset: 0, size: {SIZE}) {
+                code
+                title
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+> **Pagination:** Top-level `domainNarrower` is paginated with `offset/size: 1000`. Nested levels use `offset: 0, size: 1000` (single page — children per item are small).
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Single vs multiple substance** | Single substance (no "/" in name): use root `containingMedications` directly → batch hierarchy call. Multiple substance ("/" in name): iterate each `domainNarrower` code through `get_containing_medications` first, then batch all collected `containingMedications` codes |
+| **Batch call pattern** | `get_hierarchies_for_containing_medications` must be called exactly ONCE with ALL codes — never call multiple times, never skip codes |
+| **`containingMedications` not paginated** | Unlike `domainNarrower`, `containingMedications` has no offset/size in the KG schema — all items returned in a single response |
+| **3-level hierarchy depth** | The nested query fetches exactly 3 levels of `domainNarrower` — deeper nesting would exceed KG depth limits |
+| **Missing containing medications** | If a medication has no `containingMedications` (empty list), it may be at the leaf/SCD level already — no hierarchy call needed |
+
+---
+
+#### Mode 6 — `dx-to-med` (Diagnosis to Medication)
+
+**Tools:** `normalize_medical_term`, `validate_medication_association`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Called with `domain="Problem"` for the diagnosis and `domain="Medication"` for each medication.
+
+**`validate_medication_association`** — A wrapper tool that internally calls `get_treatments_for_problem` (same GraphQL as Mode 2), then performs exact code matching in Python.
+
+**Underlying GraphQL — `associatedTreatments` (paginated):**
+
+```graphql
+query GetTreatments($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    code
+    title
+    ... on ProblemLexical {
+      numberOfAssociatedTreatments
+      numberOfSupportiveTreatments
+      associatedTreatments(offset: {offset}, size: {SIZE}) {
+        ... on Lexical { code title }
+        ... on MedicationLexical { code title }
+      }
+    }
+  }
+}
+```
+
+**Underlying GraphQL — `supportiveTreatments` (paginated separately):**
+
+```graphql
+query GetTreatments($code: String!, $domain: IMODomain!) {
+  lexical(code: $code, domain: $domain) {
+    ... on ProblemLexical {
+      supportiveTreatments(offset: {offset}, size: {SIZE}) { code title }
+    }
+  }
+}
+```
+
+> **Pagination:** `associatedTreatments` and `supportiveTreatments` are paginated in separate query loops, each using `offset/size: 1000` with auto-fetch.
+
+**Post-query matching logic (Python, not GraphQL):**
+1. Fetch full `associatedTreatments` list for the diagnosis
+2. Build a code→title lookup map from the KG results
+3. Check each provided medication code against the map — exact code match
+4. Return `matched` (medication code + KG title) and `unmatched_codes`
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Code-based validation, not text** | Medications are matched by exact IMO lexical code against KG `associatedTreatments` — text similarity is not used |
+| **No medication codes provided** | If `medication_codes` is empty, returns the raw `get_treatments_for_problem` result without filtering |
+| **Empty KG treatments** | If the diagnosis has no `associatedTreatments` in KG, all medications are reported as unmatched — agent does NOT infer associations from medical knowledge |
+| **Dual pagination** | `associatedTreatments` and `supportiveTreatments` are fetched in separate pagination loops — each can have thousands of items |
+| **Normalize failures** | If a medication fails to normalize, it is listed as "Could not normalize — skipped" and excluded from validation |
+
+---
+
+#### Mode 7 — `dx-infer-proc` (Diagnosis Specificity using Procedure)
+
+**Tools:** `normalize_medical_term`, `find_diagnosis_by_procedure`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Called with `domain="Problem"` for the base diagnosis and `domain="Procedure"` for each procedure.
+
+**`find_diagnosis_by_procedure`** — Two-phase tool: traverses the entire `domainNarrower` hierarchy under a base diagnosis, then checks each node's procedures for matches.
+
+**Phase 1 — Hierarchy traversal (nested 3-level `domainNarrower` with ICD-10 mappings):**
+
+```graphql
+{
+  lexical(code: "{code}", domain: problem) {
+    code
+    title
+    ... on ProblemLexical {
+      domainNarrower(size: {size}, offset: {offset}) {
+        code
+        title
+        ... on ProblemLexical {
+          numberOfDomainChildren
+          mappings { code title codeSystem }
+          domainNarrower(size: {size}, offset: 0) {
+            code
+            title
+            ... on ProblemLexical {
+              numberOfDomainChildren
+              mappings { code title codeSystem }
+              domainNarrower(size: {size}, offset: 0) {
+                code
+                title
+                ... on ProblemLexical {
+                  numberOfDomainChildren
+                  mappings { code title codeSystem }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+> **Traversal:** BFS queue processes the tree in paginated 3-level batches (max depth: 5). Nodes with `numberOfDomainChildren > len(children)` are re-queued for deeper traversal. Collects all descendant codes and their ICD-10 mappings.
+
+**Phase 2 — Procedure checking (concurrent, 20 threads):**
+
+```graphql
+{
+  lexical(code: "{code}", domain: problem) {
+    code
+    title
+    ... on ProblemLexical {
+      treatmentProcedures { code title }
+      evaluationProcedures { code title }
+      preventiveProcedures { code title }
+    }
+  }
+}
+```
+
+> **Concurrency:** Phase 2 runs with `ThreadPoolExecutor(max_workers=20)` — checks all collected codes in parallel. Only nodes where at least one procedure code matches are returned as `matched_nodes`.
+
+**Procedure categories:** Each matched procedure includes a `category` field: `treatment`, `evaluation`, or `preventive`.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Full hierarchy traversal** | Unlike Mode 4 (iterative drill-down), this tool traverses the ENTIRE tree under the base diagnosis — not just one path. Returns ALL matching descendants |
+| **Three procedure types** | Checks `treatmentProcedures`, `evaluationProcedures`, AND `preventiveProcedures` — a procedure can match in any category |
+| **Multiple matches** | When multiple descendant diagnoses match the same procedure, agent selects the best fit based on clinical note context (site, laterality, chronicity, etc.) |
+| **No matches** | If no descendant has the given procedure in its KG edges, agent reports "procedure could not be linked to any narrower diagnosis" |
+| **Max depth 5** | Hierarchy traversal stops at depth 5 — covers nearly all KG hierarchies |
+| **Verbatim procedure extraction** | Procedures must be extracted EXACTLY as written in the clinical note — including parenthetical qualifiers like `(number/volume)` — to normalize to the correct IMO code |
+| **ICD-10 mappings included** | Phase 1 collects `mappings` with `codeSystem: "icd10cm"` for each node — available in matched results without extra queries |
+
+---
+
+#### Mode 8 — `procedure_inference` (Diagnosis Specificity using Procedure with Temporality)
+
+**Tools:** `normalize_medical_term`, `find_temporal_diagnoses`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Called with `domain="Procedure"` for the procedure.
+
+**`find_temporal_diagnoses`** — Queries `ProcedureLexical.associatedProblems` to get ALL associated Problem concepts for a procedure, including temporal variants ("status post", "history of"), complications, and approach-specific diagnoses.
+
+```graphql
+{
+  lexical(code: "{procedure_code}", domain: procedure) {
+    code
+    title
+    ... on ProcedureLexical {
+      numberOfAssociatedProblems
+      associatedProblems(offset: {offset}, size: {SIZE}) {
+        code
+        title
+        ... on ProblemLexical {
+          mappings { code codeSystem }
+        }
+      }
+    }
+  }
+}
+```
+
+> **Pagination:** `associatedProblems` uses `offset/size: 1000` with auto-fetch loop until `len(page) < SIZE`.
+
+> **Post-processing:** Filters each problem's `mappings` for `codeSystem == "icd10cm"`, returns `problems_with_icd10` list with `{ code, title, icd10_codes }`.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Temporal selection** | Agent selects from associated problems based on timing: "status post" for recent procedures (~<1 year), "history of" for remote procedures (>1 year) |
+| **Approach-specific variants** | If clinical note specifies surgical approach (e.g., "laparoscopic"), agent prefers approach-specific variant (e.g., "status post laparoscopic cholecystectomy") |
+| **Complications** | If the note mentions procedure-related complications, agent selects the matching complication concept (e.g., "retained gallstones following cholecystectomy") |
+| **Strict scoping** | Agent MUST ignore unrelated clinical content (labs, medications, symptoms, imaging) — only procedure name, timing, surgical approach, and procedure-related complications influence the temporal diagnosis |
+| **Ambiguous timing** | If timing is unclear, agent presents top candidates and explains the clinical distinction between "status post" vs "history of" |
+| **ICD-10 included** | Each associated problem includes ICD-10-CM mappings directly from KG `mappings` — no extra normalization needed |
+
+---
+
+#### Mode 9 — `lab-id` (Lab Identification — Prototype)
+
+**Tools:** `normalize_medical_term`, `identify_lab`
+
+#### KG GraphQL Schemas
+
+**`normalize_medical_term`** — REST only (no GraphQL). Called with `domain="Lab"`. Supports optional `order_name` parameter for panel context (e.g., `order_name="comprehensive metabolic panel"` when normalizing a component like "glucose").
+
+**`identify_lab`** — Queries the KG for a lab's narrower concepts and LOINC code mappings. Note: labs are stored under the **Procedure domain** in the KG, so the GraphQL uses `domain: procedure` despite the Normalize call using `domain="Lab"`.
+
+```graphql
+{
+  lexical(code: "{lab_code}", domain: procedure) {
+    code
+    title
+    ... on ProcedureLexical {
+      mappings { code codeSystem }
+      domainNarrower {
+        code
+        title
+        ... on ProcedureLexical {
+          mappings { code codeSystem }
+        }
+      }
+    }
+  }
+}
+```
+
+> **No pagination:** `domainNarrower` does NOT use `offset/size` — all narrower concepts returned in a single query.
+
+> **Post-processing:** Filters `mappings` for `codeSystem == "loinc"` at both root level and each narrower concept. Returns `{ lab, loinc_codes, narrower_concepts }` where each narrower concept includes its own `loinc_codes`.
+
+#### Edge Cases
+
+| Edge Case | Behavior |
+|-----------|----------|
+| **Domain mismatch** | Normalize uses `domain="Lab"` but KG GraphQL uses `domain: procedure` — labs are stored under the Procedure domain in the KG schema |
+| **ORDER vs COMPONENT classification** | Labs must be classified before normalization: ORDER (panel) passes panel name as `input_term`; COMPONENT (single analyte) passes analyte name as `input_term` with optional `order_name` for panel context |
+| **`order_name` parameter** | When a component belongs to a known panel, passing the panel name as `order_name` improves normalization accuracy (e.g., `input_term="glucose", order_name="comprehensive metabolic panel"`) |
+| **No pagination on `domainNarrower`** | Unlike other modes, this query fetches all narrower concepts in one call — no offset/size loop needed |
+| **LOINC filtering** | Only mappings with `codeSystem == "loinc"` are extracted — other code systems in `mappings` are ignored |
+| **Prototype status** | This mode is a prototype — the KG lab hierarchy may have limited depth compared to Problem or Medication domains |
 
 ### Three Core Patterns
 

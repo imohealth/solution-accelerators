@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "imo-health": {
+      "type": "streamable-http",
+      "url": "https://api.imohealth.com/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "provided",
+              "clientId": "<CLIENT_ID>",
+              "tokenEndpointAuthMethod": "client_secret_basic"
+            },
+            "baseScopes": [
+              "openid",
+              "profile",
+              "plm.core",
+              "plm.associate",
+              "normalize",
+              "nlp",
+              "knowledgegraph.read",
+              "coresearch"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
