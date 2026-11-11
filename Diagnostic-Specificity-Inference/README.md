@@ -154,7 +154,7 @@ Identifies all dose forms, strengths, and containing medications for a given dru
 
 **Mode:** `dx-to-med` &nbsp;|&nbsp; **Folder:** `Diagnosis to Medication/`
 
-Given a diagnosis, retrieves all associated treatment medications from the Knowledge Graph. Validates diagnosis-to-medication relationships using `associatedTreatments` edges.
+Given a diagnosis, retrieves all associated treatment medications from the Knowledge Graph. Validates diagnosis-to-medication relationships using `treatmentMedications` edges.
 
 **Workflow:**
 1. Normalize the diagnosis (domain: Problem)
@@ -163,7 +163,7 @@ Given a diagnosis, retrieves all associated treatment medications from the Knowl
 | Tool | Purpose |
 |------|---------|
 | `normalize_medical_term` | Map diagnosis → IMO lexical code (domain: Problem) |
-| `get_treatments_for_problem` | Get `associatedTreatments` from KG with pagination |
+| `get_treatments_for_problem` | Get `treatmentMedications` from KG with pagination |
 
 **Example:** "Type 2 diabetes mellitus" → retrieves Metformin, Insulin glargine, Empagliflozin, and hundreds more associated treatments.
 

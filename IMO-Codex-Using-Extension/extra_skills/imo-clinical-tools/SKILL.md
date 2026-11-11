@@ -158,7 +158,7 @@ Discover cross-domain clinical relationships for an IMO Problem lexical.
 Reverse lookup — find problems related to a procedure or medication.
 
 - **IMPORTANT**: Use `lexical_code` (NOT `imo_code`).
-- **Procedure input returns**: associatedProblems, interpretedFindings, determinedProblems, causedProblems, realizedProblems.
+- **Procedure input returns**: historicalProblems, interpretedFindings, determinedProblems, causedProblems, realizedProblems.
 - **Medication input returns**: treatedProblems, causedProblems.
 - **Results are paged** — can be very large.
 - **When to use**: User asks "What problems does this drug treat?", "What conditions is this procedure for?"

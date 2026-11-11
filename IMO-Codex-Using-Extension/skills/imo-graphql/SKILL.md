@@ -219,7 +219,7 @@ Results are paged — 100 items per relationship per call. Use `totals` and `tru
 
 Reverse lookup: from a **procedure** or **medication**, find the problems that reference it.
 
-- **procedure:** returns `associatedProblems`, `interpretedFindings`, `determinedProblems`, `causedProblems`, `realizedProblems`
+- **procedure:** returns `historicalProblems`, `interpretedFindings`, `determinedProblems`, `causedProblems`, `realizedProblems`
 - **medication:** returns `treatedProblems`, `causedProblems`
 
 Results are paged — 100 per call. These relationships can be very large (six figures for common medications).

@@ -407,7 +407,7 @@ The agent uses the following tools from the mcp-gateway server:
 
 #### 15. `mcp__imo-health__graphql-modifier___get_related_problems`
 
-**Description:** Find the clinical problems related to a procedure or medication (reverse lookup). Traverses the cross-domain graph in reverse. Procedure: returns associatedProblems, interpretedFindings, determinedProblems, causedProblems, realizedProblems. Medication: returns treatedProblems, contraindicatedProblems, preventedProblems, causedProblems.
+**Description:** Find the clinical problems related to a procedure or medication (reverse lookup). Traverses the cross-domain graph in reverse. Procedure: returns historicalProblems, interpretedFindings, determinedProblems, causedProblems, realizedProblems. Medication: returns treatedProblems, contraindicatedProblems, preventedProblems, causedProblems.
 
 **Important:** Use the lexical_code value from normalize_medical_term results as the code parameter (NOT the imo_code).
 
