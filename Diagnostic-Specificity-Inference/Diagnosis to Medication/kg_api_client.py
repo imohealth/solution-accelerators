@@ -1,6 +1,6 @@
 """
 Direct HTTP client for IMO Normalize API and Knowledge Graph (GOAT) GraphQL API.
-Supports diagnosis-to-medication validation via associatedTreatments.
+Supports diagnosis-to-medication validation via treatmentMedications.
 """
 
 import time
@@ -181,13 +181,13 @@ class KGApiClient:
         """
         Get associated treatments for a problem concept.
 
-        Uses offset/size pagination on associatedTreatments.
+        Uses offset/size pagination on treatmentMedications.
 
         Args:
             imo_lexical_code: The IMO lexical code of the problem
 
         Returns:
-            Dict with associatedTreatments list, each containing code and title.
+            Dict with treatmentMedications list, each containing code and title.
         """
         SIZE = 1000
         all_associated = []
@@ -200,8 +200,8 @@ class KGApiClient:
     code
     title
     ... on ProblemLexical {{
-      numberOfAssociatedTreatments
-      associatedTreatments(offset: {offset}, size: {SIZE}) {{
+      numberOfTreatmentMedications
+      treatmentMedications(offset: {offset}, size: {SIZE}) {{
         ... on Lexical {{ code title }}
         ... on MedicationLexical {{ code title }}
       }}
@@ -222,15 +222,15 @@ class KGApiClient:
                 lexical_base = {
                     "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
-                    "numberOfAssociatedTreatments": lexical_data.get("numberOfAssociatedTreatments"),
+                    "numberOfTreatmentMedications": lexical_data.get("numberOfTreatmentMedications"),
                 }
 
-            page = lexical_data.get("associatedTreatments", [])
+            page = lexical_data.get("treatmentMedications", [])
             all_associated.extend(page)
 
             if len(page) < SIZE:
                 break
             offset += SIZE
 
-        lexical_base["associatedTreatments"] = all_associated
+        lexical_base["treatmentMedications"] = all_associated
         return {"success": True, "lexical": lexical_base}

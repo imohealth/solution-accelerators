@@ -406,9 +406,9 @@ class KGApiClient:
     code
     title
     ... on ProblemLexical {{
-      numberOfAssociatedTreatments
+      numberOfTreatmentMedications
       numberOfSupportiveTreatments
-      associatedTreatments(offset: {offset}, size: {SIZE}) {{ ... on Lexical {{ code title }} ... on MedicationLexical {{ code title }} }}
+      treatmentMedications(offset: {offset}, size: {SIZE}) {{ ... on Lexical {{ code title }} ... on MedicationLexical {{ code title }} }}
     }}
   }}
 }}"""
@@ -424,11 +424,11 @@ class KGApiClient:
                 lexical_base = {
                     "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
-                    "numberOfAssociatedTreatments": lexical_data.get("numberOfAssociatedTreatments"),
+                    "numberOfTreatmentMedications": lexical_data.get("numberOfTreatmentMedications"),
                     "numberOfSupportiveTreatments": lexical_data.get("numberOfSupportiveTreatments"),
                 }
 
-            page = lexical_data.get("associatedTreatments", [])
+            page = lexical_data.get("treatmentMedications", [])
             all_associated.extend(page)
 
             if len(page) < SIZE:
@@ -461,7 +461,7 @@ class KGApiClient:
                 break
             offset += SIZE
 
-        lexical_base["associatedTreatments"] = all_associated
+        lexical_base["treatmentMedications"] = all_associated
         lexical_base["supportiveTreatments"] = all_supportive
         return {"success": True, "lexical": lexical_base}
 
@@ -570,8 +570,8 @@ class KGApiClient:
     code
     title
     ... on ProblemLexical {{
-      numberOfAssociatedProcedures
-      associatedProcedures(offset: {offset}, size: {SIZE}) {{ code title }}
+      numberOfHistoricalProcedures
+      historicalProcedures(offset: {offset}, size: {SIZE}) {{ code title }}
     }}
   }}
 }}"""
@@ -587,17 +587,17 @@ class KGApiClient:
                 lexical_base = {
                     "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
-                    "numberOfAssociatedProcedures": lexical_data.get("numberOfAssociatedProcedures"),
+                    "numberOfHistoricalProcedures": lexical_data.get("numberOfHistoricalProcedures"),
                 }
 
-            page = lexical_data.get("associatedProcedures", [])
+            page = lexical_data.get("historicalProcedures", [])
             all_procedures.extend(page)
 
             if len(page) < SIZE:
                 break
             offset += SIZE
 
-        lexical_base["associatedProcedures"] = all_procedures
+        lexical_base["historicalProcedures"] = all_procedures
         return {"success": True, "lexical": lexical_base}
 
     # ─── get_allowed_refinements ───────────────────────────────────────────

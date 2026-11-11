@@ -38,7 +38,7 @@ All 9 scenarios share the same foundation — **LangGraph `create_react_agent`**
 | 3 | Rank Diagnosis using Medication | `rank` | `treatedProblems` / `preventedProblems` / `causedProblems` | 2 | Medium — scoring formula |
 | 4 | Diagnosis Specificity using Medication | `dx-infer` | `domainNarrowerByMedications` | 2 | Low — iterative drill-down |
 | 5 | Medication Identification | `med-id` | `domainNarrower` + `containingMedications` | 3 | Medium — medication hierarchy |
-| 6 | Diagnosis to Medication | `dx-to-med` | `associatedTreatments` | 2 | Low — single KG lookup |
+| 6 | Diagnosis to Medication | `dx-to-med` | `treatmentMedications` | 2 | Low — single KG lookup |
 | 7 | Diagnosis Specificity using Procedure | `dx-infer-proc` | `domainNarrowerByProcedures` | 2 | Low — iterative drill-down |
 | 8 | DS using Procedure with Temporality | `procedure_inference` | `domainNarrowerByProcedures` + temporal logic | 2 | Medium — adds temporal context |
 | 9 | Lab Identification (Prototype) | `lab-id` | `domainNarrower` (Lab domain) | 2 | Low — lab hierarchy exploration |

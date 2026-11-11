@@ -203,7 +203,7 @@ class KGApiClient:
 
     def get_temporal_diagnoses(self, procedure_code: str) -> Dict[str, Any]:
         """
-        Given a procedure code, query ProcedureLexical.associatedProblems to get
+        Given a procedure code, query ProcedureLexical.historicalProblems to get
         all associated Problem concepts (status post, history of, complications, etc.)
         with their ICD-10 mappings.
 
@@ -211,7 +211,7 @@ class KGApiClient:
             procedure_code: IMO lexical code of the procedure (from normalize with domain="Procedure").
 
         Returns:
-            Dict with procedure info and full list of associatedProblems with ICD-10 codes.
+            Dict with procedure info and full list of historicalProblems with ICD-10 codes.
         """
         if not procedure_code or not procedure_code.strip():
             return {"success": False, "error": "procedure_code is required"}
@@ -227,8 +227,8 @@ class KGApiClient:
     code
     title
     ... on ProcedureLexical {{
-      numberOfAssociatedProblems
-      associatedProblems(offset: {offset}, size: {SIZE}) {{
+      numberOfHistoricalProblems
+      historicalProblems(offset: {offset}, size: {SIZE}) {{
         code
         title
         ... on ProblemLexical {{
@@ -250,10 +250,10 @@ class KGApiClient:
                 lexical_base = {
                     "code": lexical_data.get("code"),
                     "title": lexical_data.get("title"),
-                    "numberOfAssociatedProblems": lexical_data.get("numberOfAssociatedProblems"),
+                    "numberOfHistoricalProblems": lexical_data.get("numberOfHistoricalProblems"),
                 }
 
-            page = lexical_data.get("associatedProblems", [])
+            page = lexical_data.get("historicalProblems", [])
             all_problems.extend(page)
 
             if len(page) < SIZE:
