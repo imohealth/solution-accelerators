@@ -1,0 +1,3 @@
+requests==2.31.0
+openpyxl==3.1.2
+matplotlib==3.8.4   # optional — only needed to regenerate pipeline_flow.png
