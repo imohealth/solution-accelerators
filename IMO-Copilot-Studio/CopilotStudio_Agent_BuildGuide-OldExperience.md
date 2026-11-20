@@ -60,13 +60,14 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 ### Step 2: Create a New Agent
 
 1. Click "+ Agent" in the left sidebar
-2. Select **"+ Create blank agent"**
 
 <img src="copilotstudio_old_images/copilotstudio_old_images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
 
-3. Fill in: Provide name to blank agent.
+3. Choose the standard harness which running the old experience of the copilot studio. 
 
 <img src="copilotstudio_old_images/copilotstudio_old_images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
+
+3a. Provide name to the blank agent and click "Create"
 
 4. Fill the agent specific details:
    - Name: Provide name to agent
@@ -400,16 +401,295 @@ The agent uses the following tools from the mcp-gateway server:
 | `imo_lexical_code` | string | Yes | The lexical_code of a procedure or medication from normalize_medical_term results. |
 | `domain` | string | No | The domain of the input code: 'procedure' or 'medication'. Default: 'procedure'. |
 
-### Tool Workflow
+---
 
-```
-1. mcp__imo-health__ccp___entity_extraction --> Extracts diagnosis entities --> returns base problems
-2. mcp__imo-health__normalize-ppml___normalize_ppml_term --> Normalizes selected diagnosis --> returns default_lexical_code
-3. mcp__imo-health__graphql-modifier___get_lexical --> Uses default_lexical_code --> returns refinement groups
-4. mcp__imo-health__graphql-modifier___get_refinement_group --> Looks up refinement options within a group
-5. mcp__imo-health__graphql-modifier___get_narrower_with_refinements --> Applies refinements --> resolves most specific diagnosis
-6. mcp__imo-health__normalize-ppml___normalize_ppml_term (verification) --> Verifies final diagnosis --> returns ICD-10-CM and SNOMED codes
-```
+### Concept and Editorial Guidance
+
+#### 16. `mcp__imo-health__concept-guideline___get_concept_candidates`
+
+**Description:** Find ranked IMO Clinical Interface Terminology candidates for a Problem-domain term. Each candidate has an IMO concept ID, a name, and a word-overlap score from 0 to 1.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `term` | string | Yes | Free-text clinical term, 1–1,000 characters. |
+| `source_type` | string | No | Vocabulary label. Accepted aliases are `ICD10`, `ICD-10-CM`, `SNOMED`, `SNOMEDCT`, `SNOMED-CT`, and `IMO`. |
+| `top_n` | number | No | Maximum number of ranked candidates to return (1-50). |
+
+---
+
+#### 17. `mcp__imo-health__concept-guideline___search_editorial_kb`
+
+**Description:** Find relevant excerpts from IMO's editorial knowledge base on naming, formatting, and migration policies. Each result includes the source, text, and relevance score.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `query` | string | Yes | Free-text search query (1-1000 chars). |
+| `top_n` | number | No | Maximum number of KB chunks to return (1-25). |
+
+---
+
+### Additional Knowledge Graph Tools
+
+#### 18. `mcp__imo-health__graphql-modifier___get_broader_refinements`
+
+**Description:** Find the immediate parents of a Problem lexical in its refinement family. Each parent drops one refinement.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | IMO `lexical_code` from normalization. Use a Problem lexical. |
+| `offset` | number | No | Zero-based result offset. Returns up to 100 items per call. |
+
+---
+
+#### 19. `mcp__imo-health__graphql-modifier___get_medication_ingredients`
+
+**Description:** Find a medication product's active ingredient lexicals or find products that contain a given ingredient.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | IMO `lexical_code` from normalization. Use a Medication lexical. |
+| `direction` | string | No | `ingredients` finds active ingredients in a product. `containing` finds products that contain the supplied ingredient. |
+| `offset` | number | No | Zero-based result offset. Returns up to 100 items per call. |
+
+---
+
+#### 20. `mcp__imo-health__graphql-modifier___get_narrower_by_medications`
+
+**Description:** Find the immediate children of a Problem lexical that have a treatment or supportive-treatment relationship with every supplied medication.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | IMO `lexical_code` from normalization. Use a Problem lexical. |
+| `medication_codes` | array of strings | Yes | One or more Medication lexical codes from normalization. Every supplied code must match. |
+| `offset` | number | No | Zero-based result offset. Returns up to 100 items per call. |
+
+---
+
+#### 21. `mcp__imo-health__graphql-modifier___get_narrower_by_procedures`
+
+**Description:** Find the immediate children of a Problem lexical that have an evaluation, treatment, prevention, or evaluation-lab relationship with every supplied procedure.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_code` | string | Yes | IMO `lexical_code` from normalization. Use a Problem lexical. |
+| `procedure_codes` | array of strings | Yes | One or more Procedure lexical codes from normalization. Every supplied code must match. |
+| `offset` | number | No | Zero-based result offset. Returns up to 100 items per call. |
+
+---
+
+### GuidelineCentral
+
+#### 22. `mcp__imo-health__guidelinecentral-search___list_documents`
+
+**Description:** List available GuidelineCentral documents with document IDs, names, titles, source organizations, publication dates, and page counts.
+
+**Parameters:**
+
+No parameters required.
+
+---
+
+#### 23. `mcp__imo-health__guidelinecentral-search___search_guidelines`
+
+**Description:** Search clinical practice guidelines by meaning. Results include ranked excerpts, relevance scores, source metadata, and presigned links to PDFs and page images.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `query` | string | Yes | Natural language query to search clinical practice guidelines. |
+| `top_k` | number | No | Number of results to return (1-50, default 10). |
+
+---
+
+#### 24. `mcp__imo-health__guidelinecentral-search___search_within_document`
+
+**Description:** Search within one GuidelineCentral document by meaning. Results include the highest-ranked matching excerpts.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `document_id` | string | Yes | Guideline document UUID from a guideline search or the document catalog. |
+| `query` | string | Yes | Natural language query to search within the document. |
+| `top_k` | number | No | Number of results to return (1-50, default 10). |
+
+---
+
+#### 25. `mcp__imo-health__guidelinecentral-search___search_by_imo_codes`
+
+**Description:** Find guideline excerpts indexed with the supplied IMO lexical codes. Results include the matched entities and code details.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `imo_lexical_codes` | array of strings | Yes | List of IMO lexical codes to search for (e.g., ['41884', '54321']). |
+| `limit` | number | No | Maximum results to return (1-200, default 50). |
+
+---
+
+#### 26. `mcp__imo-health__guidelinecentral-search___get_guideline`
+
+**Description:** Retrieve a guideline's metadata, presigned PDF URL, and full text grouped by page with page-image URLs.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `document_id` | string | Yes | Guideline document UUID from a guideline search or the document catalog. |
+
+---
+
+### Knowledge Graph Explorer
+
+#### 27. `mcp__imo-health__knowledge-graph-explorer___explore_schema`
+
+**Description:** Inspect the Knowledge Graph's named graphs, classes with counts, predicates with counts, or up to 25 sample triples for a class. Use the returned identifiers in SPARQL queries.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `section` | string enum (`named_graphs`, `classes`, `predicates`, `sample_class`) | Yes | Schema section to retrieve. |
+| `class_iri` | string or null | No | Required when section='sample_class'. Full IRI of the class to sample instances of. |
+| `graph` | string or null | No | Optional named-graph IRI to scope the query to. |
+
+---
+
+#### 28. `mcp__imo-health__knowledge-graph-explorer___run_sparql`
+
+**Description:** Run a read-only SPARQL query and receive the query result plus flattened rows for `SELECT`. Queries must be under 10,000 characters and finish within 50 seconds.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `query` | string | Yes | A read-only SPARQL query (SELECT, ASK, CONSTRUCT, or DESCRIBE). |
+| `limit` | number or null | No | Row limit to inject into `SELECT` queries without a `LIMIT`. Defaults to 100, capped at 1,000. |
+
+---
+
+### Precision Literature Review
+
+#### 29. `mcp__imo-health__plr___list_projects`
+
+**Description:** List owned and shared PLR projects, most recently updated first. Results include project ID, name, disease, description, type, workflow step, last updated date, user role, and project link.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `name_filter` | string or null | No | Literal text that must appear in the project name. Omit for topic questions. |
+
+---
+
+#### 30. `mcp__imo-health__plr___get_project`
+
+**Description:** Retrieve one PLR project's name, description, disease, type, status, current workflow step, last updated date, and project link.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_id` | string | Yes | Project ID from `list_projects`. |
+
+---
+
+#### 31. `mcp__imo-health__plr___get_study_protocols`
+
+**Description:** Retrieve literature search details, inclusion and exclusion criteria, article types, domain knowledge notes, extraction fields, and protocol links for up to 25 projects.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_ids` | array of strings | Yes | Project IDs from `list_projects`. Pass up to 25 per call. |
+
+---
+
+#### 32. `mcp__imo-health__plr___get_screening_counts`
+
+**Description:** Retrieve AI and human screening counts, agreement and disagreement counts, full-text availability counts, and screening and prediction links for up to 25 projects.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_ids` | array of strings | Yes | Project IDs from `list_projects`. Pass up to 25 per call. |
+| `step` | string enum (`ABSTRACT`, `FULL_TEXT`) | Yes | Screening step: ABSTRACT or FULL_TEXT. |
+
+---
+
+#### 33. `mcp__imo-health__plr___search_citations`
+
+**Description:** Find citations within one project and screening step. Results include citation IDs, publication metadata, AI and human decisions, full-text availability, match totals, and a screening link.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_id` | string | Yes | Project ID from `list_projects`. |
+| `step` | string enum (`ABSTRACT`, `FULL_TEXT`) | Yes | Screening step: ABSTRACT or FULL_TEXT. |
+| `filters` | array of enum values or null | No | Screening decision and full-text availability filters. Values: `AI_IRRELEVANT`, `AI_NOT_SCREENED`, `AI_RELEVANT`, `HUMAN_IRRELEVANT`, `HUMAN_NOT_SCREENED`, `HUMAN_RELEVANT`, `FULL_TEXT_NOT_UPLOADED`, `FULL_TEXT_UPLOADED`. |
+| `keyword` | string or null | No | Keyword to match in title, author or journal. |
+| `page` | number or null | No | Zero-based page number. |
+| `page_size` | number or null | No | Citations per page (1-25). |
+
+---
+
+#### 34. `mcp__imo-health__plr___get_citation_ai_result`
+
+**Description:** Retrieve the AI's predicted study and publication types, screening explanation, and matched exclusion criteria by protocol section for one citation.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `citation_id` | string | Yes | Citation id from search_citations. |
+| `step` | string enum (`ABSTRACT`, `FULL_TEXT`) | Yes | Screening step: ABSTRACT or FULL_TEXT. |
+
+---
+
+#### 35. `mcp__imo-health__plr___get_prisma`
+
+**Description:** Retrieve the project's PRISMA flow chart counts and breakdowns for identification, screening, eligibility, and inclusion. The response includes a reporting-page link.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_id` | string | Yes | Project ID from `list_projects`. |
+
+---
+
+#### 36. `mcp__imo-health__plr___get_data_summary`
+
+**Description:** Retrieve a page of extracted study data with columns, rows, total row count, study count for the page, sorting details, and a link to the full table.
+
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|---|---|---|---|
+| `project_id` | string | Yes | Project ID from `list_projects`. |
+| `page` | number or null | No | Zero-based page number. |
+| `page_size` | number or null | No | Rows per page (1-25). |
+| `sort_by` | string enum (`PUBLICATION_YEAR`, `TITLE`, `FIRST_AUTHOR`, `JOURNAL`, `PMID`, `DOI`) or null | No | Column to sort by. Defaults to `PUBLICATION_YEAR`. |
+| `sort_order` | string enum (`ASCENDING`, `DESCENDING`) or null | No | Sort direction. Defaults to `DESCENDING`. |
+
+---
 
 ### Step 4: Navigate to Tools
 
@@ -668,3 +948,4 @@ The MCP Gateway connection authenticated under your maker session in test mode m
 | 2026-05-29 | 1.0 | Initial publishing guide |
 | 2026-06-01 | 1.1 | Added ccp___entity_extraction tool |
 | 2026-06-25 | 2.0 | Combined build + publish into complete guide |
+| 2026-11-20 | 3.0 | Updated MCP Tools to full 36-tool set (added Concept Guidance, GuidelineCentral, KG Explorer, PLR, and additional KG tools) |
