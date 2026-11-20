@@ -60,13 +60,14 @@ This guide walks you through building a Clinical Diagnostic Specificity Agent in
 ### Step 2: Create a New Agent
 
 1. Click "+ Agent" in the left sidebar
-2. Select **"+ Create blank agent"**
 
 <img src="copilotstudio_old_images/copilotstudio_old_images/03_create_blank_agent.png" width="700" alt="Create Blank Agent">
 
-3. Fill in: Provide name to blank agent.
+3. Choose the standard harness which running the old experience of the copilot studio. 
 
 <img src="copilotstudio_old_images/copilotstudio_old_images/04_name_your_agent.png" width="700" alt="Name Your Agent Dialog">
+
+3a. Provide name to the blank agent and click "Create"
 
 4. Fill the agent specific details:
    - Name: Provide name to agent
