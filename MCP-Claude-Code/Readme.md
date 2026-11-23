@@ -16,11 +16,14 @@ Claude will call the appropriate MCP tools behind the scenes, returning clinical
 
 ## Features
 
-- **Clinical terminology tools** — Core Search, Normalization, Hierarchy Traversal, Cross-Mapping, Entity Extraction, and Categorization.
+- **36 clinical terminology tools** — Core Search, Normalization, Hierarchy Traversal, Cross-Mapping, Entity Extraction, Categorization, Concept Guidance, GuidelineCentral, Knowledge Graph Explorer, and Precision Literature Review.
 - **Natural language interface** — ask questions in plain English; Claude calls the right MCP tools behind the scenes.
-- **Multi-system code mapping** — translate between ICD-10-CM, SNOMED CT, CPT, and IMO vocabularies in one step.
+- **Multi-system code mapping** — translate between ICD-10-CM, SNOMED CT, CPT, RxNorm, NDC, and IMO vocabularies in one step.
 - **Clinical entity extraction** — pull structured diagnoses, procedures, and medications from free-text notes.
 - **Hierarchy navigation** — explore parent/child concept relationships to find more specific or broader terms.
+- **Clinical practice guidelines** — search and retrieve GuidelineCentral documents with presigned PDF links and semantic search.
+- **Knowledge Graph exploration** — inspect schema, run SPARQL queries, and traverse cross-domain clinical relationships.
+- **Precision Literature Review** — manage PLR projects, screen citations, retrieve PRISMA charts and extracted study data.
 - **Diagnostic specificity agents** — automated pipelines that refine codes to the highest supported level of detail.
 - **Plugin-based setup** — install via Claude Code marketplace with OAuth authentication and credential management built in.
 - **Guided onboarding** — run `/imo-mcp-connect` for step-by-step authentication and connection verification.
@@ -134,54 +137,88 @@ You should see `imo-health` listed with a green checkmark and its tools availabl
 
 ## Available Tools
 
-Once connected, Claude Code has access to **17 tools** across the following capability areas:
-
-### Core Search
-
-| Tool | Description |
-|------|-------------|
-| `mcp__imo-health__core-search___search_medical_term` | Searches for clinical concepts by free-text query across all domains |
-| `mcp__imo-health__core-search___get_term_detail` | Retrieves detailed information for a specific clinical term |
-| `mcp__imo-health__core-search___lookup_term_by_code` | Looks up a clinical term by a specific code (ICD, SNOMED, CPT, etc.) |
-
-### GraphQL Modifier
-
-| Tool | Description |
-|------|-------------|
-| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Gets allowed refinements for a clinical concept |
-| `mcp__imo-health__graphql-modifier___get_cross_domain` | Retrieves cross-domain mappings for a concept |
-| `mcp__imo-health__graphql-modifier___get_lexical` | Gets lexical variants and related terms |
-| `mcp__imo-health__graphql-modifier___get_mappings` | Maps a concept across coding systems (ICD-10, SNOMED CT, CPT, etc.) |
-| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Navigates the narrower/child hierarchy of a clinical concept |
-| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Gets narrower sequential refinement options |
-| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Gets narrower concepts with available refinements |
-| `mcp__imo-health__graphql-modifier___get_refinement_group` | Retrieves refinement group details for a concept |
-| `mcp__imo-health__graphql-modifier___get_related_problems` | Gets related problems and associations for a clinical concept |
+Once connected, Claude Code has access to **36 tools** across the following capability areas:
 
 ### CCP (Clinical Content Processing)
 
 | Tool | Description |
 |------|-------------|
-| `mcp__imo-health__ccp___entity_extraction` | Extracts clinical entities from free-text clinical notes |
+| `mcp__imo-health__ccp___entity_extraction` | Extract clinical entities (problems, medications, labs, allergens) from free text using IMO CCP NLP with code mappings to ICD-10-CM, SNOMED, UMLS, and IMO terminologies |
 
-### Categorize
+### Core Search
 
 | Tool | Description |
 |------|-------------|
-| `mcp__imo-health__categorize___categorize_problems` | Categorizes clinical problems into standardized groups |
+| `mcp__imo-health__core-search___search_medical_term` | Search for medical terms using IMO Core Search API (ProblemIT Professional) with ranked results including IMO lexical codes, ICD-10-CM, SNOMED CT, and HCC risk categories |
+| `mcp__imo-health__core-search___get_term_detail` | Get detailed supplemental information for IMO lexical codes including mapped codes, HCC risk categories, and clinical attributes |
+| `mcp__imo-health__core-search___lookup_term_by_code` | Look up medical terms by IMO lexical codes with term title, ICD-10-CM/SNOMED mappings, and clinical attributes |
 
 ### Normalize (PPML)
 
 | Tool | Description |
 |------|-------------|
-| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalizes a free-text term to IMO's standard clinical terminology with mapped codes |
+| `mcp__imo-health__normalize-ppml___normalize_ppml_term` | Normalize medical terms using the IMO Precision Normalize API across Problem, Procedure, Medication, and Lab domains |
 
-### IDE Tools
+### Categorize
 
 | Tool | Description |
 |------|-------------|
-| `mcp__ide__executeCode` | Executes code within the IDE environment |
-| `mcp__ide__getDiagnostics` | Gets diagnostic information from the IDE |
+| `mcp__imo-health__categorize___categorize_problems` | Organize clinical problems into intuitive disease categories using IMO clinical intelligence |
+
+### Knowledge Graph (GraphQL Modifier)
+
+| Tool | Description |
+|------|-------------|
+| `mcp__imo-health__graphql-modifier___get_allowed_refinements` | Look up allowed refinements (modifiers) for an IMO Problem lexical — laterality, chronicity, location, etc. |
+| `mcp__imo-health__graphql-modifier___get_cross_domain` | Discover cross-domain clinical relationships — diagnostics, treatments, etiology, temporally-related concepts |
+| `mcp__imo-health__graphql-modifier___get_lexical` | Look up an IMO lexical with title, broader concepts, applied refinements, and allowed refinements |
+| `mcp__imo-health__graphql-modifier___get_mappings` | Retrieve external code mappings (ICD-10-CM, SNOMED CT, CPT, RxNorm, NDC, etc.) with relationship types |
+| `mcp__imo-health__graphql-modifier___get_narrower_hierarchy` | Explore two levels up and down the problem hierarchy to identify related terms at different specificity levels |
+| `mcp__imo-health__graphql-modifier___get_narrower_sequential_refinements` | Apply refinements as nested traversal to find progressively more specific IMO lexicals in a single query |
+| `mcp__imo-health__graphql-modifier___get_narrower_with_refinements` | Get narrower IMO lexicals filtered by specific refinement criteria (e.g., laterality:right) |
+| `mcp__imo-health__graphql-modifier___get_refinement_group` | Look up all refinement options within a category (e.g., all laterality options: right, left, bilateral) |
+| `mcp__imo-health__graphql-modifier___get_related_problems` | Find clinical problems related to a procedure or medication (reverse lookup) |
+| `mcp__imo-health__graphql-modifier___get_broader_refinements` | Find immediate parents of a Problem lexical in its refinement family (each parent drops one refinement) |
+| `mcp__imo-health__graphql-modifier___get_medication_ingredients` | Find a medication product's active ingredients or find products containing a given ingredient |
+| `mcp__imo-health__graphql-modifier___get_narrower_by_medications` | Find children of a Problem lexical that have treatment relationships with supplied medications |
+| `mcp__imo-health__graphql-modifier___get_narrower_by_procedures` | Find children of a Problem lexical that have evaluation/treatment relationships with supplied procedures |
+
+### Concept and Editorial Guidance
+
+| Tool | Description |
+|------|-------------|
+| `mcp__imo-health__concept-guideline___get_concept_candidates` | Find ranked IMO Clinical Interface Terminology candidates for a Problem-domain term with word-overlap scores |
+| `mcp__imo-health__concept-guideline___search_editorial_kb` | Find relevant excerpts from IMO's editorial knowledge base on naming, formatting, and migration policies |
+
+### GuidelineCentral
+
+| Tool | Description |
+|------|-------------|
+| `mcp__imo-health__guidelinecentral-search___list_documents` | List available GuidelineCentral documents with IDs, titles, source organizations, and page counts |
+| `mcp__imo-health__guidelinecentral-search___search_guidelines` | Search clinical practice guidelines by meaning with ranked excerpts, relevance scores, and presigned PDF links |
+| `mcp__imo-health__guidelinecentral-search___search_within_document` | Search within one GuidelineCentral document by meaning |
+| `mcp__imo-health__guidelinecentral-search___search_by_imo_codes` | Find guideline excerpts indexed with supplied IMO lexical codes |
+| `mcp__imo-health__guidelinecentral-search___get_guideline` | Retrieve a guideline's metadata, presigned PDF URL, and full text grouped by page |
+
+### Knowledge Graph Explorer
+
+| Tool | Description |
+|------|-------------|
+| `mcp__imo-health__knowledge-graph-explorer___explore_schema` | Inspect the Knowledge Graph's named graphs, classes, predicates, or sample triples for use in SPARQL queries |
+| `mcp__imo-health__knowledge-graph-explorer___run_sparql` | Run a read-only SPARQL query against the Knowledge Graph (SELECT, ASK, CONSTRUCT, or DESCRIBE) |
+
+### Precision Literature Review (PLR)
+
+| Tool | Description |
+|------|-------------|
+| `mcp__imo-health__plr___list_projects` | List owned and shared PLR projects with ID, name, disease, type, workflow step, and role |
+| `mcp__imo-health__plr___get_project` | Retrieve one PLR project's details including status, workflow step, and project link |
+| `mcp__imo-health__plr___get_study_protocols` | Retrieve literature search details, inclusion/exclusion criteria, and extraction fields for projects |
+| `mcp__imo-health__plr___get_screening_counts` | Retrieve AI and human screening counts, agreement/disagreement counts for projects |
+| `mcp__imo-health__plr___search_citations` | Find citations within a project with publication metadata, AI/human decisions, and full-text availability |
+| `mcp__imo-health__plr___get_citation_ai_result` | Retrieve the AI's predicted study types, screening explanation, and matched exclusion criteria |
+| `mcp__imo-health__plr___get_prisma` | Retrieve PRISMA flow chart counts for identification, screening, eligibility, and inclusion |
+| `mcp__imo-health__plr___get_data_summary` | Retrieve extracted study data with columns, rows, sorting, and link to the full table |
 
 ---
 
