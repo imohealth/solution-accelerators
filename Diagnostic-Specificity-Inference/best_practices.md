@@ -35,7 +35,7 @@ All 9 scenarios share the same foundation — **LangGraph `create_react_agent`**
 |---|----------|------|-------------|-------|------------|
 | 1 | Diagnosis Specificity using Problems | `ds-conditions` | `refinementNarrower` | 4 | High — multi-step refinement groups |
 | 2 | Refine Diagnosis using Medication | `refine` | `domainNarrowerByMedications` + `refinementNarrower` | 9 | Highest — two-phase (med drill-down + refinement) |
-| 3 | Rank Diagnosis using Medication | `rank` | `treatedProblems` / `preventedProblems` / `causedProblems` | 2 | Medium — scoring formula |
+| 3 | Rank Diagnosis using Medication | `rank` | `treatedProblems` / `preventedProblems` | 2 | Medium — scoring formula |
 | 4 | Diagnosis Specificity using Medication | `dx-infer` | `domainNarrowerByMedications` | 2 | Low — iterative drill-down |
 | 5 | Medication Identification | `med-id` | `domainNarrower` + `containingMedications` | 3 | Medium — medication hierarchy |
 | 6 | Diagnosis to Medication | `dx-to-med` | `treatmentMedications` | 2 | Low — single KG lookup |

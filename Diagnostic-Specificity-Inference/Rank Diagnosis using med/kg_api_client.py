@@ -173,7 +173,7 @@ class KGApiClient:
         Uses offset/size pagination: fetches first page for all fields, then
         loops on any field that hits the SIZE limit to fetch remaining pages.
 
-        MedicationLexical returns: treatedProblems, causedProblems.
+        MedicationLexical returns: treatedProblems.
         ProblemLexical returns: domainBroader, domainNarrower, appliedRefinements,
                                 allowedRefinements, refinementFamilies.
         """
@@ -196,7 +196,6 @@ class KGApiClient:
     ... on MedicationLexical {{
       mappings {{ code title codeSystem relationshipType }}
       treatedProblems(offset: 0, size: {SIZE}) {{ code title }}
-      causedProblems(offset: 0, size: {SIZE}) {{ code title }}
     }}
     ... on ProcedureLexical {{
       mappings {{ code title codeSystem relationshipType }}
@@ -217,7 +216,7 @@ class KGApiClient:
         paginated_fields = {
             "problem": ["domainBroader", "domainNarrower",
                         "appliedRefinements", "allowedRefinements", "refinementFamilies"],
-            "medication": ["treatedProblems", "causedProblems"],
+            "medication": ["treatedProblems"],
             "procedure": [],
         }
 
@@ -258,7 +257,6 @@ class KGApiClient:
             "allowedRefinements": f"allowedRefinements(offset: {offset}, size: {size}) {{ code title group {{ code title }} }}",
             "refinementFamilies": f"refinementFamilies(offset: {offset}, size: {size}) {{ code title lexicals {{ code title }} }}",
             "treatedProblems": f"treatedProblems(offset: {offset}, size: {size}) {{ code title }}",
-            "causedProblems": f"causedProblems(offset: {offset}, size: {size}) {{ code title }}",
         }
 
         fragment = field_fragments[field]

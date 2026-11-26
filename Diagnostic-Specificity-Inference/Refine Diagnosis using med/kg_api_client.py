@@ -2,7 +2,7 @@
 Direct HTTP client for IMO Normalize API and Knowledge Graph (GOAT) GraphQL API.
 Supports medication-based diagnosis specificity with full refinement capabilities.
 Provides: normalize_medical_term, get_lexical, get_domain_hierarchy,
-get_treatments_for_problem, get_caused_problems, get_diagnostics_for_problem,
+get_treatments_for_problem, get_diagnostics_for_problem,
 get_allowed_refinements, get_narrower_sequential_refinements, get_medication_diagnosis_proto.
 """
 
@@ -230,7 +230,6 @@ class KGApiClient:
     ... on MedicationLexical {{
       mappings {{ code title codeSystem relationshipType }}
       treatedProblems(offset: 0, size: {SIZE}) {{ code title }}
-      causedProblems(offset: 0, size: {SIZE}) {{ code title }}
     }}
     ... on ProcedureLexical {{
       mappings {{ code title codeSystem relationshipType }}
@@ -251,7 +250,7 @@ class KGApiClient:
         paginated_fields = {
             "problem": ["domainBroader", "domainNarrower",
                         "appliedRefinements", "allowedRefinements", "refinementFamilies"],
-            "medication": ["treatedProblems", "causedProblems"],
+            "medication": ["treatedProblems"],
             "procedure": [],
         }
 
@@ -291,7 +290,6 @@ class KGApiClient:
             "allowedRefinements": f"allowedRefinements(offset: {offset}, size: {size}) {{ code title group {{ code title }} }}",
             "refinementFamilies": f"refinementFamilies(offset: {offset}, size: {size}) {{ code title lexicals {{ code title }} }}",
             "treatedProblems": f"treatedProblems(offset: {offset}, size: {size}) {{ code title }}",
-            "causedProblems": f"causedProblems(offset: {offset}, size: {size}) {{ code title }}",
         }
 
         fragment = field_fragments[field]
@@ -463,96 +461,6 @@ class KGApiClient:
 
         lexical_base["treatmentMedications"] = all_associated
         lexical_base["supportiveTreatments"] = all_supportive
-        return {"success": True, "lexical": lexical_base}
-
-    # ─── get_caused_problems ───────────────────────────────────────────────
-
-    def get_caused_problems(self, imo_lexical_code: str, domain: str = "Problem") -> Dict[str, Any]:
-        SIZE = 1000
-        gql_domain = domain.lower()
-        variables = {"code": imo_lexical_code, "domain": gql_domain}
-        all_caused = []
-        all_causative = []
-        lexical_base = None
-
-        offset = 0
-        while True:
-            if gql_domain == "medication":
-                query = f"""query GetCausedProblems($code: String!, $domain: IMODomain!) {{
-  lexical(code: $code, domain: $domain) {{
-    code
-    title
-    ... on MedicationLexical {{
-      numberOfCausedProblems
-      causedProblems(offset: {offset}, size: {SIZE}) {{ code title }}
-    }}
-  }}
-}}"""
-            else:
-                query = f"""query GetCausedProblems($code: String!, $domain: IMODomain!) {{
-  lexical(code: $code, domain: $domain) {{
-    code
-    title
-    ... on ProblemLexical {{
-      numberOfCausedProblems
-      numberOfCausativeAgents
-      causedProblems(offset: {offset}, size: {SIZE}) {{ code title }}
-    }}
-  }}
-}}"""
-
-            result = self._graphql_query(query, variables)
-            if not result.get("success") or not result.get("data"):
-                return result
-
-            lexical_data = result["data"].get("lexical")
-            if not lexical_data:
-                return {"success": True, "lexical": None}
-
-            if lexical_base is None:
-                lexical_base = {
-                    "code": lexical_data.get("code"),
-                    "title": lexical_data.get("title"),
-                }
-
-            page = lexical_data.get("causedProblems", [])
-            all_caused.extend(page)
-
-            if len(page) < SIZE:
-                break
-            offset += SIZE
-
-        lexical_base["causedProblems"] = all_caused
-
-        if gql_domain != "medication":
-            offset = 0
-            while True:
-                query = f"""query GetCausedProblems($code: String!, $domain: IMODomain!) {{
-  lexical(code: $code, domain: $domain) {{
-    ... on ProblemLexical {{
-      causativeAgents(offset: {offset}, size: {SIZE}) {{ ... on MedicationLexical {{ code title }} }}
-    }}
-  }}
-}}"""
-                result = self._graphql_query(query, variables)
-                if not result.get("success"):
-                    break
-                if not result.get("data"):
-                    break
-
-                lexical_data = result["data"].get("lexical")
-                if not lexical_data:
-                    break
-
-                page = lexical_data.get("causativeAgents", [])
-                all_causative.extend(page)
-
-                if len(page) < SIZE:
-                    break
-                offset += SIZE
-
-            lexical_base["causativeAgents"] = all_causative
-
         return {"success": True, "lexical": lexical_base}
 
     # ─── get_diagnostics_for_problem ───────────────────────────────────────
