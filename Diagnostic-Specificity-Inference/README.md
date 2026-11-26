@@ -73,7 +73,6 @@ Two-phase medication-based diagnosis refinement. Phase 1 uses the medication to 
 | `get_lexical` | Query KG for concept data |
 | `get_domain_hierarchy` | Get narrower/broader concepts in the hierarchy |
 | `get_treatments_for_problem` | Get associated/contraindicated/supportive treatments |
-| `get_caused_problems` | Get complications caused by a condition or medication |
 | `get_diagnostics_for_problem` | Get diagnostic tests relevant to a problem |
 | `get_allowed_refinements` | Get refinement groups for Phase 2 |
 | `get_narrower_sequential_refinements` | Apply refinements sequentially (Phase 2) |
@@ -93,7 +92,7 @@ Ranks a list of candidate diagnoses against a medication list using KG `treatedP
 
 **Workflow:**
 1. Normalize each medication (domain: Medication)
-2. Query KG for each medication's `treatedProblems`, `preventedProblems`, `causedProblems`
+2. Query KG for each medication's `treatedProblems`, `preventedProblems`
 3. Run `_code_based_filter`: normalize candidates (domain: Problem), fetch `domainBroader` parents, do exact code matching
 4. Score each candidate using the formula → rank by confidence
 
